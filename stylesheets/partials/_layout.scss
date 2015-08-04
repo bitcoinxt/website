@@ -1,0 +1,39 @@
+//
+// Basic layout and styles for site
+//
+
+
+header[role=banner] {
+  padding: 0px $body-margin-x;
+  position: relative;
+  
+  a { @include basic-link(mix($banner-color, white, 20%), $hover: $bright_chartreusse, $decoration: "plain"); }
+  
+  .action-link {
+    position: absolute;
+    right: $body-margin-x;
+    top: 55px;
+    a {
+      background: rgba(white, 0.1);
+      @include border-radius;
+      display: block;
+      padding: 0.5em 1em;
+      @include text-shadow(mix($banner-color, black, 50%) 0 1px 0);
+      &:after { content: " ⇢"; }
+    }
+  }
+}
+
+section[role=main] {
+  padding: 0px $body-margin-x;
+  box-sizing: border-box;
+}
+
+footer {
+  padding: 0 $body-margin-x 20px;
+  font-size: 90%;
+  color: $quiet_color;
+  a { @include basic-link($text-color); }
+  p { margin: 1em 0em; padding: 1.5em 1em; }
+  background-color: $orange;
+}

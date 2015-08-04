@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= @title %></title>
+    <meta name="keywords" content="bitcoin_xt, crypto_currency" />
+    <meta name="author" content="curvestudio" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="/stylesheets/screen.css">
+    <link rel="stylesheet" href="/stylesheets/component.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="/javascripts/modernizr.custom.js"></script>
+  </head>
+  <body>
+    <div class="container" id="sec-top">    
+      <header role="banner">
+        <div class="cbp-af-header cbp-af-header-shrink">
+          <div class="cbp-af-inner">
+            <!-- <h1><a href="/"><%#= image "bitcoin-logo" %></a></h1> -->
+            <logo><a href="/"><%= image "bitcoin-logo" %></a></logo>
+
+            <nav class="pd-b">
+              <a href="/welcome.html">Welcome</a>
+              <a href="/welcome.html#sec-hardfork">Bigger blocks</a>
+              <a href="/patches.html">Patches</a>
+              <a href="/faq.html">FAQ</a>
+              <a href="/welcome.html#sec-takepart">Take part</a>
+            </nav>
+          </div>
+        </div>
+      </header>  
+      <section role="main">
+        <article>
+            <%= yield %>
+        </article>
+      </section>
+      <footer>
+<!--        <small>
+          <p>
+            BitcoinXt is set to revolutionize the market. Expect a broader adaption
+            for crypto currency from this point forward. We welcome your support!
+            <br><br>
+            Questions? <a href="/">Reach out for more information.</a></p>
+        </small> -->
+      </footer>
+    </div>
+  </body>
+</html>

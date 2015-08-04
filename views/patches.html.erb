@@ -1,0 +1,20 @@
+      <div class="main">
+        <section>
+        <div>
+          <h2>Patches in XT</h2>
+
+          <ul>
+          <li><b>Bigger blocks, by Gavin Andresen</b>. This set of patches performs some small code refactorings, and 
+          implements support for switching to 8 megabyte blocks after January 2015 once 75%+ of mined blocks are voting 
+          for the change by setting flags in the block version field. Once supermajority has been reached, there is a 
+          grace period of two weeks before the rule change takes effect. After the switch the max block size limit
+          smoothly increases, doubling every two years.</li>
+          <li><b>Double spend relaying, by Gavin Andresen and Tom Harding</b>. This set of patches makes the P2P network relay double spends when they are seen, so sellers can learn about attempts to defraud them faster and with a lower cost to the peer to peer network. The alternative approach, used today, requires finding and connecting to as many nodes as possible which is infeasible on mobile and wasteful even when it can be done. It also upgrades the Bitcoin-Qt wallet to show broadcast double spend attempts in red, adds a -respendnotify command line flag, and reports conflicts via the JSON-RPC API.</li>
+          <li><b>Support BIP 65 ("getutxos"), by Mike Hearn</b>. This allows peers to request the contents of a ledger entry over the network. It is useful for <a href="https://vinumeris.com/lighthouse">the Lighthouse decentralised crowdfunding wallet</a> to present a better user interface, and for miscellaneous other tasks.</li>
+          <li><b>Refresh the DNS seed list, by Mike Hearn</b>. DNS seeds are used to discover network peers when a node is started for the first time, and by lightweight/SPV wallets. The DNS seed list in Core contains a seed that only yields a single working peer (the same one every time), and does not include some seeds that are available and run by known community contributors. This patch removes the single-peer seed and adds in the other seeds, to improve robustness and diversity.</li>
+          <li><b>Deprioritise open proxies when resources are exhausted, by Mike Hearn</b>. This patch introduces a framework for handling denial of service attacks in which peers are assigned a score. If a node runs out of resources to serve clients (there is a cap of around 120 inbound connections), peers with a low score may be disconnected to make way for peers with higher scores. The intention is to develop over time a generic way of scheduling a nodes limited resources, but for now it implements a single rule that gives Tor exits a lower score than clearnet peers. This mitigates a known and observed DoS attack in which an attacker jams nodes by connecting to them over and over whilst hiding behind Tor, thus preventing new nodes and SPV wallets from accessing the network.</li>
+          <li><b>Rebrand Core to XT</b>. This ensures users know when they are running the XT patch set.</li>
+          </ul>
+        </div>
+        </section>
+      </div>	
