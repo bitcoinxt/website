@@ -32,11 +32,85 @@ $link-color: #a72;
 $link-visited-color: #a72;
 $link-hover-color: #000;
 
+$link-color-muted: #D3D3D3;
+$link-visited-color-muted: strengthen($link-color-muted, 0.46);
+$link-hover-color-muted: strengthen($link-color-muted, 0.66);;
+
+
 // Paragraphs
 $indented-paragraphs: false;
 
 // Layout
 $body-margin-x: 0%;
+
+.center {
+	text-align: center;
+}
+
+/*padding styles*/
+.pd-top-1 {
+	padding-top: 1em;
+}
+
+.pd-top-2 {
+	padding-top: 2em;
+}
+
+.pd-top-3 {
+	padding-top: 3em;
+}
+
+.pd-top-4 {
+	padding-top: 3em;
+}
+
+.pd-top-5 {
+	padding-top: 3em;
+}
+
+.pd-bottom-1 {
+	padding-top: 1em;
+}
+
+.pd-bottom-2 {
+	padding-top: 2em;
+}
+
+.pd-bottom-3 {
+	padding-top: 3em;
+}
+
+.pd-bottom-4 {
+	margin-bottom: 3em;
+}
+
+.pd-bottom-5 {
+	margin-bottom: 3em;
+}
+
+.mg-btm-05 {
+	margin-bottom: .5em;
+}
+
+.mg-btm-1 {
+	margin-bottom: 1em;
+}
+
+.mg-btm-2 {
+	margin-bottom: 2em;
+}
+
+.mg-btm-3 {
+	margin-bottom: 3em;
+}
+
+.mg-btm-4 {
+	margin-bottom: 3em;
+}
+
+.mg-btm-5 {
+	margin-bottom: 3em;
+}
 
 .container {
 	position: relative;
@@ -64,8 +138,19 @@ $body-margin-x: 0%;
 	line-height: 1.5;
 }
 
-section.anchor { padding-top: 123px; margin-top: -50px; }/*margin-top: -50px;*/
+section.anchor { padding-top: 123px; margin-top: -50px; }
 
+#releases-page.muted_link {
+	color: $link-color-muted;
+	display: block;
+    font-size: .8em;    
+}
+
+#releases-page.muted_link:hover, #releases-page.muted_link:focus, #releases-page.muted_link:active {
+	color: $link-hover-color-muted;
+	display: block;
+    font-size: .8em;    
+}
 
 
 @media screen and (max-width: 55em) {

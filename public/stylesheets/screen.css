@@ -1,5 +1,74 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+.center {
+  text-align: center;
+}
+
+/*padding styles*/
+.pd-top-1 {
+  padding-top: 1em;
+}
+
+.pd-top-2 {
+  padding-top: 2em;
+}
+
+.pd-top-3 {
+  padding-top: 3em;
+}
+
+.pd-top-4 {
+  padding-top: 3em;
+}
+
+.pd-top-5 {
+  padding-top: 3em;
+}
+
+.pd-bottom-1 {
+  padding-top: 1em;
+}
+
+.pd-bottom-2 {
+  padding-top: 2em;
+}
+
+.pd-bottom-3 {
+  padding-top: 3em;
+}
+
+.pd-bottom-4 {
+  margin-bottom: 3em;
+}
+
+.pd-bottom-5 {
+  margin-bottom: 3em;
+}
+
+.mg-btm-05 {
+  margin-bottom: .5em;
+}
+
+.mg-btm-1 {
+  margin-bottom: 1em;
+}
+
+.mg-btm-2 {
+  margin-bottom: 2em;
+}
+
+.mg-btm-3 {
+  margin-bottom: 3em;
+}
+
+.mg-btm-4 {
+  margin-bottom: 3em;
+}
+
+.mg-btm-5 {
+  margin-bottom: 3em;
+}
+
 .container {
   position: relative;
   margin-top: 6em;
@@ -32,7 +101,18 @@ section.anchor {
   margin-top: -50px;
 }
 
-/*margin-top: -50px;*/
+#releases-page.muted_link {
+  color: #D3D3D3;
+  display: block;
+  font-size: .8em;
+}
+
+#releases-page.muted_link:hover, #releases-page.muted_link:focus, #releases-page.muted_link:active {
+  color: #b1b1b1;
+  display: block;
+  font-size: .8em;
+}
+
 @media screen and (max-width: 55em) {
   .main section p {
     font-size: 1em;
