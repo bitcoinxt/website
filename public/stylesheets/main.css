@@ -7,37 +7,33 @@ h2 {
   color: grey;
 }
 
-#download-link.btn {
-  color: #fff;
-  font-size: 1.5em;
-  padding: .6em 1em;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
-  vertical-align: middle;
-  border-radius: 10px;
-  border: 1px solid #333;
-}
-
-#download-link.btn-download {
-  background-color: #d9750b;
-  background-image: -webkit-linear-gradient(#f90 10%, #e76a00 100%);
-  background-image: linear-gradient(#f90 10%, #e76a00 100%);
-  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset, 0 5px 10px rgba(0, 0, 0, 0.2);
-  border: 2px solid #999;
-  text-decoration: none;
-}
-
-#download-link.btn-download:hover, .btn-download:focus, .btn-download:active {
-  background-color: #e0811b;
-  background-image: -webkit-linear-gradient(#f0a100 10%, #f70 100%);
-  background-image: linear-gradient(#f0a100 10%, #f70 100%);
-}
-
-#download-link.btn-download:active {
-  background-color: #cf6a00;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2) inset;
-}
-
+/*#download-link.btn {
+    color: #fff;
+    font-size: 1.5em;
+    padding: .6em 1em;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    vertical-align: middle;
+    border-radius: 10px;
+    border: 1px solid #333
+}*/
+/*#download-link.btn-download {
+    background-color: #d9750b;
+    background-image: -webkit-linear-gradient(#f90 10%,#e76a00 100%);
+    background-image: linear-gradient(#f90 10%,#e76a00 100%);
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset, 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #999;
+    text-decoration: none;
+}*/
+/*#download-link.btn-download:hover,.btn-download:focus,.btn-download:active {
+    background-color: #e0811b;
+    background-image: -webkit-linear-gradient(#f0a100 10%,#f70 100%);
+    background-image: linear-gradient(#f0a100 10%,#f70 100%);
+}*/
+/*#download-link.btn-download:active {
+    background-color: #cf6a00;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.2)inset
+}*/
 #download-link.myButton {
   -moz-box-shadow: inset 0px 1px 0px 0px #fce2c1;
   -webkit-box-shadow: inset 0px 1px 0px 0px #fce2c1;
@@ -94,6 +90,7 @@ h2 {
 #mc_embed_signup input {
   border: 1px solid #999;
   -webkit-appearance: none;
+  outline: none;
 }
 
 #mc_embed_signup input[type=checkbox] {
@@ -105,7 +102,9 @@ h2 {
 }
 
 #mc_embed_signup input:focus {
-  border-color: #333;
+  border-color: #1E82D2;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.055), 0 0 6px #1E82D2;
+  box-shadow: inset 0 3px 0px rgba(0, 0, 0, 0.055), 0 0 8px #1E82D2;
 }
 
 #mc_embed_signup .button {
@@ -116,10 +115,10 @@ h2 {
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-size: 15px;
-  font-weight: bold;
-  height: 32px;
-  line-height: 32px;
+  font-size: 13px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
   margin: 0 0 10px 0;
   padding: 0;
   text-align: center;
@@ -127,9 +126,12 @@ h2 {
   vertical-align: top;
   white-space: nowrap;
   width: auto;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 1.5px;
 }
 
-#mc_embed_signup .button:hover {
+#mc_embed_signup .button:hover, #mc_embed_signup .button:focus, #mc_embed_signup .button input:focus {
   background-color: #777;
 }
 
@@ -143,7 +145,7 @@ h2 {
 
 #mc_embed_signup .clear {
   clear: none;
-  display: inline;
+  display: block;
 }
 
 #mc_embed_signup label {
@@ -154,18 +156,18 @@ h2 {
 
 #mc_embed_signup input.email {
   text-align: center;
-  padding: 15px 5px;
-  width: 85%;
-  min-width: 130px;
+  padding: 12px 5px;
+  width: 60%;
+  max-width: 550px;
+  margin: 10px 0px 20px 0px;
   font-size: 15px;
-  margin: 10px;
   color: #666;
   font-family: 'proxima-nova', 'Proxima Nova', sans-serif;
 }
 
 #mc_embed_signup input.button {
-  width: 35%;
-  min-width: 90px;
+  width: 40%;
+  max-width: 140px;
 }
 
 #mc_embed_signup div#mce-responses {
@@ -204,4 +206,24 @@ h2 {
   margin-left: 1.05em;
   text-align: left;
   padding: .5em 0;
+}
+
+@media screen and (max-width: 55em) {
+  #mc_embed_signup input.email {
+    width: 85%;
+    margin: 10px 0px 20px 0px;
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 32.25em) {
+  #mc_embed_signup input.email {
+    width: 95%;
+    margin: 10px 0px 20px 0px;
+    min-width: 300px;
+  }
+}
+@media screen and (max-width: 24em) {
+  #mc_embed_signup input.email {
+    width: 90%;
+  }
 }

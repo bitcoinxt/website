@@ -145,7 +145,7 @@
 
   .cbp-af-header nav a,
   .cbp-af-header.cbp-af-header-shrink nav a {
-    font-size: .65em;
+    font-size: .6em;
     margin: 0 5px;
   }
 
@@ -163,7 +163,7 @@
   .cbp-af-header.cbp-af-header-shrink nav a {
     line-height: 1;
     margin: 0 5px;
-    font-size: .6em;
+    font-size: .55em;
   }
 
   .cbp-af-header a img {

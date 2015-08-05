@@ -16,22 +16,30 @@ $fixed-font-size: 85%;
 $fixed-line-height: $base-line-height;
 
 // Text Colors
-$text-color: #47a3da;
+$text-color: #47a3da; /*bright blue*/
 $bright_chartreusse: #e9e516;
-$loud-color: strengthen($text-color);
+$loud-color: strengthen($text-color, .35);
 $quiet-color: soften($text-color, 1.5);
 $header-color: strengthen($text-color, 0.66);
+$gray: #B2B7CA;
+$paragraph-color: strengthen($gray, .25);
+
 
 // Theme Colors
 $background-color: white;
+$background-color-accent: #C6C6C6;
 $banner-color: #fff;
 $orange: #ef7220;
+$light-blue: #87cef8;
+$dusty-blue: #BCCFDC;
 
-// Link Colors
-$link-color: #a72;
-$link-visited-color: #a72;
-$link-hover-color: #000;
+// Link Colors - oranges
+$link-color: #e76a00; /*#F59C09;*/
+$link-visited-color: soften($link-color, .25);
+$link-hover-color: strengthen($link-color, .20);
 
+
+// Gray on White
 $link-color-muted: #D3D3D3;
 $link-visited-color-muted: strengthen($link-color-muted, 0.46);
 $link-hover-color-muted: strengthen($link-color-muted, 0.66);;
@@ -124,7 +132,7 @@ $body-margin-x: 0%;
 	padding: 2em 1.875em  4em 1.875em;
 }
 .main > section:nth-child(even) {
-	background: #87cef8;
+	background: $dusty-blue;
 	color: #fff;
 }
 
@@ -151,7 +159,6 @@ section.anchor { padding-top: 123px; margin-top: -50px; }
 	display: block;
     font-size: .8em;    
 }
-
 
 @media screen and (max-width: 55em) {
 	.main section p {
@@ -180,11 +187,11 @@ section.anchor { padding-top: 123px; margin-top: -50px; }
 	}
 	.container > section > article > .main section#sec-hardfork {
 	   padding-top: 83px; 
-	   margin-top: -83px;
+	  /* margin-top: -83px;*/
 	}
 	.container > section > article > .main section#sec-takepart {
 	   padding-top: 83px; 
-	   margin-top: -83px;
+	  /* margin-top: -83px;*/
 	}
 	
 /*	section.anchor { display: block; position: relative; top: 20px;  }
@@ -196,6 +203,12 @@ section.anchor { padding-top: 123px; margin-top: -50px; }
 }
 
 @media screen and (max-width: 24em) {
+	.container > section > article > .main section > div {
+    	width: 85%;
+    	max-width: inherit;
+    	margin: 0 auto;
+    	padding: 2em 0em 4em 0em;
+	}
 	.main section p {
 		padding: .5em 0;
 	}
@@ -208,6 +221,7 @@ section.anchor { padding-top: 123px; margin-top: -50px; }
 	.typography li, .content li, section > .main > article li {
 		font-size: 70%;
   		line-height: 1.75em;
+  		color: $paragraph-color;
 	}
 }
 
@@ -219,5 +233,6 @@ $default-border-radius: 8px;
 @include global-reset;
 @include reset-html5;
 
-html, body { background: $background-color; }
+html { background-color: soften($background-color-accent, .25); }
+body { background: $background-color; }
 body { @include base-font; }

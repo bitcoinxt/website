@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/*bright blue*/
+/*#F59C09;*/
 .center {
   text-align: center;
 }
@@ -82,7 +84,7 @@
 }
 
 .main > section:nth-child(even) {
-  background: #87cef8;
+  background: #BCCFDC;
   color: #fff;
 }
 
@@ -140,12 +142,12 @@ section.anchor {
 
   .container > section > article > .main section#sec-hardfork {
     padding-top: 83px;
-    margin-top: -83px;
+    /* margin-top: -83px;*/
   }
 
   .container > section > article > .main section#sec-takepart {
     padding-top: 83px;
-    margin-top: -83px;
+    /* margin-top: -83px;*/
   }
 
   /*	section.anchor { display: block; position: relative; top: 20px;  }
@@ -155,6 +157,13 @@ section.anchor {
   	}*/
 }
 @media screen and (max-width: 24em) {
+  .container > section > article > .main section > div {
+    width: 85%;
+    max-width: inherit;
+    margin: 0 auto;
+    padding: 2em 0em 4em 0em;
+  }
+
   .main section p {
     padding: .5em 0;
   }
@@ -170,8 +179,18 @@ section.anchor {
   .typography li, .content li, section[role=main] > article li, .content li, section[role=main] > article li, section > .main > article li {
     font-size: 70%;
     line-height: 1.75em;
+    color: #a3a9c0;
   }
 }
+.typography h3.announcement, .content h3.announcement, section[role=main] > article h3.announcement {
+  font-weight: 100;
+  font-size: 80%;
+  line-height: 1.45;
+  margin: 1em 0 0.25em;
+  color: #666;
+  letter-spacing: 1.5px;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -232,7 +251,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-html, body {
+html {
+  background-color: lightgray;
+}
+
+body {
   background: white;
 }
 
@@ -244,15 +267,15 @@ body {
 }
 
 .links a:link, .content a:link, section[role=main] > article a:link {
-  color: #a72;
-  text-decoration: underline;
+  color: #e76a00;
+  text-decoration: none;
 }
 .links a:visited, .content a:visited, section[role=main] > article a:visited {
-  color: #a72;
+  color: #ff7602;
 }
 .links a:hover, .content a:hover, section[role=main] > article a:hover {
-  color: #000;
-  text-decoration: none;
+  color: #d36100;
+  text-decoration: underline;
 }
 .links a.more, .content a.more, section[role=main] > article a.more {
   white-space: nowrap;
@@ -265,8 +288,8 @@ body {
   /*what*/
 }
 .typography strong, .content strong, section[role=main] > article strong, .typography b, .content b, section[role=main] > article b {
-  color: #1f6d9c;
-  font-weight: bold;
+  color: #2a94d3;
+  font-weight: 500;
 }
 .typography em, .content em, section[role=main] > article em, .typography i, .content i, section[role=main] > article i {
   font-style: italic;
@@ -342,6 +365,8 @@ body {
 .typography li, .content li, section[role=main] > article li {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  color: #B2B7CA;
+  font-size: .8em;
 }
 .typography dt, .content dt, section[role=main] > article dt {
   margin-top: 1em;
@@ -416,21 +441,21 @@ section[role=main] {
 }
 
 footer {
-  padding: 0 0% 20px;
+  padding: 0 0% 50px;
   font-size: 90%;
   color: #c6e3f4;
   background-color: #ef7220;
 }
 footer a:link {
   color: #47a3da;
-  text-decoration: underline;
+  text-decoration: none;
 }
 footer a:visited {
   color: #47a3da;
 }
 footer a:hover {
   color: #47a3da;
-  text-decoration: none;
+  text-decoration: underline;
 }
 footer p {
   margin: 1em 0em;
