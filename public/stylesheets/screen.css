@@ -84,7 +84,7 @@
 }
 
 .main > section:nth-child(even) {
-  background: #BCCFDC;
+  background: rgba(198, 198, 197, 0.73);
   color: #fff;
 }
 
@@ -96,6 +96,12 @@
   margin: 0;
   padding: .5em 0;
   line-height: 1.5;
+}
+
+.main section p.first {
+  margin: 0;
+  padding: .5em 0;
+  line-height: 2.5;
 }
 
 section.anchor {

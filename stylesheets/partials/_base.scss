@@ -32,6 +32,7 @@ $banner-color: #fff;
 $orange: #ef7220;
 $light-blue: #87cef8;
 $dusty-blue: #BCCFDC;
+$light-gray: rgba(198, 198, 197, 0.73);
 
 // Link Colors - oranges
 $link-color: #e76a00; /*#F59C09;*/
@@ -132,7 +133,7 @@ $body-margin-x: 0%;
 	padding: 2em 1.875em  4em 1.875em;
 }
 .main > section:nth-child(even) {
-	background: $dusty-blue;
+	background: $light-gray;
 	color: #fff;
 }
 
@@ -144,6 +145,12 @@ $body-margin-x: 0%;
 	margin: 0;
 	padding: .5em 0;
 	line-height: 1.5;
+}
+
+.main section p.first {
+	margin: 0;
+	padding: .5em 0;
+	line-height: 2.5;
 }
 
 section.anchor { padding-top: 123px; margin-top: -50px; }
