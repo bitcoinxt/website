@@ -81,11 +81,22 @@
   max-width: 69em;
   margin: 0 auto;
   padding: 2em 1.875em  4em 1.875em;
+  background: rgba(198, 198, 197, 0.7);
+}
+
+.container > section > article > .main section > div.white {
+  width: 80%;
+  max-width: 69em;
+  margin: 0 auto;
+  padding: 2em 1.875em  4em 1.875em;
+  background: rgba(198, 198, 197, 0.65);
+  background: #fff;
 }
 
 .main > section:nth-child(even) {
   background: rgba(198, 198, 197, 0.73);
   color: #fff;
+  background-image: url("../images/pattern_no_2.png");
 }
 
 .main section:first-child > div {
@@ -95,13 +106,19 @@
 .main section p {
   margin: 0;
   padding: .5em 0;
-  line-height: 1.5;
+  line-height: 1.75;
 }
 
 .main section p.first {
   margin: 0;
   padding: .5em 0;
   line-height: 2.5;
+}
+
+.main section p.highlights {
+  text-align: center;
+  padding: 0px 13%;
+  color: white;
 }
 
 section.anchor {
@@ -143,24 +160,16 @@ section.anchor {
   }
 
   .main section p {
-    font-size: 1em;
+    font-size: .8em;
   }
 
   .container > section > article > .main section#sec-hardfork {
     padding-top: 83px;
-    /* margin-top: -83px;*/
   }
 
   .container > section > article > .main section#sec-takepart {
     padding-top: 83px;
-    /* margin-top: -83px;*/
   }
-
-  /*	section.anchor { display: block; position: relative; top: 20px;  }
-  */
-  /*	.container > section > article > .main section#welcome {
-  	    padding-top: 0em;
-  	}*/
 }
 @media screen and (max-width: 24em) {
   .container > section > article > .main section > div {
@@ -259,6 +268,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 html {
   background-color: lightgray;
+  background-image: url("../images/pattern_no_2.png");
 }
 
 body {
@@ -372,7 +382,13 @@ body {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   color: #B2B7CA;
-  font-size: .8em;
+  font-size: .85em;
+}
+.typography li.on_grey, .content li.on_grey, section[role=main] > article li.on_grey {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #858dab;
+  font-size: .85em;
 }
 .typography dt, .content dt, section[role=main] > article dt {
   margin-top: 1em;

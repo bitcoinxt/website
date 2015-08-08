@@ -118,6 +118,7 @@
   ul { list-style: $ul-list-style; }
   ol { list-style: $ol-list-style; }
   li { margin-top: 0.5em; margin-bottom: 0.5em; color: $gray; font-size: .85em; }
+  li.on_grey { margin-top: 0.5em; margin-bottom: 0.5em; color: strengthen($gray, .75); font-size: .85em; }
   dt { margin-top: 1em; }
   dd { margin-bottom: 1em; }
 }
