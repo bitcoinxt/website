@@ -80,23 +80,20 @@
   width: 80%;
   max-width: 69em;
   margin: 0 auto;
-  padding: 2em 1.875em  4em 1.875em;
-  background: rgba(198, 198, 197, 0.7);
+  padding: 2em 1.875em 2em 1.875em;
+  /*background: rgba(198, 198, 197, 0.7);*/
 }
 
 .container > section > article > .main section > div.white {
   width: 80%;
   max-width: 69em;
   margin: 0 auto;
-  padding: 2em 1.875em  4em 1.875em;
-  background: rgba(198, 198, 197, 0.65);
+  padding: 2em 1.875em 2em 1.875em;
   background: #fff;
 }
 
 .main > section:nth-child(even) {
-  background: rgba(198, 198, 197, 0.73);
-  color: #fff;
-  background-image: url("../images/pattern_no_2.png");
+  background: #EFF3FF;
 }
 
 .main section:first-child > div {
@@ -129,13 +126,11 @@ section.anchor {
 #releases-page.muted_link {
   color: #D3D3D3;
   display: block;
-  font-size: .8em;
 }
 
 #releases-page.muted_link:hover, #releases-page.muted_link:focus, #releases-page.muted_link:active {
   color: #b1b1b1;
   display: block;
-  font-size: .8em;
 }
 
 @media screen and (max-width: 55em) {
@@ -157,10 +152,6 @@ section.anchor {
   .container {
     position: relative;
     margin-top: 4em;
-  }
-
-  .main section p {
-    font-size: .8em;
   }
 
   .container > section > article > .main section#sec-hardfork {
@@ -192,9 +183,8 @@ section.anchor {
   }
 
   .typography li, .content li, section[role=main] > article li, .content li, section[role=main] > article li, section > .main > article li {
-    font-size: 70%;
     line-height: 1.75em;
-    color: #a3a9c0;
+    color: #47a3da;
   }
 }
 .typography h3.announcement, .content h3.announcement, section[role=main] > article h3.announcement {
@@ -266,11 +256,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-html {
-  background-color: lightgray;
-  background-image: url("../images/pattern_no_2.png");
-}
-
 body {
   background: white;
 }
@@ -278,7 +263,7 @@ body {
 body {
   color: #47a3da;
   font-family: "Helvetica Neue", Hevetica, Arial, sans-serif;
-  font-size: 130%;
+  font-size: 110%;
   line-height: 1.4;
 }
 
@@ -381,13 +366,10 @@ body {
 .typography li, .content li, section[role=main] > article li {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  color: #B2B7CA;
-  font-size: .85em;
 }
 .typography li.on_grey, .content li.on_grey, section[role=main] > article li.on_grey {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  color: #858dab;
   font-size: .85em;
 }
 .typography dt, .content dt, section[role=main] > article dt {

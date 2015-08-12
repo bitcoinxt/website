@@ -9,36 +9,11 @@ h2 {
 }
 
 
-/*#download-link.btn {
-    color: #fff;
-    font-size: 1.5em;
-    padding: .6em 1em;
-    text-decoration: none;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-    vertical-align: middle;
-    border-radius: 10px;
-    border: 1px solid #333
-}*/
-
-/*#download-link.btn-download {
-    background-color: #d9750b;
-    background-image: -webkit-linear-gradient(#f90 10%,#e76a00 100%);
-    background-image: linear-gradient(#f90 10%,#e76a00 100%);
-    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset, 0 5px 10px rgba(0, 0, 0, 0.2);
-    border: 2px solid #999;
-    text-decoration: none;
-}*/
-
-/*#download-link.btn-download:hover,.btn-download:focus,.btn-download:active {
-    background-color: #e0811b;
-    background-image: -webkit-linear-gradient(#f0a100 10%,#f70 100%);
-    background-image: linear-gradient(#f0a100 10%,#f70 100%);
-}*/
-
-/*#download-link.btn-download:active {
-    background-color: #cf6a00;
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,.2)inset
-}*/
+/* Make scrolling to #anchor elements work with the header */
+div > a:target, section:target {
+  padding-top: 136px; 
+  margin-top: -136px;
+}
 
 
 #download-link.myButton {

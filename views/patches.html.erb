@@ -1,6 +1,6 @@
       <div class="main">
         <section>
-        <div class="white">
+        <div>
           <h2>Patches in XT</h2>
 
           <ul>
@@ -8,12 +8,20 @@
           implements support for switching to 8 megabyte blocks after January 2015 once 75%+ of mined blocks are voting 
           for the change by setting flags in the block version field. Once supermajority has been reached, there is a 
           grace period of two weeks before the rule change takes effect. After the switch the max block size limit
-          smoothly increases, doubling every two years.</li>
+          smoothly increases, doubling every two years. The soft limit is set equal to the hard limit to avoid the need
+          for miners to constantly reconfigure things.</li>
+
           <li><b>Double spend relaying, by Gavin Andresen and Tom Harding</b>. This set of patches makes the P2P network relay double spends when they are seen, so sellers can learn about attempts to defraud them faster and with a lower cost to the peer to peer network. The alternative approach, used today, requires finding and connecting to as many nodes as possible which is infeasible on mobile and wasteful even when it can be done. It also upgrades the Bitcoin-Qt wallet to show broadcast double spend attempts in red, adds a -respendnotify command line flag, and reports conflicts via the JSON-RPC API.</li>
+
           <li><b>Support BIP 65 ("getutxos"), by Mike Hearn</b>. This allows peers to request the contents of a ledger entry over the network. It is useful for <a href="https://vinumeris.com/lighthouse">the Lighthouse decentralised crowdfunding wallet</a> to present a better user interface, and for miscellaneous other tasks.</li>
+
           <li><b>Refresh the DNS seed list, by Mike Hearn</b>. DNS seeds are used to discover network peers when a node is started for the first time, and by lightweight/SPV wallets. The DNS seed list in Core contains a seed that only yields a single working peer (the same one every time), and does not include some seeds that are available and run by known community contributors. This patch removes the single-peer seed and adds in the other seeds, to improve robustness and diversity.</li>
-          <li><b>Deprioritise open proxies when resources are exhausted, by Mike Hearn</b>. This patch introduces a framework for handling denial of service attacks in which peers are assigned a score. If a node runs out of resources to serve clients (there is a cap of around 120 inbound connections), peers with a low score may be disconnected to make way for peers with higher scores. The intention is to develop over time a generic way of scheduling a nodes limited resources, but for now it implements a single rule that gives Tor exits a lower score than clearnet peers. This mitigates a known and observed DoS attack in which an attacker jams nodes by connecting to them over and over whilst hiding behind Tor, thus preventing new nodes and SPV wallets from accessing the network.</li>
-          <li><b>Rebrand Core to XT</b>. This ensures users know when they are running the XT patch set.</li>
+
+          <li><b>Anti-DoS attack improvements, by Tom Harding</b>. This patch fixes an issue that allows a malicious peer to jam a node by repeatedly offering a transaction or block and then never delivering it.</li>
+
+          <li><b>Anti-DoS attack improvements, by Mike Hearn</b>. It's currently possible to jam a Bitcoin node by connecting to it repeatedly via different IP addresses, as there is a fixed limit on how many connections a node will accept. Once full, no other peers or wallets can connect to it any more and serving capacity for new nodes and P2P wallets is reduced. If the attack is repeated against every node, the entire network could become jammed. 
+
+          <p>This patch set introduces code that runs when a node is full and otherwise could not accept new connections. It labels and prioritises connections according to lists of IP ranges: if a high priority IP address connects and the node is full, it will disconnect a lower priority connection to make room. Currently Tor exits are labelled as being lower priority than regular IP addresses, as jamming attacks via Tor have been observed, and most users/merchants don't use it. In normal operation this new code will never run. If someone performs a DoS attack via Tor, then legitimate Tor users will get the existing behaviour of being unable to connect, but mobile and home users will still be able to use the network without disruption.</p>
           </ul>
         </div>
         </section>

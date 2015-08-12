@@ -9,8 +9,6 @@
   width: 100%;
   background: #f6f6f6;
   z-index: 10000;
-  /*height: 100px;*/
-  height: auto;
   overflow: hidden;
   background-image: linear-gradient(transparent 0%, transparent 80%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(30% 50px, #f47b20, #f47b20 400px);
   background-image: url("../images/bkgrnd_wide.png");
@@ -59,7 +57,7 @@
 .cbp-af-header nav a {
   color: #aaa;
   margin: 0 10px;
-  font-size: .7em;
+  font-size: 1em;
   text-transform: uppercase;
   letter-spacing: .07em;
 }
