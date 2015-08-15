@@ -48,7 +48,7 @@ EOF
         <p>Now configure apt, by running this as root:</p>
 
         <code><pre>
-# echo 'deb http://bitcoinxt.software.s3-website-us-west-2.amazonaws.com/apt wheezy main' >/etc/apt/sources.list.d/bitcoinxt.list
+# echo 'deb [ arch=amd64 ] http://bitcoinxt.software.s3-website-us-west-2.amazonaws.com/apt wheezy main' > /etc/apt/sources.list.d/bitcoinxt.list
 # apt-get update</pre></code>
 
         <p>And finally install:</p>
