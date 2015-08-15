@@ -32,9 +32,6 @@
 
                 var a = document.getElementById("download-link");
                 var rp = document.getElementById("releases-page");
-                var make_href = function(flavour) {
-                    return "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-" + baseVer + "-" + flavour;
-                };
                 if (navigator.appVersion.indexOf("Win") != -1) {
                     var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-xt-" + release + "-" + "win" + cpuBits + ".exe";
                     a.setAttribute("href", href);
@@ -43,7 +40,7 @@
                     a.setAttribute("href", "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/BitcoinXT-" + release + ".dmg");
                     rp.style.display = "block";
                 } else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux")!=-1) {
-                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-" + baseVer + "-" + "linux" + cpuBits + ".tar.gz"
+                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-" + baseVer + ".0-" + "linux" + cpuBits + ".tar.gz"
                     a.setAttribute("href", href);
                     rp.style.display = "block";
                 }
