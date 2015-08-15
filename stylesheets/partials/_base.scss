@@ -173,14 +173,12 @@ $body-margin-x: 0%;
 
 section.anchor { padding-top: 123px; margin-top: -50px; }
 
-#releases-page.muted_link {
+#releases-page-links > .muted_link {
 	color: $link-color-muted;
-	display: block;
 }
 
-#releases-page.muted_link:hover, #releases-page.muted_link:focus, #releases-page.muted_link:active {
+#releases-page-links > .muted_link:hover, #releases-page > .muted_link:focus, #releases-page > .muted_link:active {
 	color: $link-hover-color-muted;
-	display: block;
 }
 
 @media screen and (max-width: 55em) {

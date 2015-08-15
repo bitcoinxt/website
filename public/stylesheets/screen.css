@@ -123,14 +123,12 @@ section.anchor {
   margin-top: -50px;
 }
 
-#releases-page.muted_link {
+#releases-page-links > .muted_link {
   color: #D3D3D3;
-  display: block;
 }
 
-#releases-page.muted_link:hover, #releases-page.muted_link:focus, #releases-page.muted_link:active {
+#releases-page-links > .muted_link:hover, #releases-page > .muted_link:focus, #releases-page > .muted_link:active {
   color: #b1b1b1;
-  display: block;
 }
 
 @media screen and (max-width: 55em) {
