@@ -36,7 +36,7 @@
                     return "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-" + baseVer + "-" + flavour;
                 };
                 if (navigator.appVersion.indexOf("Win") != -1) {
-                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-xt-" + release + "-" + "win" + cpuBits + "-setup.exe";
+                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-xt-" + release + "-" + "win" + cpuBits + ".exe";
                     a.setAttribute("href", href);
                     rp.style.display = "block";
                 } else if (navigator.appVersion.indexOf("Mac") != -1) {
@@ -63,7 +63,10 @@
             <!--End mc_embed_signup-->
         </div>
 
+<!--   # disabled until gandi gets back to me about why their mail forwarding is hosed
+
         <center>Using XT? Send your logo to <b><a href="mailto:hello@bitcoinxt.software">hello@bitcoinxt.software</a></b> and show your support.</center>
+        -->
 
         </div>
         </section>
