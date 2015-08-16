@@ -1,4 +1,4 @@
-.pd-b { padding-bottom: 10px; }
+.pd-b { padding-bottom: 0; }
 
 .cbp-af-header {
 	position: fixed;
@@ -32,7 +32,7 @@
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
 .cbp-af-header logo,
 .cbp-af-header h1 {
-	line-height: 90px;
+	line-height: 70px;
 }
 
 .cbp-af-header h1, .cbp-af-header logo {
@@ -89,6 +89,7 @@
 /* Example Media Queries */
 @media screen and (max-width: 55em) {
 	
+	.pd-b { padding-bottom: 10px; }
 	.cbp-af-header .cbp-af-inner {
 		width: 100%;
 	}
