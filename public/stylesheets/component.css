@@ -1,5 +1,5 @@
 .pd-b {
-  padding-bottom: 10px;
+  padding-bottom: 0;
 }
 
 .cbp-af-header {
@@ -19,7 +19,7 @@
 
 .cbp-af-header .cbp-af-inner {
   width: 90%;
-  max-width: 69em;
+  max-width: 60em;
   margin: 0 auto;
   padding: 0;
 }
@@ -34,7 +34,7 @@
 /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
 .cbp-af-header logo,
 .cbp-af-header h1 {
-  line-height: 90px;
+  line-height: 70px;
 }
 
 .cbp-af-header h1, .cbp-af-header logo {
@@ -52,18 +52,21 @@
 
 .cbp-af-header a img {
   margin-top: 14%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 15px;
 }
 
 .cbp-af-header nav a {
   color: #aaa;
   margin: 0 10px;
   font-size: 1em;
+  padding: 20px 0;
   text-transform: uppercase;
   letter-spacing: .07em;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .cbp-af-header nav a:hover {
-  color: #e9e516;
+  color: #ff7602;
   text-decoration: none;
 }
 
@@ -85,6 +88,10 @@
 
 /* Example Media Queries */
 @media screen and (max-width: 55em) {
+  .pd-b {
+    padding-bottom: 10px;
+  }
+
   .cbp-af-header .cbp-af-inner {
     width: 100%;
   }

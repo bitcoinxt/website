@@ -16,11 +16,11 @@ $fixed-font-size: 85%;
 $fixed-line-height: $base-line-height;
 
 // Text Colors
-$text-color: #47a3da; /*bright blue*/
+$text-color: #00639E; /*dark blue*/
 $bright_chartreusse: #e9e516;
-$loud-color: strengthen($text-color, .35);
+$loud-color: $text-color;
 $quiet-color: soften($text-color, 1.5);
-$header-color: strengthen($text-color, 0.66);
+$header-color: $text-color;
 $gray: #B2B7CA;
 //$paragraph-color: strengthen($gray, .25);
 $paragraph-color: $text-color;
@@ -130,7 +130,7 @@ $body-margin-x: 0%;
 
 .container > section > article > .main section > div {
 	width: 80%;
-	max-width: 69em;
+	max-width: 44em;
 	margin: 0 auto;
 	padding: 2em 1.875em 2em 1.875em;
 	/*background: rgba(198, 198, 197, 0.7);*/
@@ -139,7 +139,7 @@ $body-margin-x: 0%;
 
 .container > section > article > .main section > div.white {
 	width: 80%;
-	max-width: 69em;
+	max-width: 44em;
 	margin: 0 auto;
 	padding: 2em 1.875em 2em 1.875em;
 	background: #fff;
@@ -156,6 +156,10 @@ $body-margin-x: 0%;
 .main section p {
 	margin: 0;
 	padding: .5em 0;
+	line-height: 1.75;
+}
+
+.main section li {
 	line-height: 1.75;
 }
 
