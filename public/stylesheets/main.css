@@ -61,6 +61,16 @@ div > a:target, section:target {
   margin-right: 10px;
 }
 
+.main .main-icons {
+  text-align: center;
+  position: relative;
+}
+
+.main .main-icons div {
+  width: 30%;
+  display: inline-block;
+}
+
 /******************************************************/
 /* MailChimp Form Embed Code - Slim - 08/17/2011 */
 #mc_embed_signup form {
@@ -197,6 +207,14 @@ div > a:target, section:target {
     margin: 10px 0px 20px 0px;
     max-width: 500px;
   }
+
+  .main .main-icons {
+    margin: 20px 0;
+  }
+
+  .main .main-icons > div > h2 {
+    font-size: 100%;
+  }
 }
 @media screen and (max-width: 32.25em) {
   #mc_embed_signup input.email {
@@ -208,5 +226,9 @@ div > a:target, section:target {
 @media screen and (max-width: 24em) {
   #mc_embed_signup input.email {
     width: 90%;
+  }
+
+  .main .main-icons > div > h2 {
+    font-size: 80%;
   }
 }
