@@ -78,7 +78,7 @@
 
 .container > section > article > .main section > div {
   width: 80%;
-  max-width: 69em;
+  max-width: 44em;
   margin: 0 auto;
   padding: 2em 1.875em 2em 1.875em;
   /*background: rgba(198, 198, 197, 0.7);*/
@@ -86,7 +86,7 @@
 
 .container > section > article > .main section > div.white {
   width: 80%;
-  max-width: 69em;
+  max-width: 44em;
   margin: 0 auto;
   padding: 2em 1.875em 2em 1.875em;
   background: #fff;
