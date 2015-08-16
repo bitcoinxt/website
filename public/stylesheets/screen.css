@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
 /*dark blue*/
 /*#F59C09;*/
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 .center {
   text-align: center;
 }
@@ -120,6 +121,11 @@
   text-align: center;
   padding: 0px 13%;
   color: white;
+}
+
+.main h2 > i.fa {
+  display: block;
+  margin-bottom: 10px;
 }
 
 section.anchor {
@@ -297,6 +303,9 @@ body {
 .typography em, .content em, section[role=main] > article em, .typography i, .content i, section[role=main] > article i {
   font-style: italic;
 }
+.typography i.fa, .content i.fa, section[role=main] > article i.fa {
+  font-style: normal;
+}
 .typography abbr, .content abbr, section[role=main] > article abbr, .typography acronym, .content acronym, section[role=main] > article acronym {
   border-bottom: 1px dotted #6bc8ff;
 }
@@ -326,6 +335,7 @@ body {
   font-weight: bold;
   font-size: 125%;
   line-height: 1.099;
+  text-align: center;
 }
 .typography h3, .content h3, section[role=main] > article h3 {
   font-weight: bold;
