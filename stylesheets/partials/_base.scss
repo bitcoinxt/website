@@ -16,11 +16,11 @@ $fixed-font-size: 85%;
 $fixed-line-height: $base-line-height;
 
 // Text Colors
-$text-color: #47a3da; /*bright blue*/
+$text-color: #00639E; /*dark blue*/
 $bright_chartreusse: #e9e516;
-$loud-color: strengthen($text-color, .35);
+$loud-color: $text-color;
 $quiet-color: soften($text-color, 1.5);
-$header-color: strengthen($text-color, 0.66);
+$header-color: $text-color;
 $gray: #B2B7CA;
 //$paragraph-color: strengthen($gray, .25);
 $paragraph-color: $text-color;

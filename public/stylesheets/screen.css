@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
-/*bright blue*/
+/*dark blue*/
 /*#F59C09;*/
 .center {
   text-align: center;
@@ -182,7 +182,7 @@ section.anchor {
 
   .typography li, .content li, section[role=main] > article li, .content li, section[role=main] > article li, section > .main > article li {
     line-height: 1.75em;
-    color: #47a3da;
+    color: #00639E;
   }
 }
 .typography h3.announcement, .content h3.announcement, section[role=main] > article h3.announcement {
@@ -259,7 +259,7 @@ body {
 }
 
 body {
-  color: #47a3da;
+  color: #00639E;
   font-family: "Helvetica Neue", Hevetica, Arial, sans-serif;
   font-size: 110%;
   line-height: 1.4;
@@ -287,14 +287,14 @@ body {
   /*what*/
 }
 .typography strong, .content strong, section[role=main] > article strong, .typography b, .content b, section[role=main] > article b {
-  color: #2a94d3;
+  color: #00639E;
   font-weight: 500;
 }
 .typography em, .content em, section[role=main] > article em, .typography i, .content i, section[role=main] > article i {
   font-style: italic;
 }
 .typography abbr, .content abbr, section[role=main] > article abbr, .typography acronym, .content acronym, section[role=main] > article acronym {
-  border-bottom: 1px dotted #f1f8fc;
+  border-bottom: 1px dotted #6bc8ff;
 }
 .typography sub, .content sub, section[role=main] > article sub, .typography sup, .content sup, section[role=main] > article sup {
   font-size: 85%;
@@ -309,7 +309,7 @@ body {
   font-size: 95%;
 }
 .typography h1, .content h1, section[role=main] > article h1, .typography h2, .content h2, section[role=main] > article h2, .typography h3, .content h3, section[role=main] > article h3, .typography h4, .content h4, section[role=main] > article h4, .typography h5, .content h5, section[role=main] > article h5, .typography h6, .content h6, section[role=main] > article h6 {
-  color: #2581b9;
+  color: #00639E;
   margin: 1em 0;
 }
 .typography h1, .content h1, section[role=main] > article h1 {
@@ -379,11 +379,11 @@ body {
 .typography code, .content code, section[role=main] > article code, .typography dfn, .content dfn, section[role=main] > article dfn, .typography kbd, .content kbd, section[role=main] > article kbd, .typography samp, .content samp, section[role=main] > article samp, .typography tt, .content tt, section[role=main] > article tt {
   font-family: "Lato", Calibri, Arial, sans-serif;
   font-size: 95%;
-  color: #9ccdeb;
+  color: #05a2ff;
 }
 .typography pre, .content pre, section[role=main] > article pre {
-  background: #9ccdeb;
-  color: #b85c25;
+  background: #05a2ff;
+  color: #ff9c61;
   font-family: "Lato", Calibri, Arial, sans-serif;
   font-size: 95%;
   line-height: 1.4;
@@ -445,18 +445,18 @@ section[role=main] {
 footer {
   padding: 0 0% 50px;
   font-size: 90%;
-  color: #c6e3f4;
+  color: #38b5ff;
   background-color: #ef7220;
 }
 footer a:link {
-  color: #47a3da;
+  color: #00639E;
   text-decoration: none;
 }
 footer a:visited {
-  color: #47a3da;
+  color: #00639E;
 }
 footer a:hover {
-  color: #47a3da;
+  color: #00639E;
   text-decoration: underline;
 }
 footer p {
