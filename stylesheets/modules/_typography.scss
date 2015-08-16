@@ -113,11 +113,11 @@
 
 // Basic styles for list elements
 @mixin lists($indent: 1em, $ul-list-style: disc, $ol-list-style: decimal) {
-  ul, ol, dl { margin-top: 1em; margin-bottom: 1em; }
+  ul, ol, dl { margin-top: 0.75em; margin-bottom: 0.75em; }
   ul, ol, dd { padding-left: $indent; }
   ul { list-style: $ul-list-style; }
   ol { list-style: $ol-list-style; }
-  li { margin-top: 0.5em; margin-bottom: 0.5em; }
+  li { margin-top: 0.75em; margin-bottom: 0.75em; }
   li.on_grey { margin-top: 0.5em; margin-bottom: 0.5em; font-size: .85em; }
   dt { margin-top: 1em; }
   dd { margin-bottom: 1em; }

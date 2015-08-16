@@ -349,8 +349,8 @@ body {
   margin: .75em 0;
 }
 .typography ul, .content ul, section[role=main] > article ul, .typography ol, .content ol, section[role=main] > article ol, .typography dl, .content dl, section[role=main] > article dl {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 }
 .typography ul, .content ul, section[role=main] > article ul, .typography ol, .content ol, section[role=main] > article ol, .typography dd, .content dd, section[role=main] > article dd {
   padding-left: 1em;
@@ -362,8 +362,8 @@ body {
   list-style: decimal;
 }
 .typography li, .content li, section[role=main] > article li {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 }
 .typography li.on_grey, .content li.on_grey, section[role=main] > article li.on_grey {
   margin-top: 0.5em;
