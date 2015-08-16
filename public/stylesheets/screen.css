@@ -288,7 +288,7 @@ body {
 }
 .typography strong, .content strong, section[role=main] > article strong, .typography b, .content b, section[role=main] > article b {
   color: #00639E;
-  font-weight: 500;
+  font-weight: 700;
 }
 .typography em, .content em, section[role=main] > article em, .typography i, .content i, section[role=main] > article i {
   font-style: italic;
