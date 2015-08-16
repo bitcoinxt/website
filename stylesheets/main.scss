@@ -4,6 +4,10 @@ li {
     padding-bottom: 1em;
 }
 
+li.sublist {
+    list-style-type:none;
+}
+
 h2 {
     color: grey;
 }

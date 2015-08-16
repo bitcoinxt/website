@@ -22,7 +22,7 @@
 	padding: 0;
 }
 
-.cbp-af-header logo,
+.cbp-af-header .logo,
 .cbp-af-header h1,
 .cbp-af-header nav {
 	display: inline-block;
@@ -30,12 +30,12 @@
 }
 
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
-.cbp-af-header logo,
+.cbp-af-header .logo,
 .cbp-af-header h1 {
 	line-height: 70px;
 }
 
-.cbp-af-header h1, .cbp-af-header logo {
+.cbp-af-header h1, .cbp-af-header .logo {
 	text-transform: uppercase;
 	color: #333;
 	letter-spacing: 4px;
@@ -73,7 +73,7 @@
 	line-height: 115px;
 }
 
-.cbp-af-header h1, .cbp-af-header logo {
+.cbp-af-header h1, .cbp-af-header .logo {
 	font-size: 2em;
     width: 260px;
     height: auto;
@@ -97,7 +97,7 @@
 		height: auto;
 	}
 
-	.cbp-af-header logo,
+	.cbp-af-header .logo,
 	.cbp-af-header h1,
 	.cbp-af-header nav {
 		display: block;
@@ -106,7 +106,7 @@
 		float: none;
 	}
 
-	/*.cbp-af-header h1, .cbp-af-header logo,*/
+	/*.cbp-af-header h1, .cbp-af-header .logo,*/
 	.cbp-af-header nav a {
 		line-height: 90px;
 	}
@@ -121,7 +121,7 @@
 		line-height: 30px;
 	}
 
-	.cbp-af-header.cbp-af-header-shrink h1, .cbp-af-header.cbp-af-header-shrink logo {
+	.cbp-af-header.cbp-af-header-shrink h1, .cbp-af-header.cbp-af-header-shrink .logo {
 		font-size: 2em;
 	}
 
@@ -142,7 +142,7 @@
 		margin-top: 0px;
 	}
 
-	.cbp-af-header logo,
+	.cbp-af-header .logo,
 	.cbp-af-header h1 {
 	line-height: 50px;
 }
