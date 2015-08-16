@@ -60,6 +60,7 @@
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: .07em;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .cbp-af-header nav a:hover {
