@@ -57,6 +57,10 @@ div > a:target, section:target {
   top: 1px;
 }
 
+#download-link i.fa {
+  margin-right: 10px;
+}
+
 /******************************************************/
 /* MailChimp Form Embed Code - Slim - 08/17/2011 */
 #mc_embed_signup form {
