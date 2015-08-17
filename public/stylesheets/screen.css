@@ -133,6 +133,7 @@ section.anchor {
   margin-top: -50px;
 }
 
+#releases-page-links,
 #releases-page-links > .muted_link {
   color: #D3D3D3;
 }
