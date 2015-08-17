@@ -208,4 +208,12 @@ div > a:target, section:target {
   #mc_embed_signup input.email {
     width: 90%;
   }
+
+  #download-link.myButton {
+    font-size: 1.2em;
+  }
+
+  .main .main-icons > div > h2 {
+    font-size: 80%;
+  }
 }
