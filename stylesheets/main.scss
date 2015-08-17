@@ -10,9 +10,10 @@ h2 {
 
 
 /* Make scrolling to #anchor elements work with the header */
-div > a:target, section:target {
-  padding-top: 136px; 
-  margin-top: -136px;
+div > a:target,
+section>div>h2:target {
+  padding-top: 140px;
+  margin-top: -140px;
 }
 
 
