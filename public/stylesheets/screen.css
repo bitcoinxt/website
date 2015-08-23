@@ -330,6 +330,7 @@ body {
   font-size: 150%;
   line-height: 1.099;
   margin: 0;
+  text-align: center;
 }
 .typography h2, .content h2, section[role=main] > article h2 {
   font-weight: bold;
