@@ -133,6 +133,7 @@ section.anchor {
   margin-top: -50px;
 }
 
+#releases-page-links,
 #releases-page-links > .muted_link {
   color: #D3D3D3;
 }
@@ -328,26 +329,26 @@ body {
 .typography h1, .content h1, section[role=main] > article h1 {
   font-weight: bold;
   font-size: 150%;
-  line-height: 1.099;
-  margin: 0;
   text-align: center;
+  line-height: 1.4;
+  margin: 0 1em;
 }
 .typography h2, .content h2, section[role=main] > article h2 {
   font-weight: bold;
   font-size: 125%;
-  line-height: 1.099;
+  line-height: 1.4;
   text-align: center;
 }
 .typography h3, .content h3, section[role=main] > article h3 {
   font-weight: bold;
   font-size: 140%;
-  line-height: 1.169;
+  line-height: 1.4;
   margin: 1.25em 0 0.5em;
 }
 .typography h4, .content h4, section[role=main] > article h4 {
   font-weight: bold;
   font-size: 110%;
-  line-height: 1.26;
+  line-height: 1.4;
   margin: 0.5em 0 0.5em;
 }
 .typography h5, .content h5, section[role=main] > article h5 {
