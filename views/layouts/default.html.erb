@@ -2,10 +2,10 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= @title %> - BitcoinXT</title>
-    <meta name="keywords" content="bitcoin_xt, crypto_currency" />
+    <meta name="keywords" content="bitcoin, bitcoin xt, bitcoin core, block size, blocks, limit, mining, network, vision, principles, source" />
     <meta name="author" content="curvestudio" />
     <link rel="shortcut icon" href="/favicon.png">
     <link rel="stylesheet" href="/stylesheets/screen.css">
@@ -23,14 +23,15 @@
         <div class="cbp-af-header cbp-af-header-shrink">
           <div class="cbp-af-inner">
             <!-- <h1><a href="/"><%#= image "bitcoin-logo" %></a></h1> -->
-            <logo><a href="/"><%= image "bitcoin-logo" %></a></logo>
-
+            <div class="logo">
+              <a href="/" title="Bitcoin XT"><%= image "bitcoin-logo", {"alt" => "Bitcoin XT"} %></a>
+            </div>
             <nav class="pd-b">
-              <a href="/">Welcome</a>
-              <a href="/#sec-hardfork">Bigger&nbsp;blocks</a>
-              <a href="/patches.html">Patches</a>
-              <a href="/faq.html">FAQ</a>
-              <a href="/#sec-takepart">Take&nbsp;part</a>
+              <a href="/" title="Welcome">Welcome</a>
+              <a href="/#sec-hardfork" title="Bigger&nbsp;blocks">Bigger&nbsp;blocks</a>
+              <a href="/patches.html" title="Patches">Patches</a>
+              <a href="/faq.html" title="Frequently asked questions">FAQ</a>
+              <a href="/#sec-takepart" title="Take&nbsp;part">Take&nbsp;part</a>
             </nav>
           </div>
         </div>

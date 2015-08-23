@@ -1,6 +1,8 @@
+<% @title = "APT repository" %>
       <div class="main">
         <section>
         <div>
+        <h1>APT repository</h1>
   	    <p>
   	    We provide an APT repository for Debian and Ubuntu users, for bitcoind and 64 bit machines only. To use it, follow these steps.
   	    Run all commands as root.
@@ -8,7 +10,7 @@
 
         <p>Firstly, import the PGP key used to sign the packages:</p>
 
-        <tt><pre>
+        <pre>
 # cat &lt;&lt;EOF | apt-key add -
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: GPGTools - https://gpgtools.org
@@ -41,19 +43,19 @@ cnMXk0U=
 =zxQ5
 -----END PGP PUBLIC KEY BLOCK-----
 EOF
-</pre></tt>
+</pre>
 
-        <p>The key fingerprint is FB2C 2916 3890 E919 6434  BEFE 399C 6E4E 97B6 956B.</tt></p>
+        <p>The key fingerprint is FB2C 2916 3890 E919 6434  BEFE 399C 6E4E 97B6 956B.</p>
 
         <p>Now configure apt, by running this as root:</p>
 
-        <code><pre>
-# echo 'deb [ arch=amd64 ] http://bitcoinxt.software.s3-website-us-west-2.amazonaws.com/apt wheezy main' > /etc/apt/sources.list.d/bitcoinxt.list
-# apt-get update</pre></code>
+        <pre>
+# echo 'deb [ arch=amd64 ] http://bitcoinxt.software.s3-website-us-west-2.amazonaws.com/apt wheezy main' &gt; /etc/apt/sources.list.d/bitcoinxt.list
+# apt-get update</pre>
 
         <p>And finally install:</p>
 
-        <code><pre># apt-get install bitcoinxt</pre></code>
+        <pre># apt-get install bitcoinxt</pre>
 
         <p>Note that the server binary is named "bitcoinxt" in this package, not bitcoind. There are no init scripts or other
         such things installed, so please be aware that the node will not be started, and if you do an apt-get upgrade, you 
