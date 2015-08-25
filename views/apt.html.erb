@@ -10,8 +10,7 @@
 
         <p>Firstly, import the PGP key used to sign the packages:</p>
 
-        <pre>
-# cat &lt;&lt;EOF | apt-key add -
+        <pre><code># cat &lt;&lt;EOF | apt-key add -
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: GPGTools - https://gpgtools.org
 
@@ -42,20 +41,18 @@ TdTaPwul1eVlRmq/tRI5j6xbEkidkq38vWgSlOh2PjH1FVy0zGnDwdlSHN1sNk9g
 cnMXk0U=
 =zxQ5
 -----END PGP PUBLIC KEY BLOCK-----
-EOF
-</pre>
+EOF</code></pre>
 
         <p>The key fingerprint is FB2C 2916 3890 E919 6434  BEFE 399C 6E4E 97B6 956B.</p>
 
         <p>Now configure apt, by running this as root:</p>
 
-        <pre>
-# echo 'deb [ arch=amd64 ] http://bitcoinxt.software.s3-website-us-west-2.amazonaws.com/apt wheezy main' &gt; /etc/apt/sources.list.d/bitcoinxt.list
-# apt-get update</pre>
+        <pre><code># echo 'deb [ arch=amd64 ] http://bitcoinxt.software.s3-website-us-west-2.amazonaws.com/apt wheezy main' &gt; /etc/apt/sources.list.d/bitcoinxt.list
+# apt-get update</code></pre>
 
         <p>And finally install:</p>
 
-        <pre># apt-get install bitcoinxt</pre>
+        <pre><code># apt-get install bitcoinxt</code></pre>
 
         <p>Note that the server binary is named "bitcoinxt" in this package, not bitcoind. There are no init scripts or other
         such things installed, so please be aware that the node will not be started, and if you do an apt-get upgrade, you 

@@ -127,19 +127,30 @@
 
 // Typewritter styles for fixed-font elements
 @mixin fixed-font-elements($font-family: $fixed-font-family, $font-size: $fixed-font-size, $line-height: $fixed-line-height) {
-  code, dfn, kbd, samp, tt {
+  code, dfn, kbd, samp, tt, pre {
     font-family: $font-family;
     font-size: 95%;
-    color: soften($text-color);
+    background: soften($text-color);
+    color: if(lightness($text-color) > 50, #000, #fff);
+    @include border-radius;
+  }
+  code, dfn, kbd, samp, tt {
+    padding: 0 0.5em;
+    display: inline-block;
   }
   pre {
-    background: soften($text-color);
-    color: invert($text-color);
-    font-family: $font-family;
-    font-size: 95%;
     line-height: $line-height;
-    margin: 1.5em 0;
-    padding: 1em;
-    @include border-radius;
+    padding: 0.5em 1em;
+    @media screen and (max-width: 55em) {
+      display: inline-block;
+    }
+  }
+  pre code {
+    display: block;
+    padding: 0.5em 0;
+    overflow-x: auto;
+    @media screen and (max-width: 55em) {
+      overflow-x: visible;
+    }
   }
 }

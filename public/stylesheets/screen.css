@@ -390,22 +390,37 @@ body {
 .typography dd, .content dd, section[role=main] > article dd {
   margin-bottom: 1em;
 }
-.typography code, .content code, section[role=main] > article code, .typography dfn, .content dfn, section[role=main] > article dfn, .typography kbd, .content kbd, section[role=main] > article kbd, .typography samp, .content samp, section[role=main] > article samp, .typography tt, .content tt, section[role=main] > article tt {
+.typography code, .content code, section[role=main] > article code, .typography dfn, .content dfn, section[role=main] > article dfn, .typography kbd, .content kbd, section[role=main] > article kbd, .typography samp, .content samp, section[role=main] > article samp, .typography tt, .content tt, section[role=main] > article tt, .typography pre, .content pre, section[role=main] > article pre {
   font-family: "Lato", Calibri, Arial, sans-serif;
   font-size: 95%;
-  color: #05a2ff;
-}
-.typography pre, .content pre, section[role=main] > article pre {
   background: #05a2ff;
-  color: #ff9c61;
-  font-family: "Lato", Calibri, Arial, sans-serif;
-  font-size: 95%;
-  line-height: 1.4;
-  margin: 1.5em 0;
-  padding: 1em;
+  color: #fff;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
+}
+.typography code, .content code, section[role=main] > article code, .typography dfn, .content dfn, section[role=main] > article dfn, .typography kbd, .content kbd, section[role=main] > article kbd, .typography samp, .content samp, section[role=main] > article samp, .typography tt, .content tt, section[role=main] > article tt {
+  padding: 0 0.5em;
+  display: inline-block;
+}
+.typography pre, .content pre, section[role=main] > article pre {
+  line-height: 1.4;
+  padding: 0.5em 1em;
+}
+@media screen and (max-width: 55em) {
+  .typography pre, .content pre, section[role=main] > article pre {
+    display: inline-block;
+  }
+}
+.typography pre code, .content pre code, section[role=main] > article pre code {
+  display: block;
+  padding: 0.5em 0;
+  overflow-x: auto;
+}
+@media screen and (max-width: 55em) {
+  .typography pre code, .content pre code, section[role=main] > article pre code {
+    overflow-x: visible;
+  }
 }
 
 .content .box, section[role=main] > article .box {
