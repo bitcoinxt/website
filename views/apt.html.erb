@@ -1,6 +1,14 @@
       <div class="main">
         <section>
         <div>
+          <p>
+            There are two methods for getting started quickly on a linux machine:
+            <ol>
+              <li>Add an apt repository to a debian or ubuntu installation.</li>
+              <li>Install a docker image on a <a href="https://www.docker.com/">docker</a> supporting system.</li>
+            </ol>
+          </p>
+          <h2>1. APT Repository</h2>
   	    <p>
   	    We provide an APT repository for Debian and Ubuntu users, for bitcoind and 64 bit machines only. To use it, follow these steps.
   	    Run all commands as root.
@@ -56,8 +64,19 @@ EOF
         <code><pre># apt-get install bitcoinxt</pre></code>
 
         <p>Note that the server binary is named "bitcoinxt" in this package, not bitcoind. There are no init scripts or other
-        such things installed, so please be aware that the node will not be started, and if you do an apt-get upgrade, you 
-        will have to restart the server yourself for the update to take effect.
+        such things installed, so please be aware that the node will not be started, and if you do an apt-get upgrade, you
+        will have to restart the server yourself for the update to take effect.</p>
+
+        <h2>2. Docker Image</h2>
+
+        <p>
+        There is a third party docker image created by 5an1ty hosted on dockerhub:
+        <a href="https://hub.docker.com/r/5an1ty/bitcoinxt/">5an1ty/bitcoinxt</a>
+        </p>
+        <p>
+          This allows you to get a node up and running in seconds. All you need is a machine capable of running <a href="https://www.docker.com/">docker</a>.
+        </p>
+
         </div>
         </section>
       </div>
