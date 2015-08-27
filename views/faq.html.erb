@@ -4,7 +4,7 @@
       <div>
       <h1>Frequently asked questions</h1>
 
-      <h2><a href="#how-do-i-upgrade" id="how-do-i-upgrade">#</a> <b>How do I switch to XT?</b></h2>
+      <h2><a href="#how-do-i-upgrade" id="how-do-i-upgrade" title="How do I switch to XT?">#</a> <b>How do I switch to XT?</b></h2>
 
       <p>Upgrading is easy: just download and run from our website as normal. Bitcoin XT uses the same data directories 
       and configuration as Bitcoin Core, so if you were previously running that you won't need to download the block 
@@ -15,7 +15,7 @@
       </section>
 
       <section><div>
-      <h2><a href="#is-there-risk" id="is-there-risk">#</a> <b>Is there any risk involved in running XT?</b></h2>
+      <h2><a href="#is-there-risk" id="is-there-risk" title="Is there any risk involved in running XT?">#</a> <b>Is there any risk involved in running XT?</b></h2>
 
       <p>No. If the big blocks change doesn't obtain enough support to be successful then you are unaffected. If it does, then you will follow the new consensus and are unaffected.</p>
 
@@ -23,7 +23,7 @@
 
       <section>
       <div>
-      <h2><a href="#why-did-the-xt-fork-happen" id="why-did-the-xt-fork-happen">#</a> <b>Why did the Bitcoin XT fork happen?</b></h2>
+      <h2><a href="#why-did-the-xt-fork-happen" id="why-did-the-xt-fork-happen" title="Why did the Bitcoin XT fork happen?">#</a> <b>Why did the Bitcoin XT fork happen?</b></h2>
       <p>Bitcoin XT was created due to a series of fundamental disagreements between Bitcoin core developers. The 
       disagreements revolve around questions like "Should the block chain grow to match user demand?", "What data 
       should the Bitcoin protocol provide to clients?" and "How should technical decisions be made?".</p>
@@ -42,13 +42,13 @@
 
       <p>After a long series of attempts to find compromise in 2015, it became clear that there was no way to resolve these differences except via a fork.</p>
 
-      <p>You can read a longer article on the topic called <a href="https://medium.com/@octskyward/why-is-bitcoin-forking-d647312d22c1">"Why is Bitcoin forking?"</a>.</p>
+      <p>You can read a longer article on the topic called <a href="https://medium.com/@octskyward/why-is-bitcoin-forking-d647312d22c1" title="Why is Bitcoin forking? – Medium">"Why is Bitcoin forking?"</a>.</p>
       </div>
       </section>
 
       <section>
       <div>
-      <h2><a href="#bigger-blocks-hard-fork" id="bigger-blocks-hard-fork">#</a> <b>How does the change to 8 megabyte blocks work?</b></h2>
+      <h2><a href="#bigger-blocks-hard-fork" id="bigger-blocks-hard-fork" title="How does the change to 8 megabyte blocks work?">#</a> <b>How does the change to 8 megabyte blocks work?</b></h2>
 
       <p>Anyone who mines with XT or a node that uses the "bigblocks patches" by Gavin Andresen marks their blocks with a
          version number that indicates support for larger blocks. If 75% of blocks are indicating support a flag is set in 
@@ -66,7 +66,7 @@
 
       <section>
       <div>
-      <h2><a href="#hard-fork-alternatives" id="hard-fork-alternatives">#</a> <b>Why can't alternative approaches to the hard fork be used?</b></h2>
+      <h2><a href="#hard-fork-alternatives" id="hard-fork-alternatives" title="Why can't alternative approaches to the hard fork be used?">#</a> <b>Why can't alternative approaches to the hard fork be used?</b></h2>
 
       <p>The max block size limit is a rule that every node checks. It was put in as a temporary measure by Satoshi 
          and always intended to be removed, which implies a hard fork as older nodes will reject blocks created by newer
@@ -85,7 +85,7 @@
 
       <section>
       <div>
-      <h2><a href="#soft-forks" id="soft-forks">#</a> <b>Can a soft fork be used instead? Is that better?</b></h2>
+      <h2><a href="#soft-forks" id="soft-forks" title="Can a soft fork be used instead? Is that better?">#</a> <b>Can a soft fork be used instead? Is that better?</b></h2>
 
       <p>In the case of a block size change, no soft fork is possible because old nodes will realise they are not checking
       the same rules as soon as they see a block larger than what they are expecting. Any attempts to trick them into
@@ -98,7 +98,7 @@
       <section>
       <div>
 
-      <h2><a href="#double-currencies" id="double-currencies">#</a> <b>Does a hard fork cause Bitcoin to become two separate currencies?</b></h2>
+      <h2><a href="#double-currencies" id="double-currencies" title="Does a hard fork cause Bitcoin to become two separate currencies?">#</a> <b>Does a hard fork cause Bitcoin to become two separate currencies?</b></h2>
 
       <p>The idea that people can speculate or dump coins on one side of the block chain is a common misconception. The Bitcoin protocol does not have a field for transactions to specify a chain, so ordinary transactions made just after the fork will be included in both assuming there is sufficient capacity on both sides.</p>
 
@@ -113,7 +113,7 @@
 
       <section>
       <div>
-      <h2><a href="#why-other-changes" id="why-other-currencies">#</a> <b>Why does XT include non-block size related changes? Can there be a bigblocks only version?</b></h2>
+      <h2><a href="#why-other-changes" id="why-other-currencies" title="Why does XT include non-block size related changes? Can there be a bigblocks only version?">#</a> <b>Why does XT include non-block size related changes? Can there be a bigblocks only version?</b></h2>
 
       <p>Bitcoin XT is the result of a major change in development direction by Bitcoin Core, away from the original
       vision. This split is most visible in the block size debate but frequently impacts other issues too,
@@ -122,7 +122,7 @@
       is only one.</p>
 
       <p>Whilst we do not provide downloadable binaries of a Core that includes only the bigger block changes, the
-      patches are maintained in a standalone manner on the git <a href="https://github.com/bitcoinxt/bitcoinxt/tree/only-bigblocks">only-bigblocks</a> branch. By compiling this code yourself you can obtain a Core that isn't
+      patches are maintained in a standalone manner on the git <a href="https://github.com/bitcoinxt/bitcoinxt/tree/only-bigblocks" title="only-bigblocks patches">only-bigblocks</a> branch. By compiling this code yourself you can obtain a Core that isn't
       rebranded and which includes only patches needed to vote for and follow the 8mb+ chain.</p>
 
       </div>
@@ -130,7 +130,7 @@
 
       <section>
       <div>
-      <h2><a href="#testnet" id="testnet">#</a> <b>What will happen with the testnet?</b></h2>
+      <h2><a href="#testnet" id="testnet" title="What will happen with the testnet?">#</a> <b>What will happen with the testnet?</b></h2>
 
       <p>
       Bitcoin XT is programmed to start trying to fork the testnet chain immediately upon release. We do not expect testnet to smoothly transition in the same way as the main network, as single miners can easily dominate the testnet and then leave, so the idea of miner consensus doesn't apply in the same way there. The point of exercising the code on the testnet is to put the transition logic through its paces and ensure that chain reorgs back and forth are working correctly.
@@ -140,13 +140,13 @@
 
       <section>
       <div>
-      <h2><a href="#who-is-involved" id="who-is-involved">#</a> <b>How are decisions made?</b></h2>
+      <h2><a href="#who-is-involved" id="who-is-involved" title="How are decisions made?">#</a> <b>How are decisions made?</b></h2>
 
       <p>Bitcoin XT is a patch set on top of Bitcoin Core. It is currently maintained by Mike Hearn in collaboration with Gavin Andresen and Tom Harding. If a patch seems in line with the principles of the project it will be considered for inclusion. If the developer is willing to assist with rebasing work, that also helps build the case for inclusion.</p>
 
       <p>Decisions are made through agreement between Mike and Gavin, with Mike making the final call if a serious dispute were to arise. In the event that such a dispute cannot be resolved this way and an XT developer were to make a fork, this website would provide a discussion and link to the competing version.</p>
 
-      <p>Mike is a former senior software engineer at Google. He is founder of two Bitcoin projects: <a href="https://bitcoinj.github.io/">bitcoinj</a> and <a href="https://www.vinumeris.com/lighthouse">Lighthouse</a>. BitcoinJ was the first ever SPV wallet and is widely used by many developers. It forms the foundation of several wallets, including the most popular <a href="https://play.google.com/store/apps/details?id=de.schildbach.wallet&amp;hl=en">Android Bitcoin wallet</a>. He first used Bitcoin in April 2009 and has been a developer since 2010. With Gavin he designed the Bitcoin payment protocol, which has been widely adopted by payment processors and wallets. He is the author of the primary documents about Bitcoin <a href="https://en.bitcoin.it/wiki/Contracts">smart contracts</a> and <a href="https://en.bitcoin.it/wiki/Scalability">scalability</a>, and coined the name "Bitcoin Core".</p>
+      <p>Mike is a former senior software engineer at Google. He is founder of two Bitcoin projects: <a href="https://bitcoinj.github.io/" title="bitcoinj">bitcoinj</a> and <a href="https://www.vinumeris.com/lighthouse" title="Lighthouse - Raise money with Bitcoin">Lighthouse</a>. BitcoinJ was the first ever SPV wallet and is widely used by many developers. It forms the foundation of several wallets, including the most popular <a href="https://play.google.com/store/apps/details?id=de.schildbach.wallet&amp;hl=en" title="Bitcoin Wallet">Android Bitcoin wallet</a>. He first used Bitcoin in April 2009 and has been a developer since 2010. With Gavin he designed the Bitcoin payment protocol, which has been widely adopted by payment processors and wallets. He is the author of the primary documents about Bitcoin <a href="https://en.bitcoin.it/wiki/Contracts" title="Smart contracts">smart contracts</a> and <a href="https://en.bitcoin.it/wiki/Scalability" title="Scalability">scalability</a>, and coined the name "Bitcoin Core".</p>
 
       <p>Gavin Andresen is a veteran of several startups and has extensive experience of work on standards committees. Gavin started developing on Bitcoin in 2010 and took over from Satoshi when he left. He created the first ever Bitcoin faucet and has developed many upgrades to the original Bitcoin code base. He was maintainer of Bitcoin Core until mid-2014, when he stepped back to focus on research.</p>
       </div>
