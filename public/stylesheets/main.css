@@ -15,10 +15,10 @@ h2 {
 }
 
 /* Make scrolling to #anchor elements work with the header */
-div > a:target,
+section > div > h2 > a:target,
 section > div > h2:target {
-  padding-top: 140px;
-  margin-top: -140px;
+  padding-top: 150px;
+  margin-top: -150px;
 }
 
 #download {
