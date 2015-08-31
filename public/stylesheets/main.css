@@ -15,10 +15,10 @@ h2 {
 }
 
 /* Make scrolling to #anchor elements work with the header */
-section > div > h2 > a:target,
+div > a:target,
 section > div > h2:target {
-  padding-top: 150px;
-  margin-top: -150px;
+  padding-top: 140px;
+  margin-top: -140px;
 }
 
 #download-link.myButton {
@@ -242,4 +242,20 @@ section > div > h2:target {
   .main .main-icons > div > h2 {
     font-size: 80%;
   }
+}
+/* -- Onboard -- */
+.onboard_text {
+  text-align: justify;
+}
+
+.onboard_logo {
+  float: left;
+  width: 200px;
+  height: 70px;
+  margin: 0 24px 0 0;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.onboard_text p {
+  margin-bottom: 20px;
 }
