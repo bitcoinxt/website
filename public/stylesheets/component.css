@@ -62,16 +62,19 @@
   padding: 20px 0;
   text-transform: uppercase;
   letter-spacing: .07em;
+  line-height: 115px;
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.cbp-af-header-ru nav a {
+  margin: 0 8px;
+  font-size: 0.9em;
+  letter-spacing: .05em;
 }
 
 .cbp-af-header nav a:hover {
   color: #ff7602;
   text-decoration: none;
-}
-
-.cbp-af-header nav a {
-  line-height: 115px;
 }
 
 .cbp-af-header h1, .cbp-af-header .logo {
@@ -84,6 +87,31 @@
 .cbp-af-header a img {
   width: 100%;
   margin-top: 20px;
+}
+
+.cbp-af-header .lang {
+  position: absolute;
+  top: 5px;
+  right: 18px;
+}
+
+.cbp-af-header .lang a {
+  color: #aaa;
+  padding: 3px 6px 3px 25px;
+  background: url(/images/lang_icons.png) no-repeat;
+}
+
+.cbp-af-header .lang a:hover {
+  color: #ff7602;
+  text-decoration: none;
+}
+
+.cbp-af-header .lang .en {
+  background-position: 0px 3px;
+}
+
+.cbp-af-header .lang .ru {
+  background-position: -70px 3px;
 }
 
 /* Example Media Queries */

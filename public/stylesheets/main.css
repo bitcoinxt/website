@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin,cyrillic);
 li {
   padding-bottom: 1em;
 }
@@ -19,12 +19,6 @@ div > a:target,
 section > div > h2:target {
   padding-top: 140px;
   margin-top: -140px;
-}
-
-#download {
-  text-align: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
 }
 
 #download-link.myButton {
@@ -94,10 +88,6 @@ section > div > h2:target {
   padding: 10px 0 10px 0;
 }
 
-#mc_embed_signup_hidden {
-  position: absolute;
-  left: -5000px;
-}
 #mc_embed_signup input {
   border: 1px solid #999;
   -webkit-appearance: none;
