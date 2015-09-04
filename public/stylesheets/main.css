@@ -21,6 +21,12 @@ section > div > h2:target {
   margin-top: -140px;
 }
 
+#download {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 #download-link.myButton {
   -moz-box-shadow: inset 0px 1px 0px 0px #fce2c1;
   -webkit-box-shadow: inset 0px 1px 0px 0px #fce2c1;
@@ -207,6 +213,11 @@ section > div > h2:target {
   margin-left: 1.05em;
   text-align: left;
   padding: .5em 0;
+}
+
+#mc_embed_signup_hidden {
+  position: absolute;
+  left: -5000px;
 }
 
 @media screen and (max-width: 55em) {
