@@ -28,16 +28,16 @@
               <a href="index.html" title="Bitcoin XT"><%= image "bitcoin-logo", {"alt" => "Bitcoin XT"} %></a>
             </div>
             <nav class="pd-b">
-              <a accesskey="1" href="index.html" title="Welcome">Welcome</a>
-              <a href="index.html#sec-hardfork" title="Bigger&nbsp;blocks">Bigger&nbsp;blocks</a>
+              <a accesskey="1" href="/" title="Welcome">Welcome</a>
+              <a href="/#sec-hardfork" title="Bigger&nbsp;blocks">Bigger&nbsp;blocks</a>
               <a accesskey="2" href="onboard.html" title="Who's Onboard">Who's&nbsp;Onboard</a>
-              <a href="patches.html" title="Patches">Patches</a>
+              <a href="/" title="Patches">Patches</a>
               <a accesskey="5" href="faq.html" title="Frequently asked questions">FAQ</a>
-              <a href="index.html#sec-takepart" title="Take&nbsp;part">Take&nbsp;part</a>
+              <a href="/#sec-takepart" title="Take&nbsp;part">Take&nbsp;part</a>
             </nav>
             <div class="lang">
-              <a class="en" href="/<%= File.basename(request.fullpath) %>" title="English">EN</a>
-              <a class="ru" href="/ru/<%= File.basename(request.fullpath) %>" title="Russian">RU</a>
+              <a class="en" href="/<%= File.basename(request.fullpath)[0..-5] %>" title="English">EN</a>
+              <a class="ru" href="/ru/<%= File.basename(request.fullpath)[0..-5] %>" title="Russian">RU</a>
             </div>
           </div>
         </div>
