@@ -33,6 +33,19 @@ Web browser at this URL:
 
 <http://localhost:4000>
 
+Bundler
+-------
+Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed. 
+
+Bundler is an exit from dependency hell, and ensures that the gems you need are present in development, staging, and production. Starting work on a project is as simple as bundle install.
+
+To install Bundler open a terminal window and run this command:
+
+    gem install bundler
+    
+After Bundler is installed, you can set up the project dependencies in a given directory like this:
+
+    bundle install
 
 Compass and Sass
 ----------------
