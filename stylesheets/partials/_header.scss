@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin,cyrillic);
+
+.pd-b { padding-bottom: 0; }
+
+.cbp-af-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f6f6f6;
+    z-index: 10000;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(30% 50px, #F47B20, #F47B20 400px);
+    background-image: url("../images/bkgrnd_wide.png");
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-position-x: 55%;
+}
+.cbp-af-header .cbp-af-inner {
+    width: 90%;
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 0;
+}
+.cbp-af-header .logo,
+.cbp-af-header h1,
+.cbp-af-header nav {
+    display: inline-block;
+    position: relative;
+}
+ /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+.cbp-af-header .logo,
+.cbp-af-header h1 {
+    line-height: 70px;
+}
+.cbp-af-header h1,
+.cbp-af-header .logo {
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: 4px;
+    font-size: 4em;
+    margin: 0;
+    float: left;
+}
+.cbp-af-header nav {
+    float: right;
+}
+.cbp-af-header a img {
+    margin-top: 14%;
+    box-shadow:rgba(0, 0, 0, 0.2) 0 0 15px;
+}
+.cbp-af-header nav a {
+    color: #aaa;
+    margin: 0 10px;
+    font-size: 1em;
+    padding: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    line-height: 115px;
+    text-shadow:0 0 15px rgba(0, 0, 0, 0.5);
+}
+.cbp-af-header-ru nav a {
+  margin: 0 8px;
+  font-size: 0.9em;
+  letter-spacing: .05em;
+}
+.cbp-af-header nav a:hover {
+    color: #ff7602;
+    text-decoration: none;
+}
+.cbp-af-header h1,
+.cbp-af-header .logo {
+    font-size: 2em;
+    width: 260px;
+    height: auto;
+    display: block;
+}
+.cbp-af-header a img {
+    width: 100%;
+    margin-top: 20px;
+}
+.cbp-af-header .lang {
+    position: absolute;
+    top: 5px;
+    right: 18px;
+}
+.cbp-af-header .lang a {
+    color: #aaa;
+    padding: 3px 6px 3px 25px;
+    background: url(/images/lang_icons.png) no-repeat;
+}
+.cbp-af-header .lang a:hover {
+    color: #ff7602;
+    text-decoration: none;
+}
+.cbp-af-header .lang .en {
+    background-position: 0px 3px;
+}
+.cbp-af-header .lang .ru {
+    background-position: -70px 3px;
+}
+
+@media screen and (max-width: 55em) {
+    .pd-b {
+        padding-bottom: 10px; 
+    }
+    .cbp-af-header .cbp-af-inner {
+        width: 100%;
+    }
+    .cbp-af-header {
+        height: auto;
+    }
+    .cbp-af-header .logo,
+    .cbp-af-header h1,
+    .cbp-af-header nav {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        float: none;
+    }
+    .cbp-af-header nav a {
+        line-height: 90px;
+    }
+    .cbp-af-header nav a {
+        margin: 0 10px;
+    }
+    .cbp-af-header.cbp-af-header-shrink h1,
+    .cbp-af-header.cbp-af-header-shrink nav a {
+        line-height: 30px;
+    }
+    .cbp-af-header.cbp-af-header-shrink h1,
+    .cbp-af-header.cbp-af-header-shrink .logo {
+        font-size: 2em;
+    }
+    .cbp-af-header.cbp-af-header-shrink nav a {
+        font-size: .80em;;
+    }
+    .cbp-af-header a img {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 32.25em) {
+    .cbp-af-header a img,
+    .cbp-af-header.cbp-af-header-shrink a img {
+        margin-top: 15px;
+        width: 80%;
+        margin-top: 0px;
+    }
+    .cbp-af-header .logo,
+    .cbp-af-header h1 {
+        line-height: 50px;
+    }
+    .cbp-af-header nav a,
+    .cbp-af-header.cbp-af-header-shrink nav a {
+        font-size: .6em;
+        margin: 0 5px;
+
+    }
+    .cbp-af-header {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 24em) {
+    .cbp-af-header nav a,
+    .cbp-af-header.cbp-af-header-shrink nav a {
+        line-height: 1;
+        margin: 0 5px;
+        font-size: .55em;
+    }
+    .cbp-af-header a img {
+        width: 80%;
+        margin-top: 0px;
+        margin: 0 auto;
+    }
+    .cbp-af-header nav a {
+        font-size: .80em;
+        margin: 0 7px;
+    }
+    .cbp-af-header {
+        /*background-position-x: 200%;*/
+        height: auto;
+    }
+}
