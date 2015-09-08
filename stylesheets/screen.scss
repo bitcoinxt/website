@@ -2,7 +2,9 @@
 // Application Stylesheet
 //
 
-@import "partials/base";
+@import "modules/all";
+@import "partials/normalize";
 @import "partials/content";
 @import "partials/layout";
+@import "partials/header";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";

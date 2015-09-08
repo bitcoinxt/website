@@ -2,38 +2,142 @@
 // Basic layout and styles for site
 //
 
+// Layout
 
-header[role=banner] {
-  padding: 0px $body-margin-x;
-  position: relative;
-  
-  a { @include basic-link(mix($banner-color, white, 20%), $hover: $bright_chartreusse, $decoration: "plain"); }
-  
-  .action-link {
-    position: absolute;
-    right: $body-margin-x;
-    top: 55px;
-    a {
-      background: rgba(white, 0.1);
-      @include border-radius;
-      display: block;
-      padding: 0.5em 1em;
-      @include text-shadow(mix($banner-color, black, 50%) 0 1px 0);
-      &:after { content: " ⇢"; }
-    }
-  }
+body {
+    @include base-font;
+    background: $background-color;
 }
 
-section[role=main] {
-  padding: 0px $body-margin-x;
-  box-sizing: border-box;
+header[role=banner] {
+    padding: 0px $body-margin-x;
+    position: relative;
+    
+    a { @include basic-link(mix($banner-color, white, 20%), $hover: $bright_chartreusse, $decoration: "plain"); }
+    
+        .action-link {
+        position: absolute;
+        right: $body-margin-x;
+        top: 55px;
+        a {
+            background: rgba(white, 0.1);
+            border-radius:8px;
+            display: block;
+            padding: 0.5em 1em;
+            &:after { content: " ⇢"; }
+        }
+    }
 }
 
 footer {
-  padding: 0 $body-margin-x 50px;
-  font-size: 90%;
-  color: $quiet_color;
-  a { @include basic-link($text-color); }
-  p { margin: 1em 0em; padding: 1.5em 1em; }
-  background-color: $orange;
+    padding: 0 $body-margin-x 50px;
+    font-size: 90%;
+    color: $quiet_color;
+    a { @include basic-link($text-color); }
+    p { margin: 1em 0em; padding: 1.5em 1em; }
+    background-color: $orange;
+}
+
+/*padding styles*/
+
+.mg-btm-05 {
+    margin-bottom: .5em;
+}
+
+.container {
+    position: relative;
+    margin-top: 6em;
+}
+
+.container > section > article > .main section > div {
+    width: 80%;
+    max-width: 44em;
+    margin: 0 auto;
+    padding: 2em 1.875em 2em 1.875em;
+    /*background: rgba(198, 198, 197, 0.7);*/
+}
+
+.container > section > article > .main section > div.white {
+    width: 80%;
+    max-width: 44em;
+    margin: 0 auto;
+    padding: 2em 1.875em 2em 1.875em;
+    background: #fff;
+}
+
+.main > section:nth-child(even) {
+    background: #EFF3FF;
+}
+
+.main section p {
+    margin: 0;
+    padding: .5em 0;
+    line-height: 1.75;
+}
+
+.main section li {
+    line-height: 1.75;
+}
+
+.main h2 > i.fa {
+    display:block;
+    margin-bottom:10px;
+}
+
+#releases-page-links,
+#releases-page-links > .muted_link {
+    color: $link-color-muted;
+}
+
+#releases-page-links > .muted_link:hover {
+    color: $link-hover-color-muted;
+}
+
+@media screen and (max-width: 55em) {
+    .main section p {
+        font-size: 1em;
+    }
+    .container > section > article > .main section#sec-hardfork {
+        padding-top: 123px; 
+        margin-top: -50px
+    }
+    .container > section > article > .main section#sec-takepart {
+        padding-top: 123px; 
+        margin-top: -50px
+    }
+
+}
+
+@media screen and (max-width: 32.25em) {
+    
+    .container {
+         position: relative;
+         margin-top: 4em;
+    }
+    .container > section > article > .main section#sec-hardfork {
+        padding-top: 83px; 
+    }
+    .container > section > article > .main section#sec-takepart {
+        padding-top: 83px; 
+    }
+    
+}
+
+@media screen and (max-width: 24em) {
+    .container > section > article > .main section > div {
+    width: 85%;
+    max-width: inherit;
+     margin: 0 auto;
+     padding: 2em 0em 4em 0em;
+    }
+    .main section p {
+        padding: .5em 0;
+    }
+    .typography h2, .content h2, section > .main > article h2 {
+        margin: 1.75em 0 .45em 0 !important; 
+    }
+    .typography li, .content li, section > .main > article li {
+            line-height: 1.75em;
+            color: $paragraph-color;
+    }
 }

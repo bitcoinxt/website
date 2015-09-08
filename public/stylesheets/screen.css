@@ -1,75 +1,1029 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
 /*dark blue*/
 /*#F59C09;*/
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin,cyrillic);
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
-.center {
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+.content strong, section[role=main] > article strong, .content b, section[role=main] > article b {
+  color: #00639E;
+  font-weight: 700;
+}
+.content em, section[role=main] > article em, .content i, section[role=main] > article i {
+  font-style: italic;
+}
+.content i.fa, section[role=main] > article i.fa {
+  font-style: normal;
+}
+.content abbr, section[role=main] > article abbr, .content acronym, section[role=main] > article acronym {
+  border-bottom: 1px dotted #6bc8ff;
+}
+.content sub, section[role=main] > article sub, .content sup, section[role=main] > article sup {
+  font-size: 85%;
+}
+.content sub, section[role=main] > article sub {
+  vertical-align: sub;
+}
+.content sup, section[role=main] > article sup {
+  vertical-align: super;
+}
+.content span.caps, section[role=main] > article span.caps {
+  font-size: 95%;
+}
+.content h1, section[role=main] > article h1, .content h2, section[role=main] > article h2, .content h3, section[role=main] > article h3, .content h4, section[role=main] > article h4, .content h5, section[role=main] > article h5, .content h6, section[role=main] > article h6 {
+  color: #00639E;
+  margin: 1em 0;
+}
+.content h1, section[role=main] > article h1 {
+  font-weight: bold;
+  font-size: 150%;
+  line-height: 1.4;
   text-align: center;
+}
+.content h2, section[role=main] > article h2 {
+  font-weight: bold;
+  font-size: 125%;
+  line-height: 1.4;
+  text-align: center;
+}
+.content h3, section[role=main] > article h3 {
+  font-weight: bold;
+  font-size: 140%;
+  line-height: 1.4;
+  margin: 1.25em 0 0.5em;
+}
+.content h4, section[role=main] > article h4 {
+  font-weight: bold;
+  font-size: 110%;
+  line-height: 1.4;
+  margin: 0.5em 0 0.5em;
+}
+.content h5, section[role=main] > article h5 {
+  font-style: italic;
+  font-size: 110%;
+  line-height: 1.4;
+  margin: 0.65em 0;
+}
+.content h6, section[role=main] > article h6 {
+  font-weight: bold;
+  margin-bottom: -0.75em;
+}
+.content p, section[role=main] > article p {
+  margin: .75em 0;
+}
+.content ul, section[role=main] > article ul, .content ol, section[role=main] > article ol, .content dl, section[role=main] > article dl {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.content ul, section[role=main] > article ul, .content ol, section[role=main] > article ol, .content dd, section[role=main] > article dd {
+  padding-left: 1em;
+}
+.content ul, section[role=main] > article ul {
+  list-style: disc;
+}
+.content ol, section[role=main] > article ol {
+  list-style: decimal;
+}
+.content li, section[role=main] > article li {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.content li.on_grey, section[role=main] > article li.on_grey {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: .85em;
+}
+.content dt, section[role=main] > article dt {
+  margin-top: 1em;
+}
+.content dd, section[role=main] > article dd {
+  margin-bottom: 1em;
+}
+.content code, section[role=main] > article code, .content dfn, section[role=main] > article dfn, .content kbd, section[role=main] > article kbd, .content samp, section[role=main] > article samp, .content tt, section[role=main] > article tt, .content pre, section[role=main] > article pre {
+  font-family: "Lato", Calibri, Arial, sans-serif;
+  font-size: 95%;
+  background: #05a2ff;
+  color: #fff;
+  border-radius: 8px;
+}
+.content code, section[role=main] > article code, .content dfn, section[role=main] > article dfn, .content kbd, section[role=main] > article kbd, .content samp, section[role=main] > article samp, .content tt, section[role=main] > article tt {
+  padding: 0 0.5em;
+  display: inline-block;
+}
+.content pre, section[role=main] > article pre {
+  line-height: 1.4;
+  padding: 0.5em 1em;
+}
+@media screen and (max-width: 55em) {
+  .content pre, section[role=main] > article pre {
+    display: inline-block;
+  }
+}
+.content pre code, section[role=main] > article pre code {
+  display: block;
+  padding: 0.5em 0;
+  overflow-x: auto;
+}
+@media screen and (max-width: 55em) {
+  .content pre code, section[role=main] > article pre code {
+    overflow-x: visible;
+  }
+}
+.content a:link, section[role=main] > article a:link {
+  color: #e76a00;
+  text-decoration: none;
+  cursor: pointer;
+}
+.content a:visited, section[role=main] > article a:visited {
+  color: #ff7602;
+}
+.content a:hover, section[role=main] > article a:hover {
+  color: #d36100;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.content a.more, section[role=main] > article a.more {
+  white-space: nowrap;
+}
+.content a.more:after, section[role=main] > article a.more:after {
+  content: " »";
+}
+.content .box, section[role=main] > article .box {
+  background: #efeacf;
+  border: 1px solid #e2d9a9;
+  border-radius: 8px;
+  margin: 1.5em -1em;
+  padding: 1px 1em;
+}
+
+li {
+  padding-bottom: 1em;
+}
+
+li.sublist {
+  list-style-type: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: grey;
+}
+
+/* Make scrolling to #anchor elements work with the header */
+section > div > h2:target,
+section > div > h2 > a:target {
+  padding-top: 150px;
+  margin-top: -150px;
+}
+
+.typography strong, .typography b {
+  color: #00639E;
+  font-weight: 700;
+}
+.typography em, .typography i {
+  font-style: italic;
+}
+.typography i.fa {
+  font-style: normal;
+}
+.typography abbr, .typography acronym {
+  border-bottom: 1px dotted #6bc8ff;
+}
+.typography sub, .typography sup {
+  font-size: 85%;
+}
+.typography sub {
+  vertical-align: sub;
+}
+.typography sup {
+  vertical-align: super;
+}
+.typography span.caps {
+  font-size: 95%;
+}
+.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
+  color: #00639E;
+  margin: 1em 0;
+}
+.typography h1 {
+  font-weight: bold;
+  font-size: 150%;
+  line-height: 1.4;
+  text-align: center;
+}
+.typography h2 {
+  font-weight: bold;
+  font-size: 125%;
+  line-height: 1.4;
+  text-align: center;
+}
+.typography h3 {
+  font-weight: bold;
+  font-size: 140%;
+  line-height: 1.4;
+  margin: 1.25em 0 0.5em;
+}
+.typography h4 {
+  font-weight: bold;
+  font-size: 110%;
+  line-height: 1.4;
+  margin: 0.5em 0 0.5em;
+}
+.typography h5 {
+  font-style: italic;
+  font-size: 110%;
+  line-height: 1.4;
+  margin: 0.65em 0;
+}
+.typography h6 {
+  font-weight: bold;
+  margin-bottom: -0.75em;
+}
+.typography p {
+  margin: .75em 0;
+}
+.typography ul, .typography ol, .typography dl {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.typography ul, .typography ol, .typography dd {
+  padding-left: 1em;
+}
+.typography ul {
+  list-style: disc;
+}
+.typography ol {
+  list-style: decimal;
+}
+.typography li {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.typography li.on_grey {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: .85em;
+}
+.typography dt {
+  margin-top: 1em;
+}
+.typography dd {
+  margin-bottom: 1em;
+}
+.typography code, .typography dfn, .typography kbd, .typography samp, .typography tt, .typography pre {
+  font-family: "Lato", Calibri, Arial, sans-serif;
+  font-size: 95%;
+  background: #05a2ff;
+  color: #fff;
+  border-radius: 8px;
+}
+.typography code, .typography dfn, .typography kbd, .typography samp, .typography tt {
+  padding: 0 0.5em;
+  display: inline-block;
+}
+.typography pre {
+  line-height: 1.4;
+  padding: 0.5em 1em;
+}
+@media screen and (max-width: 55em) {
+  .typography pre {
+    display: inline-block;
+  }
+}
+.typography pre code {
+  display: block;
+  padding: 0.5em 0;
+  overflow-x: auto;
+}
+@media screen and (max-width: 55em) {
+  .typography pre code {
+    overflow-x: visible;
+  }
+}
+
+.typography h3.announcement {
+  font-weight: 100;
+  font-size: 80%;
+  line-height: 1.45;
+  margin: 1em 0 0.25em;
+  color: #666;
+  letter-spacing: 1.5px;
+}
+
+#download {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#download-link.myButton {
+  -moz-box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5) inset, 0 5px 10px rgba(0, 0, 0, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+  background: -moz-linear-gradient(top, #f90 10%, #e76a00 100%);
+  background: -webkit-linear-gradient(top, #f90 10%, #e76a00 100%);
+  background: -o-linear-gradient(top, #f90 10%, #e76a00 100%);
+  background: -ms-linear-gradient(top, #f90 10%, #e76a00 100%);
+  background: linear-gradient(#f90 10%, #e76a00 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+  background-color: #d9750b;
+  border-radius: 6px;
+  border: 1px solid #eeb44f;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-family: Arial;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: .5em 1em;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #cc9f52;
+  vertical-align: middle;
+}
+
+#download-link.myButton:hover, #download-link.myButton:focus {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0a100), color-stop(1, #f70));
+  background: -moz-linear-gradient(top, #f0a100 5%, #f70 100%);
+  background: -webkit-linear-gradient(top, #f0a100 5%, #f70 100%);
+  background: -o-linear-gradient(top, #f0a100 5%, #f70 100%);
+  background: -ms-linear-gradient(top, #f0a100 5%, #f70 100%);
+  background: linear-gradient(to bottom, #f70 5%, #f70 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f70', endColorstr='#f70',GradientType=0);
+  background-color: #fb9e25;
+}
+
+#download-link.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+#download-link i.fa {
+  margin-right: 10px;
+}
+
+.main .main-icons {
+  text-align: center;
+  position: relative;
+}
+
+.main .main-icons div {
+  width: 30%;
+  display: inline-block;
+}
+
+/* -- MailChimp Form Embed Code - Slim - 08/17/2011 -- */
+#mc_embed_signup form {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+#mc_embed_signup input {
+  border: 1px solid #999;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+#mc_embed_signup input[type=checkbox] {
+  -webkit-appearance: checkbox;
+}
+
+#mc_embed_signup input[type=radio] {
+  -webkit-appearance: radio;
+}
+
+#mc_embed_signup input:focus {
+  border-color: #1E82D2;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.055), 0 0 6px #1E82D2;
+  box-shadow: inset 0 3px 0px rgba(0, 0, 0, 0.055), 0 0 8px #1E82D2;
+}
+
+#mc_embed_signup .button {
+  clear: both;
+  background-color: #aaa;
+  border: 0 none;
+  border-radius: 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 1.5px;
+}
+
+#mc_embed_signup .button:hover,
+#mc_embed_signup .button:focus,
+#mc_embed_signup .button input:focus {
+  background-color: #777;
+}
+
+#mc_embed_signup .small-meta {
+  font-size: 11px;
+}
+
+#mc_embed_signup .nowrap {
+  white-space: nowrap;
+}
+
+#mc_embed_signup .clear {
+  clear: none;
+  display: block;
+}
+
+#mc_embed_signup label {
+  font-size: 16px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+#mc_embed_signup input.email {
+  text-align: center;
+  padding: 12px 5px;
+  width: 60%;
+  max-width: 550px;
+  margin: 10px 0px 20px 0px;
+  font-size: 15px;
+  color: #666;
+  font-family: 'proxima-nova', 'Proxima Nova', sans-serif;
+}
+
+#mc_embed_signup input.button {
+  width: 40%;
+  max-width: 140px;
+}
+
+#mc_embed_signup div#mce-responses {
+  float: left;
+  top: -1.4em;
+  padding: 0em .5em 0em .5em;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 5%;
+  clear: both;
+}
+
+#mc_embed_signup div.response {
+  margin: 1em 0;
+  padding: 1em .5em .5em 0;
+  font-weight: bold;
+  float: left;
+  top: -1.5em;
+  z-index: 1;
+  width: 80%;
+}
+
+#mc_embed_signup #mce-error-response {
+  display: none;
+}
+
+#mc_embed_signup #mce-success-response {
+  color: #529214;
+  display: none;
+}
+
+#mc_embed_signup label.error {
+  display: block;
+  float: none;
+  width: auto;
+  margin-left: 1.05em;
+  text-align: left;
+  padding: .5em 0;
+}
+
+#mc_embed_signup_hidden {
+  position: absolute;
+  left: -5000px;
+}
+
+@media screen and (max-width: 55em) {
+  #mc_embed_signup input.email {
+    width: 85%;
+    margin: 10px 0px 20px 0px;
+    max-width: 500px;
+  }
+
+  .main .main-icons {
+    margin: 20px 0;
+  }
+
+  .main .main-icons > div > h2 {
+    font-size: 100%;
+  }
+}
+@media screen and (max-width: 32.25em) {
+  #mc_embed_signup input.email {
+    width: 95%;
+    margin: 10px 0px 20px 0px;
+  }
+}
+@media screen and (max-width: 24em) {
+  #mc_embed_signup input.email {
+    width: 90%;
+  }
+
+  #download-link.myButton {
+    font-size: 1.2em;
+  }
+
+  .main .main-icons > div > h2 {
+    font-size: 80%;
+  }
+}
+/* -- Onboard -- */
+.onboard_text {
+  text-align: justify;
+}
+
+.onboard_logo {
+  float: left;
+  width: 200px;
+  height: 70px;
+  margin: 0 24px 0 0;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.onboard_text p {
+  margin-bottom: 20px;
+}
+
+body {
+  color: #00639E;
+  font-family: "Helvetica Neue", Hevetica, Arial, sans-serif;
+  font-size: 110%;
+  line-height: 1.4;
+  background: white;
+}
+
+header[role=banner] {
+  padding: 0px 0%;
+  position: relative;
+}
+header[role=banner] a:link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+header[role=banner] a:visited {
+  color: white;
+}
+header[role=banner] a:hover {
+  color: #e9e516;
+  text-decoration: underline;
+  cursor: pointer;
+}
+header[role=banner] .action-link {
+  position: absolute;
+  right: 0%;
+  top: 55px;
+}
+header[role=banner] .action-link a {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: block;
+  padding: 0.5em 1em;
+}
+header[role=banner] .action-link a:after {
+  content: " ⇢";
+}
+
+footer {
+  padding: 0 0% 50px;
+  font-size: 90%;
+  color: #38b5ff;
+  background-color: #ef7220;
+}
+footer a:link {
+  color: #00639E;
+  text-decoration: none;
+  cursor: pointer;
+}
+footer a:visited {
+  color: #00639E;
+}
+footer a:hover {
+  color: #00639E;
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer p {
+  margin: 1em 0em;
+  padding: 1.5em 1em;
 }
 
 /*padding styles*/
-.pd-top-1 {
-  padding-top: 1em;
-}
-
-.pd-top-2 {
-  padding-top: 2em;
-}
-
-.pd-top-3 {
-  padding-top: 3em;
-}
-
-.pd-top-4 {
-  padding-top: 3em;
-}
-
-.pd-top-5 {
-  padding-top: 3em;
-}
-
-.pd-bottom-1 {
-  padding-top: 1em;
-}
-
-.pd-bottom-2 {
-  padding-top: 2em;
-}
-
-.pd-bottom-3 {
-  padding-top: 3em;
-}
-
-.pd-bottom-4 {
-  margin-bottom: 3em;
-}
-
-.pd-bottom-5 {
-  margin-bottom: 3em;
-}
-
 .mg-btm-05 {
   margin-bottom: .5em;
-}
-
-.mg-btm-1 {
-  margin-bottom: 1em;
-}
-
-.mg-btm-2 {
-  margin-bottom: 2em;
-}
-
-.mg-btm-3 {
-  margin-bottom: 3em;
-}
-
-.mg-btm-4 {
-  margin-bottom: 3em;
-}
-
-.mg-btm-5 {
-  margin-bottom: 3em;
 }
 
 .container {
@@ -97,10 +1051,6 @@
   background: #EFF3FF;
 }
 
-.main section:first-child > div {
-  padding-top: 0em;
-}
-
 .main section p {
   margin: 0;
   padding: .5em 0;
@@ -111,26 +1061,9 @@
   line-height: 1.75;
 }
 
-.main section p.first {
-  margin: 0;
-  padding: .5em 0;
-  line-height: 2.5;
-}
-
-.main section p.highlights {
-  text-align: center;
-  padding: 0px 13%;
-  color: white;
-}
-
 .main h2 > i.fa {
   display: block;
   margin-bottom: 10px;
-}
-
-section.anchor {
-  padding-top: 123px;
-  margin-top: -50px;
 }
 
 #releases-page-links,
@@ -138,7 +1071,7 @@ section.anchor {
   color: #D3D3D3;
 }
 
-#releases-page-links > .muted_link:hover, #releases-page > .muted_link:focus, #releases-page > .muted_link:active {
+#releases-page-links > .muted_link:hover {
   color: #b1b1b1;
 }
 
@@ -183,313 +1116,225 @@ section.anchor {
     padding: .5em 0;
   }
 
-  .container > section > article > .main > section#sec-hardfork {
-    /*padding-top: 4.875em;*/
-  }
-
-  .typography h2, .content h2, section[role=main] > article h2, .content h2, section[role=main] > article h2, section > .main > article h2 {
+  .typography h2, .content h2, section[role=main] > article h2, section > .main > article h2 {
     margin: 1.75em 0 .45em 0 !important;
   }
 
-  .typography li, .content li, section[role=main] > article li, .content li, section[role=main] > article li, section > .main > article li {
+  .typography li, .content li, section[role=main] > article li, section > .main > article li {
     line-height: 1.75em;
     color: #00639E;
   }
 }
-.typography h3.announcement, .content h3.announcement, section[role=main] > article h3.announcement {
-  font-weight: 100;
-  font-size: 80%;
-  line-height: 1.45;
-  margin: 1em 0 0.25em;
-  color: #666;
-  letter-spacing: 1.5px;
+.pd-b {
+  padding-bottom: 0;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
+.cbp-af-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f6f6f6;
+  z-index: 10000;
+  overflow: hidden;
+  background-image: linear-gradient(transparent 0%, transparent 80%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(30% 50px, #f47b20, #f47b20 400px);
+  background-image: url("../images/bkgrnd_wide.png");
+  background-size: cover;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-position-x: 55%;
+}
+
+.cbp-af-header .cbp-af-inner {
+  width: 90%;
+  max-width: 60em;
+  margin: 0 auto;
   padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
 }
 
-html {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-body {
-  background: white;
-}
-
-body {
-  color: #00639E;
-  font-family: "Helvetica Neue", Hevetica, Arial, sans-serif;
-  font-size: 110%;
-  line-height: 1.4;
-}
-
-.links a:link, .content a:link, section[role=main] > article a:link {
-  color: #e76a00;
-  text-decoration: none;
-}
-.links a:visited, .content a:visited, section[role=main] > article a:visited {
-  color: #ff7602;
-}
-.links a:hover, .content a:hover, section[role=main] > article a:hover {
-  color: #d36100;
-  text-decoration: underline;
-}
-.links a.more, .content a.more, section[role=main] > article a.more {
-  white-space: nowrap;
-}
-.links a.more:after, .content a.more:after, section[role=main] > article a.more:after {
-  content: " »";
-}
-
-.typography, .content, section[role=main] > article {
-  /*what*/
-}
-.typography strong, .content strong, section[role=main] > article strong, .typography b, .content b, section[role=main] > article b {
-  color: #00639E;
-  font-weight: 700;
-}
-.typography em, .content em, section[role=main] > article em, .typography i, .content i, section[role=main] > article i {
-  font-style: italic;
-}
-.typography i.fa, .content i.fa, section[role=main] > article i.fa {
-  font-style: normal;
-}
-.typography abbr, .content abbr, section[role=main] > article abbr, .typography acronym, .content acronym, section[role=main] > article acronym {
-  border-bottom: 1px dotted #6bc8ff;
-}
-.typography sub, .content sub, section[role=main] > article sub, .typography sup, .content sup, section[role=main] > article sup {
-  font-size: 85%;
-}
-.typography sub, .content sub, section[role=main] > article sub {
-  vertical-align: sub;
-}
-.typography sup, .content sup, section[role=main] > article sup {
-  vertical-align: super;
-}
-.typography span.caps, .content span.caps, section[role=main] > article span.caps {
-  font-size: 95%;
-}
-.typography h1, .content h1, section[role=main] > article h1, .typography h2, .content h2, section[role=main] > article h2, .typography h3, .content h3, section[role=main] > article h3, .typography h4, .content h4, section[role=main] > article h4, .typography h5, .content h5, section[role=main] > article h5, .typography h6, .content h6, section[role=main] > article h6 {
-  color: #00639E;
-  margin: 1em 0;
-}
-.typography h1, .content h1, section[role=main] > article h1 {
-  font-weight: bold;
-  font-size: 150%;
-  line-height: 1.4;
-  text-align: center;
-}
-.typography h2, .content h2, section[role=main] > article h2 {
-  font-weight: bold;
-  font-size: 125%;
-  line-height: 1.4;
-  text-align: center;
-}
-.typography h3, .content h3, section[role=main] > article h3 {
-  font-weight: bold;
-  font-size: 140%;
-  line-height: 1.4;
-  margin: 1.25em 0 0.5em;
-}
-.typography h4, .content h4, section[role=main] > article h4 {
-  font-weight: bold;
-  font-size: 110%;
-  line-height: 1.4;
-  margin: 0.5em 0 0.5em;
-}
-.typography h5, .content h5, section[role=main] > article h5 {
-  font-style: italic;
-  font-size: 110%;
-  line-height: 1.4;
-  margin: 0.65em 0;
-}
-.typography h6, .content h6, section[role=main] > article h6 {
-  font-weight: bold;
-  margin-bottom: -0.75em;
-}
-.typography p, .content p, section[role=main] > article p {
-  margin: .75em 0;
-}
-.typography ul, .content ul, section[role=main] > article ul, .typography ol, .content ol, section[role=main] > article ol, .typography dl, .content dl, section[role=main] > article dl {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
-}
-.typography ul, .content ul, section[role=main] > article ul, .typography ol, .content ol, section[role=main] > article ol, .typography dd, .content dd, section[role=main] > article dd {
-  padding-left: 1em;
-}
-.typography ul, .content ul, section[role=main] > article ul {
-  list-style: disc;
-}
-.typography ol, .content ol, section[role=main] > article ol {
-  list-style: decimal;
-}
-.typography li, .content li, section[role=main] > article li {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
-}
-.typography li.on_grey, .content li.on_grey, section[role=main] > article li.on_grey {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  font-size: .85em;
-}
-.typography dt, .content dt, section[role=main] > article dt {
-  margin-top: 1em;
-}
-.typography dd, .content dd, section[role=main] > article dd {
-  margin-bottom: 1em;
-}
-.typography code, .content code, section[role=main] > article code, .typography dfn, .content dfn, section[role=main] > article dfn, .typography kbd, .content kbd, section[role=main] > article kbd, .typography samp, .content samp, section[role=main] > article samp, .typography tt, .content tt, section[role=main] > article tt, .typography pre, .content pre, section[role=main] > article pre {
-  font-family: "Lato", Calibri, Arial, sans-serif;
-  font-size: 95%;
-  background: #05a2ff;
-  color: #fff;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-}
-.typography code, .content code, section[role=main] > article code, .typography dfn, .content dfn, section[role=main] > article dfn, .typography kbd, .content kbd, section[role=main] > article kbd, .typography samp, .content samp, section[role=main] > article samp, .typography tt, .content tt, section[role=main] > article tt {
-  padding: 0 0.5em;
+.cbp-af-header .logo,
+.cbp-af-header h1,
+.cbp-af-header nav {
   display: inline-block;
-}
-.typography pre, .content pre, section[role=main] > article pre {
-  line-height: 1.4;
-  padding: 0.5em 1em;
-}
-@media screen and (max-width: 55em) {
-  .typography pre, .content pre, section[role=main] > article pre {
-    display: inline-block;
-  }
-}
-.typography pre code, .content pre code, section[role=main] > article pre code {
-  display: block;
-  padding: 0.5em 0;
-  overflow-x: auto;
-}
-@media screen and (max-width: 55em) {
-  .typography pre code, .content pre code, section[role=main] > article pre code {
-    overflow-x: visible;
-  }
-}
-
-.content .box, section[role=main] > article .box {
-  background: #efeacf;
-  border: 1px solid #e2d9a9;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  margin: 1.5em -1em;
-  padding: 1px 1em;
-}
-
-header[role=banner] {
-  padding: 0px 0%;
   position: relative;
 }
-header[role=banner] a:link {
-  color: white;
+
+/* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+.cbp-af-header .logo,
+.cbp-af-header h1 {
+  line-height: 70px;
+}
+
+.cbp-af-header h1,
+.cbp-af-header .logo {
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: 4px;
+  font-size: 4em;
+  margin: 0;
+  float: left;
+}
+
+.cbp-af-header nav {
+  float: right;
+}
+
+.cbp-af-header a img {
+  margin-top: 14%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 15px;
+}
+
+.cbp-af-header nav a {
+  color: #aaa;
+  margin: 0 10px;
+  font-size: 1em;
+  padding: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  line-height: 115px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.cbp-af-header-ru nav a {
+  margin: 0 8px;
+  font-size: 0.9em;
+  letter-spacing: .05em;
+}
+
+.cbp-af-header nav a:hover {
+  color: #ff7602;
   text-decoration: none;
 }
-header[role=banner] a:visited {
-  color: white;
-}
-header[role=banner] a:hover {
-  color: #e9e516;
-  text-decoration: underline;
-}
-header[role=banner] .action-link {
-  position: absolute;
-  right: 0%;
-  top: 55px;
-}
-header[role=banner] .action-link a {
-  background: rgba(255, 255, 255, 0.1);
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
+
+.cbp-af-header h1,
+.cbp-af-header .logo {
+  font-size: 2em;
+  width: 260px;
+  height: auto;
   display: block;
-  padding: 0.5em 1em;
-  text-shadow: gray 0 1px 0;
-}
-header[role=banner] .action-link a:after {
-  content: " ⇢";
 }
 
-section[role=main] {
-  padding: 0px 0%;
-  box-sizing: border-box;
+.cbp-af-header a img {
+  width: 100%;
+  margin-top: 20px;
 }
 
-footer {
-  padding: 0 0% 50px;
-  font-size: 90%;
-  color: #38b5ff;
-  background-color: #ef7220;
+.cbp-af-header .lang {
+  position: absolute;
+  top: 5px;
+  right: 18px;
 }
-footer a:link {
-  color: #00639E;
+
+.cbp-af-header .lang a {
+  color: #aaa;
+  padding: 3px 6px 3px 25px;
+  background: url(/images/lang_icons.png) no-repeat;
+}
+
+.cbp-af-header .lang a:hover {
+  color: #ff7602;
   text-decoration: none;
 }
-footer a:visited {
-  color: #00639E;
+
+.cbp-af-header .lang .en {
+  background-position: 0px 3px;
 }
-footer a:hover {
-  color: #00639E;
-  text-decoration: underline;
+
+.cbp-af-header .lang .ru {
+  background-position: -70px 3px;
 }
-footer p {
-  margin: 1em 0em;
-  padding: 1.5em 1em;
+
+@media screen and (max-width: 55em) {
+  .pd-b {
+    padding-bottom: 10px;
+  }
+
+  .cbp-af-header .cbp-af-inner {
+    width: 100%;
+  }
+
+  .cbp-af-header {
+    height: auto;
+  }
+
+  .cbp-af-header .logo,
+  .cbp-af-header h1,
+  .cbp-af-header nav {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+  }
+
+  .cbp-af-header nav a {
+    line-height: 90px;
+  }
+
+  .cbp-af-header nav a {
+    margin: 0 10px;
+  }
+
+  .cbp-af-header.cbp-af-header-shrink h1,
+  .cbp-af-header.cbp-af-header-shrink nav a {
+    line-height: 30px;
+  }
+
+  .cbp-af-header.cbp-af-header-shrink h1,
+  .cbp-af-header.cbp-af-header-shrink .logo {
+    font-size: 2em;
+  }
+
+  .cbp-af-header.cbp-af-header-shrink nav a {
+    font-size: .80em;
+  }
+
+  .cbp-af-header a img {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 32.25em) {
+  .cbp-af-header a img,
+  .cbp-af-header.cbp-af-header-shrink a img {
+    margin-top: 15px;
+    width: 80%;
+    margin-top: 0px;
+  }
+
+  .cbp-af-header .logo,
+  .cbp-af-header h1 {
+    line-height: 50px;
+  }
+
+  .cbp-af-header nav a,
+  .cbp-af-header.cbp-af-header-shrink nav a {
+    font-size: .6em;
+    margin: 0 5px;
+  }
+
+  .cbp-af-header {
+    height: auto;
+  }
+}
+@media screen and (max-width: 24em) {
+  .cbp-af-header nav a,
+  .cbp-af-header.cbp-af-header-shrink nav a {
+    line-height: 1;
+    margin: 0 5px;
+    font-size: .55em;
+  }
+
+  .cbp-af-header a img {
+    width: 80%;
+    margin-top: 0px;
+    margin: 0 auto;
+  }
+
+  .cbp-af-header nav a {
+    font-size: .80em;
+    margin: 0 7px;
+  }
+
+  .cbp-af-header {
+    /*background-position-x: 200%;*/
+    height: auto;
+  }
 }
