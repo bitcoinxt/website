@@ -13,6 +13,9 @@ tmtags
 ## VIM
 *.swp
 
+## PHPSTORM
+.idea
+
 ## PROJECT::GENERAL
 .sass-cache
 coverage
