@@ -1,0 +1,20 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for post in site.posts %}{% capture extension %}{{ page.url | split:"." | last }}{% endcapture %}{% unless post.published == false or extension != "html" %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% else %}weekly{% endif %}</changefreq>
+    <priority>{% if post.sitemap.priority %}{{ post.sitemap.priority }}{% else %}0.5{% endif %}</priority>
+  </url>
+  {% endunless %}{% endfor %}
+  {% for page in site.pages %}{% capture extension %}{{ page.url | split:"." | last }}{% endcapture %}{% unless page.sitemap-exclude or extension != "html" %}
+  <url>
+    <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
+    <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}weekly{% endif %}</changefreq>
+    <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}0.5{% endif %}</priority>
+  </url>
+  {% endunless %}{% endfor %}
+</urlset>

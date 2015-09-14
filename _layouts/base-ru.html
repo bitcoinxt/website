@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Bitcoin XT</title>
+    <meta name="keywords" content="bitcoin, bitcoin xt, bitcoin core, block size, blocks, limit, mining, network, vision, principles, source" />
+    <meta name="author" content="curvestudio" />
+    <meta name="description" content="{{ page.description }}">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/screen.css">
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container" id="sec-top">
+      <header role="banner">
+        <div class="cbp-af-header cbp-af-header-ru cbp-af-header-shrink">
+          <div class="cbp-af-inner">
+            <div class="logo">
+              <a href="index.html" title="Bitcoin XT"><img src="/img/bitcoin-logo.png" alt="Bitcoin XT"></a>
+            </div>
+            <nav class="pd-b">
+              <a accesskey="1" href="/ru/" title="Главная страница">Главная</a>
+              <a href="/ru/#sec-hardfork" title="Большие&nbsp;блоки">Большие&nbsp;блоки</a>
+              <a accesskey="2" href="onboard.html" title="Кто нас поддерживает">Кто&nbsp;поддерживает</a>
+              <a href="patches.html" title="Патчи">Патчи</a>
+              <a accesskey="5"  href="faq.html" title="Часто задаваемые вопросы">FAQ</a>
+              <a href="/ru/#sec-takepart" title="Примите&nbsp;участие">Примите&nbsp;участие</a>
+            </nav>
+            <div class="lang">
+              <a class="en" href="/{{ page.url | split:"/" | last }}" title="English">EN</a>
+              <a class="ru" href="/ru/{{ page.url | split:"/" | last }}" title="Russian">RU</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section accesskey="S" role="main">
+        <article>
+          {{ content }}
+        </article>
+      </section>
+      <footer>
+<!--        <small>
+          <p>
+            BitcoinXt is set to revolutionize the market. Expect a broader adaption
+            for crypto currency from this point forward. We welcome your support!
+            <br><br>
+            Questions? <a href="/">Reach out for more information.</a></p>
+        </small> -->
+      </footer>
+    </div>
+  </body>
+</html>

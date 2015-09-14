@@ -1,0 +1,243 @@
+---
+layout: "base"
+title: "Welcome" 
+description: "Bitcoin XT is an implementation of a full node that embraces Bitcoin's original vision of simple, reliable, low-cost transactions for everyone in the world." 
+
+# This is a workaround to duplicate welcome.html into index.html
+---
+      <div class="main">
+        <section>
+        <div>
+        <div class="main-icons">
+          <div>
+            <h2><i class="fa fa-signal fa-2x"></i>Scaling<br>Bitcoin</h2>
+          </div>
+          <div>
+            <h2><i class="fa fa-user fa-2x"></i>Users<br>Matter</h2>
+          </div>
+          <div>
+            <h2><i class="fa fa-thumbs-o-up fa-2x"></i>Pragmatic<br>Community</h2>
+          </div>
+        </div>
+        <p>
+        Bitcoin XT is an implementation of a Bitcoin full node that embraces Bitcoin's original vision of simple, reliable, low-cost transactions for everyone in the world. It is based upon the source code of Bitcoin Core, and is built by taking the latest stable Core release, applying a series of <a href="patches.html">patches</a>, and then doing
+        <a href="https://github.com/bitcoinxt/gitian.sigs">deterministic builds</a> so anyone can check the downloads correspond to the <a href="https://github.com/bitcoinxt/bitcoinxt">source code</a>.
+        </p>
+
+        <div id="download">
+            <a id="download-link" href="https://github.com/bitcoinxt/bitcoinxt/releases/latest" class="myButton mg-btm-05" title="Download now"><i class="fa fa-download fa-1x"></i>Download now</a>
+            <div id="releases-page-links">
+            <a class="muted_link" href="https://github.com/bitcoinxt/bitcoinxt/releases/latest" title="other versions"> other versions</a>&nbsp;|&nbsp;<a class="muted_link" href="apt.html" title="APT repository - Bitcoin XT">apt repository</a>
+            </div>
+            <script>
+                var baseVer = "0.11";
+                var release = baseVer + "A";
+
+                var cpuBits = 32;
+                var platform = window.navigator.platform;
+                var check = function(s) {
+                    return window.navigator.userAgent.indexOf(s) > -1;
+                };
+                if (check('x86_64') || check('x86-64') || check('Win64') || check('x64;') || check('amd64') || check('AMD64') || check('WOW64') || check('x64_64') || platform === 'MacIntel' || platform === 'Linux x86_64') {
+                    cpuBits = 64;
+                } else if (platform === 'Linux armv7l' || platform === 'iPad' || platform === 'iPhone' || platform === 'Android' || platform === 'iPod' || platform === 'BlackBerry') {
+                    // No release for this platform, but just let the user fall through to the generic release page as
+                    // there's not much else we can do.
+                } else if (platform === 'Linux i686') {
+                    // Not enough info to decide.
+                }
+
+                var a = document.getElementById("download-link");
+                var rp = document.getElementById("releases-page-links");
+                if (navigator.appVersion.indexOf("Win") != -1) {
+                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-xt-" + release + "-" + "win" + cpuBits + ".exe";
+                    a.setAttribute("href", href);
+                    rp.style.display = "block";
+                } else if (navigator.appVersion.indexOf("Mac") != -1) {
+                    a.setAttribute("href", "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/BitcoinXT-" + release + ".dmg");
+                    rp.style.display = "block";
+                } else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux")!=-1) {
+                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-" + baseVer + ".0-" + "linux" + cpuBits + ".tar.gz"
+                    a.setAttribute("href", href);
+                    rp.style.display = "block";
+                }
+            </script>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="//vinumeris.us8.list-manage.com/subscribe/post?u=8e10893034414bfbeed7ca838&amp;id=d1d71cbfec" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Get announcements of new releases and network events" required>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div id="mc_embed_signup_hidden"><input type="text" name="b_8e10893034414bfbeed7ca838_d1d71cbfec" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </div>
+                </form>
+            </div>
+            <!--End mc_embed_signup-->
+        </div>
+
+<!--   # disabled until gandi gets back to me about why their mail forwarding is hosed
+
+        <center>Using XT? Send your logo to <b><a href="mailto:hello@bitcoinxt.software" title="Email">hello@bitcoinxt.software</a></b> and show your support.</center>
+        -->
+
+        </div>
+        </section>
+
+        <section>
+        <div>
+
+        <h2 id="sec-manifesto"><i class="fa fa-compass fa-2x"></i>What we stand for</h2>
+
+        <p>The XT mission statement defines what the project believes is important: commitment to these principles are what differentiates us from Bitcoin Core. We try to follow Satoshi's original vision, as it is that vision which brought the Bitcoin community together.</p>
+
+        <ul>
+          <li><b>Scaling the network up to handle user demand is important</b>, even if that means the network
+              changes along the way. <a href="http://satoshi.nakamotoinstitute.org/emails/cryptography/2/" title="Satoshi Nakamoto Institute - Re: Bitcoin P2P e-cash paper">It's what
+              Satoshi wanted</a> and the idea of a global system used by ordinary people is what motivated many of us to
+              join him.
+          </li>
+
+          <li><b>XT provides people with information they need</b>, even if using it requires them to make
+              risk based decisions. For example:</li>
+          <li class="sublist"><ul>
+            <li>We believe <b>unconfirmed transactions are important</b>. Many merchants want or need to accept
+                payments within seconds rather than minutes or hours. XT accepts this fact and does what it can to
+                minimise the risk, then help sellers judge what remains. It is committed to <a href="http://satoshi.nakamotoinstitute.org/emails/cryptography/8/" title="Satoshi Nakamoto Institute - Re: Bitcoin P2P e-cash paper">
+                the first seen rule</a>. We will not adopt changes that make unconfirmed transactions riskier.
+            </li>
+            <li><b>Lightweight wallets are important</b>. Most users cannot or will not run a fully verifying node.
+                Most of the world population does not even own a computer: they will experience the internet exclusively
+                via smartphones. These users must sacrifice some security in order to participate, so XT supports
+                whatever technical tradeoffs wallet developers wish to explore.
+            </li>
+          </ul></li>
+
+          <li><b>Decision making is quick and clear.</b> Decisions are made according to a leadership hierarchy. The XT
+              software encodes decisions that follow the above principles: people who disagree are welcome to use
+              different software, or patch ours. We do not consider writing principled software to be centralising
+              and do not refuse to select reasonable defaults.
+          </li>
+
+          <li>The Bitcoin XT community is friendly, pragmatic, cares about app developers and considers the user
+              experience in everything we do. We value professionalism in technical approach and communication.
+              We run a moderated mailing list and do not tolerate troublemakers.
+          </li>
+        </ul>
+
+        <p>You can <a href="patches.html" title="Patches - Bitcoin XT">read more about the code changes in Bitcoin XT</a>.
+
+          </div>
+        </section>
+
+        <section>
+        <div>
+
+        <h2 id="sec-hardfork"><i class="fa fa-gg fa-2x"></i>Block size hard fork</h2>
+
+        <p>
+            Many years ago, a capacity limit was introduced into Bitcoin by Satoshi. He intended it to be removed once
+            lightweight wallets were developed, however, this was never done. It is expected that soon Bitcoin
+            will be out of capacity and <a href="https://medium.com/@octskyward/crash-landing-f5cc19908e32" title="Crash landing — Medium">
+            experiencing reliability problems as a result</a>.
+            The Bitcoin Core developers are unwilling to increase the block chain's capacity,
+            so miners and users who disagree with them must either switch to Bitcoin XT, or apply <a href="https://github.com/bitcoinxt/bitcoinxt/tree/only-bigblocks" title="only-bigblocks patches">the bigblocks patches</a> manually.
+        </p>
+
+        <p>
+            There has been much community debate on this topic. You can read analysis and explanations for why we think
+            raising the block size limit is important here:
+        </p>
+
+        <ul>
+            <li><a href="http://gavinandresen.ninja/" title="Gavin Andresen - Chief Scientist, Bitcoin Foundation. All-around geek.">A series of essays by Gavin Andresen</a></li>
+            <li><a href="https://medium.com/@octskyward/crash-landing-f5cc19908e32" title="Crash landing — Medium">Why the block size limit must be raised</a> and <a href="https://medium.com/@octskyward/the-capacity-cliff-586d1bf7715e" title="The capacity cliff – Medium">why the proposed alternative schemes will not work</a>, by Mike Hearn.</li>
+        </ul>
+
+        </div>
+        </section>
+
+        <section>
+        <div>
+
+        <h2 id="sec-miners"><i class="fa fa-cube fa-2x"></i>Miners</h2>
+
+        <p>
+            By mining with Bitcoin XT you will produce blocks with a new version number. This indicates to the rest of
+            the network that you support larger blocks. When 75% of the blocks are new-version blocks, a decision
+            has been reached to start building larger blocks that will be rejected by Bitcoin Core nodes. At that point
+            a waiting period of two weeks begins to allow news of the new consensus to spread and allow anyone who hasn't upgraded yet to do so. During this time, existing Bitcoin Core nodes will be printing a message notifying
+            the operators about the availability of an upgraded version.
+        </p>
+
+        <p>
+            If the hard fork occurs and you are still mining with Bitcoin Core, your node will reject the first new block
+            that is larger than one megabyte in size. At that point there is a risk your newly mined coins will not be
+            accepted at major exchanges or merchants.
+        </p>
+
+        <p>
+            <b>Soft limit</b>: Like Core, Bitcoin XT supports configuring the maximum size of blocks to mine. When set
+            your node will not create blocks larger than the limit, although it will still accept them. By default the
+            soft limit is not used, but it can be configured if you feel your blocks are being orphaned too frequently
+            due to propagation delays.
+        </p>
+
+        <p>
+            Want advice on how to maximise your earnings? We are here to help you! Jump on
+            <a href="https://groups.google.com/forum/#!forum/bitcoin-xt" title="bitcoin-xt on Google Groups">the mailing list</a> and ask!
+        </p>
+
+        </div>
+        </section>
+
+        <section>
+        <div>
+
+        <h2 id="sec-users"><i class="fa fa-users fa-2x"></i>Users and merchants</h2>
+
+        <p>
+            By running Bitcoin XT you take no risks: if insufficient mining hash power runs XT to reach supermajority
+            then nothing will happen. If enough does, you will follow the new chain and things will continue as normal.
+        </p>
+
+        <p>
+            Additionally, XT has a useful feature: double spend monitoring and relaying. By running XT you help propagate
+            information about double spends across the network, making it harder for payment fraudsters to steal from
+            sellers by broadcasting two conflicting transactions simultaneously.
+        </p>
+
+        </div>
+        </section>
+
+
+        <section>
+        <div>
+
+        <h2 id="sec-takepart"><i class="fa fa-comments fa-2x"></i>Take part!</h2>
+
+        <p>
+            <a href="https://groups.google.com/forum/#!forum/bitcoin-xt" title="bitcoin-xt on Google Groups">Get in touch via our mailing list!</a>
+            Appropriate topics for the list include:
+        </p>
+
+        <ul>
+            <li>Discussion of new patches</li>
+            <li>Questions around usage or how best to configure XT for mining</li>
+            <li>Development ideas (please at least try to implement your idea before asking others to do so!)</li>
+        </ul>
+
+        <p>
+            Be polite and debate ideas rather than people.
+        </p>
+
+        <p>
+            Subscribing if you are not using your google account can be done
+            <a href="https://groups.google.com/forum/?hl=en#!forum/bitcoin-xt/join">here</a>.
+        </p>
+
+        <p>You can also find us on Freenode IRC in the <a href="http://webchat.freenode.net/?channels=#bitcoinxt" title="Bitcoin XT on Freenode IRC">#bitcoinxt</a> channel and on <a href="https://www.reddit.com/r/bitcoinxt" title="Bitcoin XT subreddit">reddit</a>.</p>
+        </div>
+        </section>
+      </div>
