@@ -31,7 +31,8 @@ description: "Bitcoin XT is an implementation of a full node that embraces Bitco
             </div>
             <script>
                 var baseVer = "0.11";
-                var release = baseVer + "A";
+                var relChar = "B";
+                var release = baseVer + relChar;
 
                 var cpuBits = 32;
                 var platform = window.navigator.platform;
@@ -50,14 +51,14 @@ description: "Bitcoin XT is an implementation of a full node that embraces Bitco
                 var a = document.getElementById("download-link");
                 var rp = document.getElementById("releases-page-links");
                 if (navigator.appVersion.indexOf("Win") != -1) {
-                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-xt-" + release + "-" + "win" + cpuBits + ".exe";
+                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/Bitcoin.XT." + release + "." + cpuBits + ".bit.exe";
                     a.setAttribute("href", href);
                     rp.style.display = "block";
                 } else if (navigator.appVersion.indexOf("Mac") != -1) {
                     a.setAttribute("href", "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/BitcoinXT-" + release + ".dmg");
                     rp.style.display = "block";
                 } else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux")!=-1) {
-                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-" + baseVer + ".0-" + "linux" + cpuBits + ".tar.gz"
+                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-xt-" + baseVer + ".0-" + relChar + "-linux" + cpuBits + ".tar.gz"
                     a.setAttribute("href", href);
                     rp.style.display = "block";
                 }
