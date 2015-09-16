@@ -1,0 +1,18 @@
+safe:        false
+port:        4000
+baseurl:     /
+url:         http://bitcoinxt.website
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - vendor
+    - README.md
+
+
+sass:
+  sass_dir: _sass
+  style: compressed

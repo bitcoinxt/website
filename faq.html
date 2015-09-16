@@ -1,0 +1,156 @@
+---
+layout: "base"
+title: "FAQ"
+description: "Bitcoin XT is a patch set on top of Bitcoin Core. It is currently maintained by Mike Hearn in collaboration with Gavin Andresen and Tom Harding."
+---
+
+<div class="main" id="faq">
+      <section>
+      <div>
+      <h1>Frequently asked questions</h1>
+
+      <h2><a href="#how-do-i-upgrade" id="how-do-i-upgrade" title="How do I switch to XT?">#</a> <b>How do I switch to XT?</b></h2>
+
+      <p>Upgrading is easy: just download and run from our website as normal. Bitcoin XT uses the same data directories 
+      and configuration as Bitcoin Core, so if you were previously running that you won't need to download the block 
+      chain again. And you can switch back again at any time if you want, again, without redownloading the block chain.
+      </p>
+
+      </div>
+      </section>
+
+      <section><div>
+      <h2><a href="#is-there-risk" id="is-there-risk" title="Is there any risk involved in running XT?">#</a> <b>Is there any risk involved in running XT?</b></h2>
+
+      <p>No. If the big blocks change doesn't obtain enough support to be successful then you are unaffected. If it does, then you will follow the new consensus and are unaffected.</p>
+
+      </div></section>
+
+      <section>
+      <div>
+      <h2><a href="#why-did-the-xt-fork-happen" id="why-did-the-xt-fork-happen" title="Why did the Bitcoin XT fork happen?">#</a> <b>Why did the Bitcoin XT fork happen?</b></h2>
+      <p>Bitcoin XT was created due to a series of fundamental disagreements between Bitcoin core developers. The 
+      disagreements revolve around questions like "Should the block chain grow to match user demand?", "What data 
+      should the Bitcoin protocol provide to clients?" and "How should technical decisions be made?".</p>
+
+      <p>The biggest and most intractable disagreement is about the block size: the XT community believes the block size 
+      must grow in order to support Bitcoin's expanding user base. The Bitcoin Core project has made no move towards increasing the limit, in order to incentivise the creation and use of alternative, non-block chain based 
+      financial systems such as the so-called Lightning network. This is an irreconcilable difference of vision that has 
+      proven impossible to surmount.</p>
+
+      <p>Additionally, the Bitcoin Core developers have made statements that imply they no longer care about unconfirmed 
+      transactions or lightweight peer to peer wallets, although both are relied upon by many users. It is
+      unclear that these features will remain viable without a fork.</p>
+
+      <p>The final area of disagreement is around how decisions are made. Bitcoin Core has no process for 
+      resolving disagreements amongst its developers or defining who those developers actually are.</p>
+
+      <p>After a long series of attempts to find compromise in 2015, it became clear that there was no way to resolve these differences except via a fork.</p>
+
+      <p>You can read a longer article on the topic called <a href="https://medium.com/@octskyward/why-is-bitcoin-forking-d647312d22c1" title="Why is Bitcoin forking? – Medium">"Why is Bitcoin forking?"</a>.</p>
+      </div>
+      </section>
+
+      <section>
+      <div>
+      <h2><a href="#bigger-blocks-hard-fork" id="bigger-blocks-hard-fork" title="How does the change to 8 megabyte blocks work?">#</a> <b>How does the change to 8 megabyte blocks work?</b></h2>
+
+      <p>Anyone who mines with XT or a node that uses the "bigblocks patches" by Gavin Andresen marks their blocks with a
+         version number that indicates support for larger blocks. If 75% of blocks are indicating support a flag is set in 
+         all supporting nodes and a two week grace period begins. All nodes will be printing upgrade alerts to their logs. 
+         Miners, merchants and service providers then know to upgrade before the two week period elapses if they haven't 
+         already. Note that once the 75% threshold is reached the change is locked in and will occur after two weeks even if support dips back below 75%.</p>
+
+      <p>Once the fork occurs, nodes that are still following the 1mb-only chain will continue to receive and process 
+         transactions as before. However miners are incentivised to quickly switch to the larger chain as long as 
+         merchants, exchanges and other users do because otherwise their newly mined coins cannot be sold. Users are also 
+         incentivised to use the chain supported by the majority of mining hash power. Thus once the switch happens it is
+         not likely that the 1mb-only side of the chain will continue for very long.</p>
+      </div>   
+      </section>
+
+      <section>
+      <div>
+      <h2><a href="#hard-fork-alternatives" id="hard-fork-alternatives" title="Why can't alternative approaches to the hard fork be used?">#</a> <b>Why can't alternative approaches to the hard fork be used?</b></h2>
+
+      <p>The max block size limit is a rule that every node checks. It was put in as a temporary measure by Satoshi 
+         and always intended to be removed, which implies a hard fork as older nodes will reject blocks created by newer
+         nodes. The alternative most heavily promoted is the "Lightning network" by Blockstream, which is an entirely 
+         different system: it would require completely different wallets, a replacement for Bitcoin addresses/QR codes, 
+         new node software and so on. Lightning posits a set of relationships between quasi-institutional entities that 
+         settle up between each other on the block chain from time to time. It is unimplemented and many design elements 
+         are not yet defined.
+      </p>
+
+      <p>
+         In short, the only alternative seriously proposed involves abandoning Bitcoin as we know it today and attempting to convince users to move to a largely undesigned and potentially worse alternative.
+      </p>
+      </div>
+      </section>
+
+      <section>
+      <div>
+      <h2><a href="#soft-forks" id="soft-forks" title="Can a soft fork be used instead? Is that better?">#</a> <b>Can a soft fork be used instead? Is that better?</b></h2>
+
+      <p>In the case of a block size change, no soft fork is possible because old nodes will realise they are not checking
+      the same rules as soon as they see a block larger than what they are expecting. Any attempts to trick them into
+      believing the 1mb rule is still being followed would require radical modifications to the protocol and major changes
+      to all wallets, which is impractical. Additionally, as old nodes would have to upgrade anyway in order to preserve
+      their security level, there is no benefit to doing a soft fork.</p>
+      </div>
+      </section>
+
+      <section>
+      <div>
+
+      <h2><a href="#double-currencies" id="double-currencies" title="Does a hard fork cause Bitcoin to become two separate currencies?">#</a> <b>Does a hard fork cause Bitcoin to become two separate currencies?</b></h2>
+
+      <p>The idea that people can speculate or dump coins on one side of the block chain is a common misconception. The Bitcoin protocol does not have a field for transactions to specify a chain, so ordinary transactions made just after the fork will be included in both assuming there is sufficient capacity on both sides.</p>
+
+      <p>Eventually, if both chains were to be in active use, newly mined coins would start to enter circulation and 
+      at that point transactions involving them would start to become valid on only one chain. Sending coins to someone on the other chain would have no effect if they use a fully validating node: they would simply never see the payment appear. </p>
+
+      <p>A situation where both chains are advancing simultaneously is not likely to last for long. After a hard fork with 75% of hashing power support the less supported side would be rapidly abandoned, as confirmation times on the 25% side would be much higher than normal. This in turn means the transaction backlog would get much larger until the next retargeting interval was reached, meaning a higher risk of double spending for people still on the weaker chain. Merchants and exchanges should therefore prefer the side with the most hashing power, and growth of Bitcoin is good for their businesses anyway. This would make coins mined on the 25% side after the fork unspendable with those traders, so also incentivising miners to rapidly switch to the main chain.</p>
+
+      <p>Because of this dynamic any actual disruption during the fork should be minimal, especially as the grace period means it will have been clear to everyone that the change is about to happen.</p>
+      </div>
+      </section>
+
+      <section>
+      <div>
+      <h2><a href="#why-other-changes" id="why-other-currencies" title="Why does XT include non-block size related changes? Can there be a bigblocks only version?">#</a> <b>Why does XT include non-block size related changes? Can there be a bigblocks only version?</b></h2>
+
+      <p>Bitcoin XT follows the original vision of Bitcoin: simple, reliable, low-cost transactions for everyone in the world. Bitcoin Core developers have de-prioritised these goals. This split is most visible in the block size debate but frequently impacts other issues too, such as support for lightweight P2P wallets and unconfirmed transactions. XT is intended to resolve many issues with Bitcoin Core development that work against widespread user adoption, of which the need for better capacity planning is only one.
+      </p>
+
+      <p>Whilst we do not provide downloadable binaries of a Core that includes only the bigger block changes, the
+      patches are maintained in a standalone manner on the git <a href="https://github.com/bitcoinxt/bitcoinxt/tree/only-bigblocks" title="only-bigblocks patches">only-bigblocks</a> branch. By compiling this code yourself you can obtain a Core that isn't
+      rebranded and which includes only patches needed to vote for and follow the 8mb+ chain.</p>
+
+      </div>
+      </section>
+
+      <section>
+      <div>
+      <h2><a href="#testnet" id="testnet" title="What will happen with the testnet?">#</a> <b>What will happen with the testnet?</b></h2>
+
+      <p>
+      Bitcoin XT is programmed to start trying to fork the testnet chain immediately upon release. We do not expect testnet to smoothly transition in the same way as the main network, as single miners can easily dominate the testnet and then leave, so the idea of miner consensus doesn't apply in the same way there. The point of exercising the code on the testnet is to put the transition logic through its paces and ensure that chain reorgs back and forth are working correctly.
+      </p>
+      </div>
+      </section>
+
+      <section>
+      <div>
+      <h2><a href="#who-is-involved" id="who-is-involved" title="How are decisions made?">#</a> <b>How are decisions made?</b></h2>
+
+      <p>Bitcoin XT is a patch set on top of Bitcoin Core. It is currently maintained by Mike Hearn in collaboration with Gavin Andresen and Tom Harding. If a patch seems in line with the principles of the project it will be considered for inclusion. If the developer is willing to assist with rebasing work, that also helps build the case for inclusion.</p>
+
+      <p>Decisions are made through agreement between Mike and Gavin, with Mike making the final call if a serious dispute were to arise. In the event that such a dispute cannot be resolved this way and an XT developer were to make a fork, this website would provide a discussion and link to the competing version.</p>
+
+      <p>Mike is a former senior software engineer at Google. He is founder of two Bitcoin projects: <a href="https://bitcoinj.github.io/" title="bitcoinj">bitcoinj</a> and <a href="https://www.vinumeris.com/lighthouse" title="Lighthouse - Raise money with Bitcoin">Lighthouse</a>. BitcoinJ was the first ever SPV wallet and is widely used by many developers. It forms the foundation of several wallets, including the most popular <a href="https://play.google.com/store/apps/details?id=de.schildbach.wallet&amp;hl=en" title="Bitcoin Wallet">Android Bitcoin wallet</a>. He first used Bitcoin in April 2009 and has been a developer since 2010. With Gavin he designed the Bitcoin payment protocol, which has been widely adopted by payment processors and wallets. He is the author of the primary documents about Bitcoin <a href="https://en.bitcoin.it/wiki/Contracts" title="Smart contracts">smart contracts</a> and <a href="https://en.bitcoin.it/wiki/Scalability" title="Scalability">scalability</a>, and coined the name "Bitcoin Core".</p>
+
+      <p>Gavin Andresen is a veteran of several startups and has extensive experience of work on standards committees. Gavin started developing on Bitcoin in 2010 and took over from Satoshi when he left. He created the first ever Bitcoin faucet and has developed many upgrades to the original Bitcoin code base. He was maintainer of Bitcoin Core until mid-2014, when he stepped back to focus on research.</p>
+      </div>
+      </section>
+</div>

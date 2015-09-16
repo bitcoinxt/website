@@ -1,0 +1,282 @@
+.content {
+    @include basic-typography;
+
+    a { @include basic-link($link-color, $link-visited-color, $link-hover-color); }
+    a.more {
+        white-space: nowrap;
+        &:after { content: " »"; }
+    }
+    
+    .box {
+        background: #efeacf;
+        border: 1px solid darken(#efeacf, 10);
+        border-radius: 8px;
+        margin: 1.5em -1em;
+        padding: 1px 1em;
+    }
+}
+
+section[role=main] > article {
+    @extend .content
+}
+
+li {
+    padding-bottom: 1em;
+}
+
+li.sublist {
+    list-style-type:none;
+    border:0;
+    margin:0;
+    padding:0;
+}
+
+h2 {
+    color: grey;
+}
+
+/* Make scrolling to #anchor elements work with the header */
+section > div > h2:target,
+section > div > h2 > a:target {
+    padding-top: 150px;
+    margin-top: -150px;
+}
+
+.typography {
+    @include basic-typography;
+}
+
+.typography h3.announcement {
+      font-weight: 100;
+      font-size: 80%;
+      line-height: 1.45;
+      margin: 1em 0 0.25em;
+      color: #666;
+      letter-spacing: 1.5px;
+}
+
+#download {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#download-link.myButton {
+    -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+    box-shadow:inset 0 2px 0 rgba(255, 255, 255, 0.5) inset, 0 5px 10px rgba(0, 0, 0, 0.2);
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+    background:-moz-linear-gradient(top, #f90 10%,#e76a00 100%);
+    background:-webkit-linear-gradient(top, #f90 10%,#e76a00 100%);
+    background:-o-linear-gradient(top, #f90 10%,#e76a00 100%);
+    background:-ms-linear-gradient(top, #f90 10%,#e76a00 100%);
+    background:linear-gradient(#f90 10%, #e76a00 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+    background-color:#d9750b;
+    border-radius:6px;
+    border:1px solid #eeb44f;
+    display:inline-block;
+    cursor:pointer;
+    color: #fff;
+    font-family: Arial;
+    font-size: 1.5em;
+    font-weight:bold;
+    padding:.5em 1em;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #cc9f52;
+    vertical-align: middle;
+}
+#download-link.myButton:hover, #download-link.myButton:focus {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0a100), color-stop(1, #f70));
+    background:-moz-linear-gradient(top, #f0a100 5%, #f70 100%);
+    background:-webkit-linear-gradient(top, #f0a100 5%, #f70 100%);
+    background:-o-linear-gradient(top, #f0a100 5%, #f70 100%);
+    background:-ms-linear-gradient(top, #f0a100 5%, #f70 100%);
+    background:linear-gradient(to bottom, #f70 5%, #f70 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f70', endColorstr='#f70',GradientType=0);
+    background-color:#fb9e25;
+}
+#download-link.myButton:active {
+    position:relative;
+    top:1px;
+}
+#download-link i.fa{
+    margin-right:10px;
+}
+
+.main .main-icons {
+    text-align: center;
+    position: relative;
+}
+.main .main-icons div {
+    width: 30%;
+    display: inline-block;
+}
+
+/* -- MailChimp Form Embed Code - Slim - 08/17/2011 -- */
+
+#mc_embed_signup form {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding: 10px 0 10px 0
+}
+#mc_embed_signup input {
+    border: 1px solid #999;
+    -webkit-appearance: none;
+    outline: none;
+}
+#mc_embed_signup input[type=checkbox] {
+    -webkit-appearance: checkbox;
+}
+#mc_embed_signup input[type=radio] {
+    -webkit-appearance: radio;
+}
+#mc_embed_signup input:focus {
+    border-color: #1E82D2;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.055), 0 0 6px #1E82D2;
+    box-shadow: inset 0 3px 0px rgba(0, 0, 0, 0.055), 0 0 8px #1E82D2;
+}
+#mc_embed_signup .button {
+    clear: both;
+    background-color: #aaa;
+    border: 0 none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+}
+#mc_embed_signup .button:hover,
+#mc_embed_signup .button:focus,
+#mc_embed_signup .button input:focus {
+    background-color: #777;
+}
+#mc_embed_signup .small-meta {
+    font-size: 11px;
+}
+#mc_embed_signup .nowrap {
+    white-space: nowrap;
+}
+#mc_embed_signup .clear {
+    clear: none;
+    display: block;
+}
+#mc_embed_signup label {
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+#mc_embed_signup input.email {
+    text-align: center;
+    padding: 12px 5px;
+    width: 60%;
+    max-width: 550px;
+    margin: 10px 0px 20px 0px;
+    font-size: 15px;
+    color: #666;
+    font-family: 'proxima-nova', 'Proxima Nova', sans-serif;
+}
+#mc_embed_signup input.button {
+    width: 40%;
+    max-width: 140px;
+}
+#mc_embed_signup div#mce-responses {
+    float: left;
+    top: -1.4em;
+    padding: 0em .5em 0em .5em;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 5%;
+    clear: both;
+}
+#mc_embed_signup div.response {
+    margin: 1em 0;
+    padding: 1em .5em .5em 0;
+    font-weight: bold;
+    float: left;
+    top: -1.5em;
+    z-index: 1;
+    width: 80%;
+}
+#mc_embed_signup #mce-error-response {
+    display: none;
+}
+#mc_embed_signup #mce-success-response {
+    color: #529214;
+    display: none;
+}
+#mc_embed_signup label.error {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: 1.05em;
+    text-align: left;
+    padding: .5em 0;
+}
+#mc_embed_signup_hidden {
+    position: absolute;
+    left: -5000px;
+}
+
+@media screen and (max-width: 55em) {
+    #mc_embed_signup input.email {
+        width:85%;
+        margin: 10px 0px 20px 0px;
+        max-width: 500px;
+    }
+    .main .main-icons {
+        margin: 20px 0;
+    }
+    .main .main-icons > div > h2 {
+        font-size: 100%;
+    }
+}
+@media screen and (max-width: 32.25em) {
+    #mc_embed_signup input.email {
+        width:95%;
+        margin: 10px 0px 20px 0px;
+    }
+}
+
+@media screen and (max-width: 24em) {
+    #mc_embed_signup input.email {
+        width: 90%;
+    }
+    #download-link.myButton {
+        font-size: 1.2em;
+    }
+    .main .main-icons > div > h2 {
+        font-size: 80%;
+    }
+}
+
+/* -- Onboard -- */
+
+.onboard_text {
+    text-align: justify;
+}
+.onboard_logo {
+    float: left;
+    width: 200px;
+    height: 70px;
+    margin: 0 24px 0 0;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+}
+.onboard_text p {
+    margin-bottom: 20px;
+}
+

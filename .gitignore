@@ -13,13 +13,15 @@ tmtags
 ## VIM
 *.swp
 
-## PROJECT::GENERAL
+## PHPSTORM
+.idea
+
+## JEKYLL
+_site
 .sass-cache
-coverage
-rdoc
-pkg
 
 ## PROJECT::SPECIFIC
 *.gem
 .rvmrc
 .bundle
+vendor

@@ -1,0 +1,21 @@
+// Text Colors
+$text-color: #00639E; /*dark blue*/
+$bright_chartreusse: #e9e516;
+$loud-color: $text-color;
+$quiet-color: soften($text-color, 1.5);
+$header-color: $text-color;
+$paragraph-color: $text-color;
+
+// Theme Colors
+$background-color: white;
+$banner-color: #fff;
+$orange: #ef7220;
+
+// Link Colors - oranges
+$link-color: #e76a00; /*#F59C09;*/
+$link-visited-color: soften($link-color, .25);
+$link-hover-color: strengthen($link-color, .20);
+
+// Gray on White
+$link-color-muted: #D3D3D3;
+$link-hover-color-muted: strengthen($link-color-muted, 0.66);

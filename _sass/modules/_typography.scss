@@ -1,0 +1,182 @@
+// Reversed?
+$reversed-text: false;
+
+// Base Font
+$base-font-family: "Helvetica Neue", Hevetica, Arial, sans-serif;
+$base-font-size: 110%;
+$base-line-height: 1.4;
+
+// Fixed Font
+$fixed-font-family: 'Lato', Calibri, Arial, sans-serif;
+$fixed-font-size: 85%;
+$fixed-line-height: $base-line-height;
+
+// Paragraphs
+$indented-paragraphs: false;
+
+// Body margin
+$body-margin-x: 0%;
+
+// This should be applied to the body of the document:
+// 
+//     body { @include base-font; }
+// 
+@mixin base-font {
+    color: $text-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+
+@mixin basic-link($color: $link-color, $visited: $color, $hover: $color, $decoration: "plain") {
+    &:link {
+        color: $color;
+        @if $decoration == "underline" { text-decoration: underline; cursor: pointer; }
+        @if $decoration == "plain"     { text-decoration: none; cursor: pointer; }
+    }
+    &:visited {
+        color: $visited;
+    }
+    &:hover {
+        color: $hover;
+        @if $decoration == "underline" { text-decoration: underline; cursor: pointer; }
+        @if $decoration == "plain"     { text-decoration: underline; cursor: pointer; }
+    }
+}
+
+// Typically this should be applied to content portion of the document:
+// 
+//     .content { @include basic-typography; }
+// 
+// Pass true if you would like to use indented instead of block level paragraphs:
+// 
+//     .content { @include basic-typography(true); }
+// 
+@mixin basic-typography($indented: $indented-paragraphs) {
+    @include inline-elements;
+    @include headings;
+    @if $indented {
+        @include indented-paragraphs;
+    } @else {
+        @include block-paragraphs;
+    }
+    @include lists;
+    @include fixed-font-elements;
+}
+
+// Style inline elements like strong, em, abbr, etc...
+@mixin inline-elements($loud-color: $loud-color) {
+    @include bold-italic-elements($loud-color);
+    @include misc-inline-elements;
+}
+
+// Basic styles for strong, b, em, and i
+@mixin bold-italic-elements($loud-color: $loud-color) {
+    strong, b { color: $loud-color; font-weight: 700; }
+    em, i { font-style: italic; }
+    i.fa { font-style: normal; }
+}
+
+// Basic styles for abbr, acronym, sub, sup, and span.caps
+@mixin misc-inline-elements {
+    abbr, acronym { border-bottom: 1px dotted soften($text-color, 2); }
+    sub, sup { font-size: 85%; }
+    sub { vertical-align: sub; }
+    sup { vertical-align: super; }
+    span.caps { font-size: 95%; }
+}
+
+// Basic styles for headings
+@mixin headings($color: $header-color, $line-height: $base-line-height) {
+    h1, h2, h3, h4, h5, h6 {
+        color: $color;
+        margin: 1em 0;
+    }
+    h1 {
+        font-weight: bold;
+        font-size: 150%;
+        line-height: 1 * $line-height;
+        text-align: center;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 125%;
+        line-height: 1 * $line-height;
+        text-align:center;
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 140%;
+        line-height: 1 * $line-height;
+        margin: 1.25em 0 0.5em;
+    }
+    h4 {
+        font-weight: bold;
+        font-size: 110%;
+        line-height: 1 * $line-height;
+        margin: 0.5em 0 0.5em;
+    }
+    h5 {
+        font-style: italic;
+        font-size: 110%;
+        line-height: $line-height;
+        margin: 0.65em 0;
+    }
+    h6 {
+        font-weight: bold;
+        margin-bottom: -0.75em;
+    }
+}
+
+// Block-level paragraphs with vertical margin
+@mixin block-paragraphs {
+    p { margin: .75em 0; }
+}
+
+// Indented paragraphs
+@mixin indented-paragraphs($indent: 1em) {
+    p { margin-top: 0.5; margin-bottom: 0.5; }
+    p + p { text-indent: $indent; }
+}
+
+// Basic styles for list elements
+@mixin lists($indent: 1em, $ul-list-style: disc, $ol-list-style: decimal) {
+    ul, ol, dl { margin-top: 0.75em; margin-bottom: 0.75em; }
+    ul, ol, dd { padding-left: $indent; }
+    ul { list-style: $ul-list-style; }
+    ol { list-style: $ol-list-style; }
+    li { margin-top: 0.75em; margin-bottom: 0.75em; }
+    li.on_grey { margin-top: 0.5em; margin-bottom: 0.5em; font-size: .85em; }
+    dt { margin-top: 1em; }
+    dd { margin-bottom: 1em; }
+}
+
+// Typewritter styles for fixed-font elements
+@mixin fixed-font-elements($font-family: $fixed-font-family, $font-size: $fixed-font-size, $line-height: $fixed-line-height) {
+    code, dfn, kbd, samp, tt, pre {
+        font-family: $font-family;
+        font-size: 95%;
+        background: soften($text-color);
+        color: if(lightness($text-color) > 50, #000, #fff);
+        border-radius: 8px;
+    }
+    code, dfn, kbd, samp, tt {
+        padding: 0 0.5em;
+        display: inline-block;
+    }
+    pre {
+        line-height: $line-height;
+        padding: 0.5em 1em;
+        @media screen and (max-width: 55em) {
+            display: inline-block;
+        }
+    }
+    pre code {
+        display: block;
+        padding: 0.5em 0;
+        overflow-x: auto;
+        @media screen and (max-width: 55em) {
+            overflow-x: visible;
+        }
+    }
+}
