@@ -19,61 +19,14 @@ title: "Добро пожаловать"
           </div>
         </div>
         <p>
-        Bitcoin XT - это воплощение полной ноды биткоин-сети, которая соответствует первоначальному видению Биткоина: простые, надёжные, дешёвые транзакции для каждого в мире. Bitcoin XT основан на исходном коде Bitcoin Core и собран на его последней стабильной версии с применением ряда <a href="patches.html">патчей</a>. Для того, чтобы каждый мог проверить, что загружаемые файлы согласуются с <a href="https://github.com/bitcoinxt/bitcoinxt">исходным кодом</a>, используется метод <a href="https://github.com/bitcoinxt/gitian.sigs">Deterministic Builds</a>.
+        Bitcoin XT - это воплощение полной ноды биткоин-сети, которая соответствует первоначальному видению Биткоина: простые, надёжные, дешёвые транзакции для каждого в мире. Изначально Bitcoin XT представлял из себя простой набор патчей поверх Bitcoin Core, сейчас же Bitcoin XT - независимый форк с множеством новых <a href="patches.html">возможностей</a>. Для того, чтобы каждый мог проверить, что загружаемые файлы согласуются с <a href="https://github.com/bitcoinxt/bitcoinxt">исходным кодом</a>, используется метод <a href="https://github.com/bitcoinxt/gitian.sigs">Deterministic Builds</a>.
         </p>
 
         <div style="text-align: center; padding-top: 1em; padding-bottom: 1em;">
             <a id="download-link" href="https://github.com/bitcoinxt/bitcoinxt/releases/latest" class="myButton mg-btm-05"><i class="fa fa-download fa-1x"></i>Скачать</a>
             <div id="releases-page-links">
-            <a class="muted_link" href="https://github.com/bitcoinxt/bitcoinxt/releases/latest"> другие версии</a>&nbsp;|&nbsp;<a class="muted_link" href="apt.html">apt-репозиторий</a>
+            <a class="muted_link" href="apt.html">APT-репозиторий</a>
             </div>
-            <script>
-                var baseVer = "0.11";
-                var relChar = "D";
-                var release = baseVer + relChar;
-
-                var cpuBits = 32;
-                var platform = window.navigator.platform;
-                var check = function(s) {
-                    return window.navigator.userAgent.indexOf(s) > -1;
-                };
-                if (check('x86_64') || check('x86-64') || check('Win64') || check('x64;') || check('amd64') || check('AMD64') || check('WOW64') || check('x64_64') || platform === 'MacIntel' || platform === 'Linux x86_64') {
-                    cpuBits = 64;
-                } else if (platform === 'Linux armv7l' || platform === 'iPad' || platform === 'iPhone' || platform === 'Android' || platform === 'iPod' || platform === 'BlackBerry') {
-                    // No release for this platform, but just let the user fall through to the generic release page as
-                    // there's not much else we can do.
-                } else if (platform === 'Linux i686') {
-                    // Not enough info to decide.
-                }
-
-                var a = document.getElementById("download-link");
-                var rp = document.getElementById("releases-page-links");
-                if (navigator.appVersion.indexOf("Win") != -1) {
-                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/Bitcoin.XT." + cpuBits + ".bit.exe";
-                    a.setAttribute("href", href);
-                    rp.style.display = "block";
-                } else if (navigator.appVersion.indexOf("Mac") != -1) {
-                    a.setAttribute("href", "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/Bitcoin-XT." + release + ".dmg");
-                    rp.style.display = "block";
-                } else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux")!=-1) {
-                    var href = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v" + release + "/bitcoin-xt-" + baseVer + ".0-" + relChar + "-linux" + cpuBits + ".tar.gz"
-                    a.setAttribute("href", href);
-                    rp.style.display = "block";
-                }
-            </script>
-
-            <!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-                <form action="//vinumeris.us8.list-manage.com/subscribe/post?u=8e10893034414bfbeed7ca838&amp;id=d1d71cbfec" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll">
-                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Получайте уведомления о новых релизах и событиях сети" required>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_8e10893034414bfbeed7ca838_d1d71cbfec" tabindex="-1" value=""></div>
-                        <div class="clear"><input type="submit" value="Подписаться" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                    </div>
-                </form>
-            </div>
-            <!--End mc_embed_signup-->
         </div>
 
 <!--   # disabled until gandi gets back to me about why their mail forwarding is hosed
@@ -111,7 +64,7 @@ title: "Добро пожаловать"
           </li>
         </ul>
 
-        <p>Вы можете <a href="patches.html">узнать больше о патчах в Bitcoin XT</a>.
+        <p>Вы можете <a href="patches.html">узнать больше о новых возможностях в Bitcoin XT</a>.
 
           </div>
         </section>
@@ -123,7 +76,7 @@ title: "Добро пожаловать"
 
         <p>
            Много лет назад Сатоши Накамото установил лимит на размер блоков в Биткоине для защиты от спама. Он намеревался убрать этот лимит, как только будут разработаны лёгкие кошельки, однако, убран он так и не был. Ожидается, что в скором времени Биткоин выйдет за пределы установленного лимита и <a href="https://medium.com/@octskyward/crash-landing-f5cc19908e32">из-за этого возникнут проблемы в надёжности работы сети</a>.
-            Разработчики Bitcoin Core не желают увеличивать вместительность блокчеина, поэтому майнеры и пользователи, которые не согласны с ними, должны либо переключиться на Bitcoin XT, либо применить <a href="https://github.com/bitcoinxt/bitcoinxt/tree/only-bigblocks">патч для больших блоков</a> вручную.
+            Разработчики Bitcoin Core не желают увеличивать вместительность блокчеина, поэтому майнеры и пользователи, которые не согласны с ними, должны либо переключиться на Bitcoin XT, либо выбрать другой форк, поддерживающий большие блоки, например <a href="https://bitcoinclassic.com" title="Bitcoin Classic">Bitcoin Classic</a>.
         </p>
 
         <p>
@@ -144,7 +97,7 @@ title: "Добро пожаловать"
         <h2 id="sec-miners"><i class="fa fa-cube fa-2x"></i>Майнеры</h2>
 
         <p>
-            Если вы майните с помощью Bitcoin XT, вы будете производить блоки со специальным номером в поле "номер версии блока". Для остальной сети это будет означать, что вы поддерживаете увеличение размера блоков. Как только 75% из последней тысячи блоков будут с этим специальным номером, сетью будет принято решение о том, что майнинг увеличенных блоков можно начать. Так как увеличенные блоки не будут приняты нодами, которые на тот момент всё ещё будут использовать Bitcoin Core, сначала будет введён специальный двухнедельный промежуточный период, в течение которого будут распространяться новости о новом консенсусе, в том числе и с помощью вывода специального сообщения о доступности обновления для операторов нод, использующих Bitcoin Core. Лишь после этого периода будет начат майнинг больших блоков.
+            Если вы майните с помощью Bitcoin XT, вы будете производить блоки со специальным номером в поле "номер версии блока". Для остальной сети это будет означать, что вы поддерживаете увеличение размера блоков. Как только 75% из последней тысячи блоков будут с этим специальным номером, сетью будет принято решение о том, что майнинг увеличенных блоков можно начать. Так как увеличенные блоки не будут приняты нодами, которые на тот момент всё ещё будут использовать Bitcoin Core, сначала будет введён специальный четырёхнедельный промежуточный период, в течение которого будут распространяться новости о новом консенсусе, в том числе и с помощью вывода специального сообщения о доступности обновления для операторов нод, использующих Bitcoin Core. Лишь после этого периода будет начат майнинг больших блоков.
         </p>
 
         <p>
@@ -152,12 +105,7 @@ title: "Добро пожаловать"
         </p>
 
         <p>
-            <b>Мягкие ограничения</b>: так же как и Bitcoin Core, Bitcoin XT поддерживает настройку максимального размера блока, который вы будете майнить. Если применить такую настройку, то ваша нода не будет майнить блоки больше этого лимита, но при этом она будет принимать большие блоки от других. По умолчанию, такое ограничение не используется, но вы можете это изменить, если вы считаете, что ваши блоки орфанятся слишком часто из-за задержек их распространения по сети.
-        </p>
-
-        <p>
-            Хотите узнать, как максимизировать свою прибыль? Мы готовы вам помочь! Присоединяйтесь к
-            <a href="https://groups.google.com/forum/#!forum/bitcoin-xt">списку рассылки</a> и задавайте ваши вопросы!
+            <b>Мягкие ограничения</b>: так же как и Bitcoin Core, Bitcoin XT поддерживает настройку максимального размера блока, который вы будете майнить. Если применить такую настройку, то ваша нода не будет майнить блоки больше этого лимита, но при этом она будет принимать большие блоки от других.
         </p>
 
         </div>
