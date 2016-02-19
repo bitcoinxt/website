@@ -22,6 +22,10 @@ description: "We provide an APT repository for Debian and Ubuntu users, for bitc
   	    Run all commands as root.
         </p>
 
+        <p>
+        If you are upgrading from Bitcoin XT 0.11.0D, please update <em>/etc/apt/sources.list.d/bitcoinxt.list</em> &mdash; The URL has changed.
+        </p>
+
         <p>Firstly, import the PGP key used to sign the packages:</p>
 
         <pre><code># cat &lt;&lt;EOF | apt-key add -
@@ -61,7 +65,7 @@ EOF</code></pre>
 
         <p>Now configure apt, by running this as root:</p>
 
-        <pre><code># echo 'deb [ arch=amd64 ] http://bitcoinxt.software.s3-website-us-west-2.amazonaws.com/apt wheezy main' &gt; /etc/apt/sources.list.d/bitcoinxt.list
+        <pre><code># echo 'deb [ arch=amd64 ] http://xt.allnodes.xyz jessie main' &gt; /etc/apt/sources.list.d/bitcoinxt.list
 # apt-get update</code></pre>
 
         <p>And finally install:</p>
