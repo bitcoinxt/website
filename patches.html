@@ -7,31 +7,23 @@ description: "Bitcoin XT introduces bigger blocks, thin block download, double s
       <div class="main">
         <section>
         <div>
-          <h1>Notable features in XT</h1>
+		<p>Bitcoin XT has a rich set of features. It's encouraged to explore RPC interface and the <em>--help</em> options.</p>
+          <h1>Some selected features of XT</h1>
 
           <ul>
-          <li><b>Bigger blocks</b>. This set of patches performs some small code refactorings, and
-          implements support for switching to 2 megabyte blocks after January 2016 once 75%+ of mined blocks are voting
-          for the change by setting flags in the block version field. Once supermajority has been reached, there is a
-          grace period of four weeks before the rule change takes effect. After the switch the max block size limit
-          increases to 2 megabyte blocks. The soft limit is set equal to the hard limit to avoid the need
-          for miners to constantly reconfigure things.</li>
+		  <li><b>Dynamic maximum block size by miner vote</b>. Bitcoin XT implements BIP100, allowing the miners to adjust maximum block size limit after network needs. Read more about it and follow the votes at <a href="https://bip100.tech">bip100.tech</a></li>
 
-          <li><b>Bandwidth limiting</b>. Set limitations on upload and download bandwidth. This allows you to run a full node without it interfering with other internet services used on your network such as Netflix. It can also be configured to use as much bandwidth as available, but have a total usage cap over a time period.</li>
+          <li><b>Bandwidth limiting</b>. Set limitations on upload and download bandwidth. This allows you to run a full node without it interfering with other internet services used on your network.</li>
 
-          <li><b>Thin blocks</b>. This set of patches add <a href="https://www.reddit.com/r/btc/comments/42k7ka/all_about_thin_blocks_in_xt/">thin blocks</a> making Bitcoin XT currently the fastest Bitcoin client on the network. Our thin block implementation reduces the size of downloading a new block by 85%. We support downloading thin blocks in parallel from multiple peers. This means that no single node can stall the download. The thin blocks patch can be configured for either for fast download (parallel) or bandwidth saving (no parallel).</li>
+	  <li><b>Thin block relay</b>. Bitcoin XT is the only client that supports <em>both</em> the <a href="https://github.com/BitcoinUnlimited/BitcoinUnlimited/blob/release/doc/bu-xthin-protocol.md">XThin</a> and <a href="https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki">Compact Block</a> protocols. When running XT you will efficiently keep up with the blockchain. You will also help the network by effectively acting as a bridge between nodes that support either protocol, but not both.</li>
 
-          <li><b>Double spend relaying</b>. This set of patches makes the P2P network relay double spends when they are seen, so sellers can learn about attempts to defraud them faster and with a lower cost to the peer to peer network. The alternative approach, used today, requires finding and connecting to as many nodes as possible which is infeasible on mobile and wasteful even when it can be done. It also upgrades the Bitcoin-Qt wallet to show broadcast double spend attempts in red, adds a -respendnotify command line flag, and reports conflicts via the JSON-RPC API.</li>
+	  <li><b>Double spend relaying</b>. Detect and help other clients detect double spending transactions. This allows sellers to learn about attempts to defraud them faster and with a lower cost to the peer to peer network. The Bitcoin-Qt wallet will show broadcast double spend attempts in red. There is a new <em>-respendnotify</em> command line flag, and conflicts are reported via the RPC interface. Even if this feature is not needed by you, by running XT you will help those that benifit from it. </li>
 
           <li><b>Support BIP 64 ("getutxos")</b>. This allows peers to request the contents of a ledger entry over the network. It is useful for <a href="https://vinumeris.com/lighthouse" title="Lighthouse - Raise money with Bitcoin">the Lighthouse decentralised crowdfunding wallet</a> to present a better user interface, and for miscellaneous other tasks.</li>
 
-          <li><b>Refresh the DNS seed list</b>. DNS seeds are used to discover network peers when a node is started for the first time, and by lightweight/SPV wallets. The DNS seed list in Core contains a seed that only yields a single working peer (the same one every time), and does not include some seeds that are available and run by known community contributors. This patch removes the single-peer seed and adds in the other seeds, to improve robustness and diversity.</li>
+	  <li><b>Enhances SPV security</b>. XT passes onto SPV wallets knowledge about unconfirmed ancestors of transactions, enabling them to better asses the risk of their unconfirmed transactions.</li>
 
-          <li><b>Anti-DoS attack improvements</b>. This patch fixes an issue that allows a malicious peer to jam a node by repeatedly offering a transaction or block and then never delivering it.</li>
-
-          <li><b>Anti-DoS attack improvements</b>. It's currently possible to jam a Bitcoin node by connecting to it repeatedly via different IP addresses, as there is a fixed limit on how many connections a node will accept. Once full, no other peers or wallets can connect to it any more and serving capacity for new nodes and P2P wallets is reduced. If the attack is repeated against every node, the entire network could become jammed.
-
-          <p>This patch set introduces code that runs when a node is full and otherwise could not accept new connections. It labels and prioritises connections according to lists of IP ranges: if a high priority IP address connects and the node is full, it will disconnect a lower priority connection to make room. Currently Tor exits are labelled as being lower priority than regular IP addresses, as jamming attacks via Tor have been observed, and most users/merchants don't use it. In normal operation this new code will never run. If someone performs a DoS attack via Tor, then legitimate Tor users will get the existing behaviour of being unable to connect, but mobile and home users will still be able to use the network without disruption.</p>
+	  <li><b>Prioritize incoming connections</b>. It's possible to group IP-addresses of incoming connections and assign them priority. If connection slots become full, then a peer with a lower priority than the incoming connection will be disconnected. As a an anti-DoS masure, Tor exit nodes have optionally lower priority than regular IP addresses as to not reject mobile and home users.</li>
           </ul>
         </div>
         </section>
