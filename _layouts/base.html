@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="{{ site.lang }}" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - Bitcoin XT</title>
+    <title>{% t page.title %} - Bitcoin XT</title>
     <meta name="keywords" content="bitcoin, bitcoin xt, bitcoin core, block size, blocks, limit, mining, network, vision, principles, source" />
     <meta name="author" content="curvestudio" />
-    <meta name="description" content="{{ page.description }}">
+    <meta name="description" content="{% t page.description %}">
     <link rel="shortcut icon" href="/favicon.png">
     <link rel="stylesheet" href="/css/screen.css">
     <!--[if IE]>
@@ -17,17 +17,17 @@
   <body>
     <div class="container" id="sec-top">
       <header role="banner">
-        <div class="cbp-af-header cbp-af-header-shrink">
+        <div class="cbp-af-header cbp-af-header-{{ site.lang }} cbp-af-header-shrink">
           <div class="cbp-af-inner">
             <div class="logo">
-              <a href="index.html" title="Bitcoin XT"><img src="/img/bitcoin-logo.png" alt="Bitcoin XT"></a>
+              <a href="{{ site.baseurl }}/" title="Bitcoin XT"><img src="/img/bitcoin-logo.png" alt="Bitcoin XT"></a>
             </div>
             <nav class="pd-b">
-              <a accesskey="1" href="/" title="Welcome">Welcome</a>
-              <a href="/#sec-hardfork" title="Bigger&nbsp;blocks">Bigger&nbsp;blocks</a>
-              <a href="/patches.html" title="Features">Features</a>
-              <a accesskey="5" href="faq.html" title="Frequently asked questions">FAQ</a>
-              <a href="/#sec-takepart" title="Take&nbsp;part">Take&nbsp;part</a>
+              <a accesskey="1" href="{{ site.baseurl }}/" title="{% t base.menu.welcome %}">{% t base.menu.welcome %}</a>
+              <a href="{{ site.baseurl }}/#sec-hardfork" title="{% t base.menu.bigblocks %}">{% t base.menu.bigblocks %}</a>
+              <a href="{{ site.baseurl }}/patches.html" title="{% t base.menu.features %}">{% t base.menu.features %}</a>
+              <a accesskey="5" href="{{ site.baseurl }}/faq.html" title="{% t base.menu.faq.title %}">{% t base.menu.faq.text %}</a>
+              <a href="{{ site.baseurl }}/#sec-takepart" title="{% t base.menu.takepart %}">{% t base.menu.takepart %}</a>
             </nav>
             <div class="lang">
               <a class="en" href="/{{ page.url | split:"/" | last }}" title="English">EN</a>
