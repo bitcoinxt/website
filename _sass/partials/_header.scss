@@ -87,7 +87,6 @@
 .cbp-af-header .lang a {
     color: #aaa;
     padding: 3px 6px 3px 25px;
-    background: url(/img/lang_icons.png) no-repeat;
 }
 .cbp-af-header .lang a:hover {
     color: #ff7602;
@@ -102,7 +101,7 @@
 
 @media screen and (max-width: 55em) {
     .pd-b {
-        padding-bottom: 10px; 
+        padding-bottom: 10px;
     }
     .cbp-af-header .cbp-af-inner {
         width: 100%;
