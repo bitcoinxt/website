@@ -1,94 +1,15 @@
 ---
 layout: "base"
-title: "FAQ"
-description: "Bitcoin XT is an implementation of a Bitcoin full node"
+title: faq.title
+description: faq.description
 ---
 
 <div class="main" id="faq">
-      <section>
-      <div>
-      <h1>Frequently asked questions</h1>
-
-      <h2><a href="#how-do-i-upgrade" id="how-do-i-upgrade" title="How do I switch to XT?">#</a> <b>How do I switch to XT?</b></h2>
-
-      <p>Download and run from our website as normal. Bitcoin XT uses the same data directories
-      and configuration as Bitcoin Core, so if you were previously running that you won't need to download the block
-      chain again. On first run you will need to reindex the blockchain by adding the <em>-reindex</em> switch.
-      </p>
-
-      </div>
-      </section>
-
-      <section><div>
-      <h2><a href="#is-there-risk" id="is-there-risk" title="Is there any risk involved in running XT?">#</a> <b>Is there any risk involved in running XT?</b></h2>
-
-      <p>Bitcoin XT is fully compatible with the Bitcoin Cash (BCH) network.</p>
-      <p>When running on the Bitcoin (BTC) network, segwit transactions cannot be fully validated.</p>
-
+	  <section><div>
+      <h1>{% t faq.faq %}</h1>
+{% for item in site.translations[site.lang]["faq"]["items"] %}
+      <h2><a href="#{{ item["id"] }}" id="{{ item["id"] }}" title="{{ item["title"] }}">#</a> <b>{{ item["title"] }}</b></h2>{{ item["text"] }}
+	  </div></section><section><div>
+{% endfor %}
       </div></section>
-
-      <section>
-      <div>
-      <h2><a href="#why-did-the-xt-fork-happen" id="why-did-the-xt-fork-happen" title="Why did the Bitcoin XT fork happen?">#</a> <b>Why did the Bitcoin XT fork happen?</b></h2>
-      <p>Bitcoin XT was created due to a series of fundamental disagreements between Bitcoin core developers. The
-      disagreements revolve around questions like "Should the block chain grow to match user demand?", "What data
-      should the Bitcoin protocol provide to clients?" and "How should technical decisions be made?".</p>
-
-      <p>The biggest and most intractable disagreement is about the block size: the XT community believes the block size
-      must grow in order to support Bitcoin's expanding user base. The Bitcoin Core project has made no move towards increasing the limit, in order to incentivise the creation and use of alternative, non-block chain based
-      financial systems such as the so-called Lightning network. This is an irreconcilable difference of vision that has
-      proven impossible to surmount.</p>
-
-      <p>Additionally, the Bitcoin Core developers have made statements that imply they no longer care about unconfirmed
-      transactions or lightweight peer to peer wallets, although both are relied upon by many users. Without the Bitcoin Cash fork
-      these features would not have remained viable.</p>
-
-      <p>The final area of disagreement is around how decisions are made. Bitcoin Core has no process for
-      resolving disagreements amongst its developers or defining who those developers actually are.</p>
-
-      <p>After a long series of attempts to find compromise in 2015, it became clear that there was no way to resolve these differences except via a fork.</p>
-
-      <p>You can read a longer article on the topic called <a href="https://medium.com/@octskyward/why-is-bitcoin-forking-d647312d22c1" title="Why is Bitcoin forking? – Medium">"Why is Bitcoin forking?"</a>.</p>
-      </div>
-      </section>
-
-      <section>
-      <div>
-      <h2><a href="#hard-fork-alternatives" id="hard-fork-alternatives" title="Why can't alternative approaches to the hard fork be used?">#</a> <b>Why can't alternative approaches to the hard fork be used?</b></h2>
-
-      <p>The max block size limit is a rule that every node checks. It was put in as a temporary measure by Satoshi
-         and always intended to be removed, which implies a hard fork as older nodes will reject blocks created by newer
-         nodes. The alternative most heavily promoted is the "Lightning network" by Blockstream, which is an entirely
-         different system: it would require completely different wallets, a replacement for Bitcoin addresses/QR codes,
-         new node software and so on. Lightning posits a set of relationships between quasi-institutional entities that
-         settle up between each other on the block chain from time to time. It is unimplemented and many design elements
-         are not yet defined.
-      </p>
-
-      <p>
-         In short, the only alternative seriously proposed involves abandoning Bitcoin as we know it today and attempting to convince users to move to a largely undesigned and potentially worse alternative.
-      </p>
-      </div>
-      </section>
-
-      <section>
-      <div>
-      <h2><a href="#soft-forks" id="soft-forks" title="Can a soft fork be used instead? Is that better?">#</a> <b>Can a soft fork be used instead? Is that better?</b></h2>
-
-      <p>In the case of a block size change, no soft fork is possible because old nodes will realise they are not checking
-      the same rules as soon as they see a block larger than what they are expecting. Any attempts to trick them into
-      believing the 1mb rule is still being followed would require radical modifications to the protocol and major changes
-      to all wallets, which is impractical. Additionally, as old nodes would have to upgrade anyway in order to preserve
-      their security level, there is no benefit to doing a soft fork.</p>
-      </div>
-      </section>
-
-      <section>
-      <div>
-      <h2><a href="#who-is-involved" id="who-is-involved" title="How are decisions made?">#</a> <b>How are decisions made?</b></h2>
-
-      <p>Decisions are made by the current maintainer with input from the Bitcoin XT development team. When there is a disagreement the current maintainer will have the final say. If a patch seems in line with the principles of the project it will be considered for inclusion. If the developer is willing to assist with rebasing work, that also helps build the case for inclusion.</p>
-
-      </div>
-      </section>
 </div>

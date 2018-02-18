@@ -1,29 +1,19 @@
 ---
 layout: "base"
-title: "Features"
-description: "Bitcoin XT introduces bigger blocks, thin block download, double spend relaying, BIP 64 support, Anti-DoS attack improvements and updates for the DNS seed list."
+title: patches.title
+description: patches.description
 ---
 
       <div class="main">
         <section>
         <div>
-		<p>Bitcoin XT has a rich set of features. It's encouraged to explore RPC interface and the <em>--help</em> options.</p>
-          <h1>Some selected features of XT</h1>
+		<p>{% t patches.explore %}</p>
+          <h1>{% t patches.somefeatures %}</h1>
 
           <ul>
-		  <li><b>Dynamic maximum block size by miner vote</b>. Bitcoin XT implements BIP100, allowing the miners to adjust maximum block size limit after network needs. Read more about it and follow the votes at <a href="https://bip100.tech">bip100.tech</a></li>
-
-          <li><b>Bandwidth limiting</b>. Set limitations on upload and download bandwidth. This allows you to run a full node without it interfering with other internet services used on your network.</li>
-
-	  <li><b>Thin block relay</b>. Bitcoin XT is the only client that supports <em>both</em> the <a href="https://github.com/BitcoinUnlimited/BitcoinUnlimited/blob/release/doc/bu-xthin-protocol.md">XThin</a> and <a href="https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki">Compact Block</a> protocols. When running XT you will efficiently keep up with the blockchain. You will also help the network by effectively acting as a bridge between nodes that support either protocol, but not both.</li>
-
-	  <li><b>Double spend relaying</b>. Detect and help other clients detect double spending transactions. This allows sellers to learn about attempts to defraud them faster and with a lower cost to the peer to peer network. The Bitcoin-Qt wallet will show broadcast double spend attempts in red. There is a new <em>-respendnotify</em> command line flag, and conflicts are reported via the RPC interface. Even if this feature is not needed by you, by running XT you will help those that benefit from it. </li>
-
-          <li><b>Support BIP 64 ("getutxos")</b>. This allows peers to request the contents of a ledger entry over the network. It is useful for <a href="https://vinumeris.com/lighthouse" title="Lighthouse - Raise money with Bitcoin">the Lighthouse decentralized crowdfunding wallet</a> to present a better user interface, and for miscellaneous other tasks.</li>
-
-	  <li><b>Enhances SPV security</b>. XT passes onto SPV wallets knowledge about unconfirmed ancestors of transactions, enabling them to better asses the risk of their unconfirmed transactions.</li>
-
-	  <li><b>Prioritize incoming connections</b>. It's possible to group IP-addresses of incoming connections and assign them priority. If connection slots become full, then a peer with a lower priority than the incoming connection will be disconnected. As a an anti-DoS measure, Tor exit nodes have optionally lower priority than regular IP addresses as to not reject mobile and home users.</li>
+{% for item in site.translations[site.lang]["patches"]["features"] %}
+<li><b>{{ item["title"] }}</b>. {{ item["text"] }}</li>
+{% endfor %}
           </ul>
         </div>
         </section>

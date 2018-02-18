@@ -1,0 +1,186 @@
+base:
+    menu:
+        welcome: "Welcome"
+        bigblocks: "Bigger&nbsp;blocks"
+        features: "Features"
+        faq:
+            title: "Frequently asked questions"
+            text: "FAQ"
+        takepart: "Take&nbsp;part"
+
+index:
+    title: "Welcome"
+    description: |
+        Bitcoin XT is an implementation of a full node that embraces Bitcoin's original vision of simple, reliable, low-cost transactions for everyone in the world.
+    
+    header:
+        scalingicon: "Scaling<br>Bitcoin"
+        usersicon: "Users<br>Matter"
+        communityicon: "Pragmatic<br>Community"
+        info: |
+            Bitcoin XT is a full node implementation of a Bitcoin Cash (BCH) and Bitcoin (BTC). Bitcoin XT embraces Bitcoin's original vision of simple, reliable, low-cost transactions for everyone in the world. Bitcoin XT originated as a series of patches on top of Bitcoin Core and is now a independently maintained software fork. We do <a href="https://github.com/bitcoinxt/gitian.sigs">deterministic builds</a> so anyone can check the downloads correspond to the <a href="https://github.com/bitcoinxt/bitcoinxt">source code</a>.
+        download:
+            title: "Download now"
+            aptrepo: "APT repository"
+            dockerimg: "Docker Image"
+    
+    whatwestandfor:
+        title: "What we stand for"
+        missionstatement: |
+            The XT mission statement defines what the project believes is important: commitment to these principles are what differentiates us from Bitcoin Core. We try to follow Satoshi's original vision, as it is that vision which brought the Bitcoin community together.
+        scaling: |
+            <b>Scaling the network up to handle user demand is important</b>, even if that means the network changes along the way. <a href="http://satoshi.nakamotoinstitute.org/emails/cryptography/2/" title="Satoshi Nakamoto Institute - Re: Bitcoin P2P e-cash paper">It's what Satoshi wanted</a> and the idea of a global system used by ordinary people is what motivated many of us to join him.
+        provideinfo: |
+            <b>XT provides people with information they need</b>, even if using it requires them to make risk based decisions. For example:
+        zeroconf: |
+            We believe <b>unconfirmed transactions are important</b>. Many merchants want or need to accept payments within seconds rather than minutes or hours. XT accepts this fact and does what it can to minimize the risk, then help sellers judge what remains. It is committed to <a href="http://satoshi.nakamotoinstitute.org/emails/cryptography/8/" title="Satoshi Nakamoto Institute - Re: Bitcoin P2P e-cash paper"> the first seen rule</a>. We will not adopt changes that make unconfirmed transactions riskier.
+        lightwallet: |
+            <b>Lightweight wallets are important</b>. Most users cannot or will not run a fully verifying node. Most of the world population does not even own a computer: they will experience the internet exclusively via smartphones. These users must sacrifice some security in order to participate, so XT supports whatever technical tradeoffs wallet developers wish to explore.
+        decisionmaking: |
+            <b>Decision making is quick and clear.</b> Decisions are made according to a leadership hierarchy. The XT software encodes decisions that follow the above principles: people who disagree are welcome to use different software, or patch ours. We do not consider writing principled software to be centralizing and do not refuse to select reasonable defaults.
+        professionalism: |
+            The Bitcoin XT community is friendly, pragmatic, cares about app developers and considers the user experience in everything we do. We value professionalism in technical approach and communication. We run a moderated mailing list and do not tolerate troublemakers.
+        
+    blocksize:
+        title: "Block size hard fork"
+        history: |
+            Many years ago, a capacity limit was introduced into Bitcoin by Satoshi. He intended it to be removed once lightweight wallets were developed, however, this was never done. As predicted Bitcoin has run out of capacity and users are experiencing reliability problems as a result. The Bitcoin Core developers are unwilling to increase the block chain's capacity, finally this caused the network split into Bitcoin Cash (BCH) and Bitcoin (BTC). Miners and users who disagree with them have switched to Bitcoin XT or switched to other clients following the Bitcoin Cash consensus.
+        raise: |
+            There has been much community debate on this topic. You can read analysis and explanations for why we think raising the block size limit is important here:
+        links:
+            gavin: |
+                <a href="http://gavinandresen.ninja/" title="Gavin Andresen - Chief Scientist, Bitcoin Foundation. All-around geek.">A series of essays by Gavin Andresen</a>
+            mike: |
+                <a href="https://medium.com/@octskyward/crash-landing-f5cc19908e32" title="Crash landing — Medium">Why the block size limit must be raised</a> and <a href="https://medium.com/@octskyward/the-capacity-cliff-586d1bf7715e" title="The capacity cliff – Medium">why the proposed alternative schemes will not work</a>, by Mike Hearn.
+    
+    miners:
+        title: "Miners"
+        vote: |
+            By mining with Bitcoin XT you are empowered to <a href="https://bip100.tech">vote on a new maximum block size limit</a>. This indicates to the rest of the network that you support updating the limit. When 75% of the block votes are in agreement, a new limit will automatically activate.
+        softlimit: |
+            <b>Soft limit</b>: Bitcoin XT supports configuring the maximum size of blocks to mine. When set your node will not create blocks larger than the limit, although it will still accept them.
+        nosegwit: |
+            Mining is only supported on the Bitcoin Cash network only, as Bitcoin XT does not implement segwit.
+
+    users:
+        title: "Users and merchants"
+        norisks: |
+            By running Bitcoin XT you take no risks: if insufficient mining hash power runs XT to reach supermajority then nothing will happen. If enough does, you will follow the new chain and things will continue as normal.
+        doublespend: |
+            Additionally, XT has a useful feature: double spend monitoring and relaying. By running XT you help propagate information about double spends across the network, making it harder for payment fraudsters to steal from sellers by broadcasting two conflicting transactions simultaneously.
+
+    takepart:
+        title: "Take part!"
+        contact: |
+            Get in touch via our <a href="https://gitter.im/bitcoinxt">chatroom on Gitter</a> or <a href="https://groups.google.com/forum/#!forum/bitcoin-xt" title="bitcoin-xt on Google Groups">our mailing list!</a> Appropriate topics for the list include:
+        topics:
+            patches: |
+                Discussion of new patches
+            configuration: |
+                Questions around usage or how best to configure XT for mining
+            ideas: |
+                Development ideas (please at least try to implement your idea before asking others to do so!)
+        polite: |
+            Be polite and debate ideas rather than people.
+        subscribe: |
+            Subscribing to the mailing list without using your google account can be done <a href="https://groups.google.com/forum/?hl=en#!forum/bitcoin-xt/join">here</a>.
+
+patches:
+    title: "Features"
+    description: "Bitcoin XT introduces bigger blocks, thin block download, double spend relaying, BIP 64 support, Anti-DoS attack improvements and updates for the DNS seed list."
+
+    explore: "Bitcoin XT has a rich set of features. It's encouraged to explore RPC interface and the <em>--help</em> options."
+    somefeatures: "Some selected features of XT"
+    
+    features:
+      - title: "Dynamic maximum block size by miner vote"
+        text: |
+            Bitcoin XT implements BIP100, allowing the miners to adjust maximum block size limit after network needs. Read more about it and follow the votes at <a href="https://bip100.tech">bip100.tech</a>
+      - title: "Bandwidth limiting"
+        text: |
+            Set limitations on upload and download bandwidth. This allows you to run a full node without it interfering with other internet services used on your network.
+      - title: "Thin block relay"
+        text: |
+            Bitcoin XT is the only client that supports <em>both</em> the <a href="https://github.com/BitcoinUnlimited/BitcoinUnlimited/blob/release/doc/bu-xthin-protocol.md">XThin</a> and <a href="https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki">Compact Block</a> protocols. When running XT you will efficiently keep up with the blockchain. You will also help the network by effectively acting as a bridge between nodes that support either protocol, but not both.
+      - title: "Double spend relaying"
+        text: |
+            Detect and help other clients detect double spending transactions. This allows sellers to learn about attempts to defraud them faster and with a lower cost to the peer to peer network. The Bitcoin-Qt wallet will show broadcast double spend attempts in red. There is a new <em>-respendnotify</em> command line flag, and conflicts are reported via the RPC interface. Even if this feature is not needed by you, by running XT you will help those that benefit from it.
+      - title: "Support BIP 64 (\"getutxos\")"
+        text: |
+            This allows peers to request the contents of a ledger entry over the network. It is useful for <a href="https://vinumeris.com/lighthouse" title="Lighthouse - Raise money with Bitcoin">the Lighthouse decentralized crowdfunding wallet</a> to present a better user interface, and for miscellaneous other tasks.
+      - title: "Enhanced SPV security"
+        text: |
+            XT passes onto SPV wallets knowledge about unconfirmed ancestors of transactions, enabling them to better asses the risk of their unconfirmed transactions.
+      - title: "Prioritize incoming connections"
+        text: |
+            It's possible to group IP-addresses of incoming connections and assign them priority. If connection slots become full, then a peer with a lower priority than the incoming connection will be disconnected. As a an anti-DoS measure, Tor exit nodes have optionally lower priority than regular IP addresses as to not reject mobile and home users.
+
+faq:
+    title: "FAQ"
+    description: "Bitcoin XT is an implementation of a Bitcoin full node"
+    
+    faq: "Frequently asked questions"
+    
+    items:
+      - id: "how-do-i-upgrade"
+        title: "How do I switch to XT?"
+        text: |
+            <p>Download and run from our website as normal. Bitcoin XT uses the same data directories and configuration as Bitcoin Core, so if you were previously running that you won't need to download the block chain again. On first run you will need to reindex the blockchain by adding the <em>-reindex</em> switch.</p>
+      - id: "is-there-risk"
+        title: "Is there any risk involved in running XT?"
+        text: |
+            <p>Bitcoin XT is fully compatible with the Bitcoin Cash (BCH) network.</p>
+            <p>When running on the Bitcoin (BTC) network, segwit transactions cannot be fully validated.</p>            
+      - id: "why-did-the-xt-fork-happen"
+        title: "Why did the Bitcoin XT fork happen?"
+        text: |
+            <p>Bitcoin XT was created due to a series of fundamental disagreements between Bitcoin core developers. The disagreements revolve around questions like "Should the block chain grow to match user demand?", "What data should the Bitcoin protocol provide to clients?" and "How should technical decisions be made?".</p>
+            <p>The biggest and most intractable disagreement is about the block size: the XT community believes the block size must grow in order to support Bitcoin's expanding user base. The Bitcoin Core project has made no move towards increasing the limit, in order to incentivise the creation and use of alternative, non-block chain based financial systems such as the so-called Lightning network. This is an irreconcilable difference of vision that has proven impossible to surmount.</p>
+            <p>Additionally, the Bitcoin Core developers have made statements that imply they no longer care about unconfirmed transactions or lightweight peer to peer wallets, although both are relied upon by many users. Without the Bitcoin Cash fork these features would not have remained viable.</p>
+            <p>The final area of disagreement is around how decisions are made. Bitcoin Core has no process for resolving disagreements amongst its developers or defining who those developers actually are.</p>
+            <p>After a long series of attempts to find compromise in 2015, it became clear that there was no way to resolve these differences except via a fork.</p>
+            <p>You can read a longer article on the topic called <a href="https://medium.com/@octskyward/why-is-bitcoin-forking-d647312d22c1" title="Why is Bitcoin forking? – Medium">"Why is Bitcoin forking?"</a>.</p>
+      - id: "hard-fork-alternatives"
+        title: "Why can't alternative approaches to the hard fork be used?"
+        text: |
+            <p>The max block size limit is a rule that every node checks. It was put in as a temporary measure by Satoshi and always intended to be removed, which implies a hard fork as older nodes will reject blocks created by newer nodes. The alternative most heavily promoted is the "Lightning network" by Blockstream, which is an entirely different system: it would require completely different wallets, a replacement for Bitcoin addresses/QR codes, new node software and so on. Lightning posits a set of relationships between quasi-institutional entities that settle up between each other on the block chain from time to time. It is unimplemented and many design elements are not yet defined.</p>
+            <p>In short, the only alternative seriously proposed involves abandoning Bitcoin as we know it today and attempting to convince users to move to a largely undesigned and potentially worse alternative.</p>
+      - id: "soft-forks"
+        title: "Can a soft fork be used instead? Is that better?"
+        text: |
+            <p>In the case of a block size change, no soft fork is possible because old nodes will realise they are not checking the same rules as soon as they see a block larger than what they are expecting. Any attempts to trick them into believing the 1mb rule is still being followed would require radical modifications to the protocol and major changes to all wallets, which is impractical. Additionally, as old nodes would have to upgrade anyway in order to preserve their security level, there is no benefit to doing a soft fork.</p>
+      - id: "who-is-involved"
+        title: "How are decisions made?"
+        text: |
+            <p>Decisions are made by the current maintainer with input from the Bitcoin XT development team. When there is a disagreement the current maintainer will have the final say. If a patch seems in line with the principles of the project it will be considered for inclusion. If the developer is willing to assist with rebasing work, that also helps build the case for inclusion.</p>
+
+apt:
+    title: "APT repository"
+    description: "We provide an APT repository for Debian and Ubuntu users, for bitcoind and 64 bit machines only. To use it, follow these steps."
+
+    aptanddocker: "APT And Docker"
+    
+    gettingstarted: "There are two methods for getting started quickly on a linux machine:"
+    addrepo: "Add an apt repository to a debian or ubuntu installation."
+    installdocker: |
+        Install a docker image on a <a href="https://www.docker.com/" title="Docker">docker</a> supporting system.
+    
+    apt:
+        repo: "1. APT Repository"
+        64bitonly: "We provide an APT repository for Debian and Ubuntu users, for bitcoind and 64 bit machines only. To use it, follow these steps. Run all commands as root."
+        upgrade: "If you are upgrading from Bitcoin XT 0.11.0D, please update <em>/etc/apt/sources.list.d/bitcoinxt.list</em> &mdash; The URL has changed."
+        importpgp: "Firstly, import the PGP key used to sign the packages:"
+        fingerprint: "The key fingerprint is FB2C 2916 3890 E919 6434  BEFE 399C 6E4E 97B6 956B."
+        configureapt: "Now configure apt, by running this as root:"
+        install: "And finally install:"
+        service: |
+            Note that the server binary is named "bitcoinxtd" in this package, not bitcoind. Since 0.11B we have added systemd init scripts to make sure that the node will be started and auto-restarted if you reboot.</br>
+            The systemd bitcoinxtd.service registers the XT based daemon for autostart. Also installed is the bitcoinxt-cli executable which allows you to communicate with the running daemon.
+    
+    docker:
+        image: 2. Docker Image
+        dockerhub: |
+            There is a docker image hosted on dockerhub:
+            <a href="https://hub.docker.com/r/bitcoinxt/bitcoinxt/" title="Bitcoin XT on Docker Hub">bitcoinxt/bitcoinxt</a>
+        node: |
+            This allows you to get a node up and running in seconds. All you need is a machine capable of running <a href="https://www.docker.com/" title="Docker - Build, Ship, and Run Any App, Anywhere">docker</a>.

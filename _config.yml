@@ -1,11 +1,11 @@
 safe:        false
 port:        4000
-baseurl:     /
+baseurl:     ""
 url:         http://bitcoinxt.website
 
 source:      .
 destination: ./_site
-plugins:     ./_plugins
+plugins_dir: ./_plugins
 exclude:
     - Gemfile
     - Gemfile.lock
@@ -16,3 +16,17 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
+
+plugins:
+  - jekyll-multiple-languages-plugin
+
+languages: ["en", "ru"]
+
+exclude_from_localizations: [
+    "css",
+    "img",
+    "favicon.ico",
+    "favicon.png",
+    "industry-letter.pdf",
+    "robots.txt"
+    ]
