@@ -39,7 +39,7 @@ index:
         decisionmaking: |
             <b>Decision making is quick and clear.</b> Decisions are made according to a leadership hierarchy. The XT software encodes decisions that follow the above principles: people who disagree are welcome to use different software, or patch ours. We do not consider writing principled software to be centralizing and do not refuse to select reasonable defaults.
         professionalism: |
-            The Bitcoin XT community is friendly, pragmatic, cares about app developers and considers the user experience in everything we do. We value professionalism in technical approach and communication. We run a moderated mailing list and do not tolerate troublemakers.
+            The Bitcoin XT community is friendly, pragmatic, cares about app developers and considers the user experience in everything we do. We value professionalism in technical approach and communication.
         
     blocksize:
         title: "Block size hard fork"
@@ -72,7 +72,7 @@ index:
     takepart:
         title: "Take part!"
         contact: |
-            Get in touch via our <a href="https://gitter.im/bitcoinxt">chatroom on Gitter</a> or <a href="https://groups.google.com/forum/#!forum/bitcoin-xt" title="bitcoin-xt on Google Groups">our mailing list!</a> Appropriate topics for the list include:
+            Get in touch via our <a href="https://gitter.im/bitcoinxt">chatroom on Gitter</a>. Appropriate topics include:
         topics:
             patches: |
                 Discussion of new patches
@@ -82,8 +82,6 @@ index:
                 Development ideas (please at least try to implement your idea before asking others to do so!)
         polite: |
             Be polite and debate ideas rather than people.
-        subscribe: |
-            Subscribing to the mailing list without using your google account can be done <a href="https://groups.google.com/forum/?hl=en#!forum/bitcoin-xt/join">here</a>.
 
 patches:
     title: "Features"
