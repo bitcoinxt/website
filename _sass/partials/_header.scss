@@ -9,7 +9,6 @@
     width: 100%;
     background: #f6f6f6;
     z-index: 10000;
-    overflow: hidden;
     background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(30% 50px, #F47B20, #F47B20 400px);
     background-image: url("/img/bkgrnd_wide.png");
     background-size: cover;
@@ -43,7 +42,6 @@
     float: left;
 }
 .cbp-af-header nav {
-    float: right;
 }
 .cbp-af-header a img {
     margin-top: 14%;
@@ -58,11 +56,6 @@
     letter-spacing: .07em;
     line-height: 115px;
     text-shadow:0 0 15px rgba(0, 0, 0, 0.5);
-}
-.cbp-af-header-ru nav a {
-  margin: 0 8px;
-  font-size: 0.9em;
-  letter-spacing: .05em;
 }
 .cbp-af-header nav a:hover {
     color: #ff7602;
@@ -81,28 +74,40 @@
 }
 .cbp-af-header .lang {
     position: absolute;
-    top: 5px;
+    top: 20px;
     right: 18px;
-}
-.cbp-af-header .lang a {
-    color: #aaa;
-    padding: 3px 6px 3px 25px;
-    background: url(/img/lang_icons.png) no-repeat;
 }
 .cbp-af-header .lang a:hover {
     color: #ff7602;
     text-decoration: none;
 }
-.cbp-af-header .lang .en {
-    background-position: 0px 3px;
-}
-.cbp-af-header .lang .ru {
-    background-position: -70px 3px;
+
+.cbp-af-header .langpicker {
+    display: inline-block;
+    padding: 0;
+    height: 40px;
+    overflow: hidden;
+    transition: all .2s ease;
+    text-transform: uppercase;
+    letter-spacing: .07em;
 }
 
-@media screen and (max-width: 55em) {
+.cbp-af-header .langpicker:hover {
+    height: 200px;
+}
+
+.cbp-af-header .langpicker li {
+	display: block;
+	padding: 0px 20px;
+	line-height: 40px;
+}
+.cbp-af-header .langpicker .langitem {
+    background-color: #115165;
+}
+
+@media screen and (max-width: 66em) {
     .pd-b {
-        padding-bottom: 10px; 
+        padding-bottom: 10px;
     }
     .cbp-af-header .cbp-af-inner {
         width: 100%;
@@ -132,6 +137,7 @@
     .cbp-af-header.cbp-af-header-shrink .logo {
         font-size: 2em;
     }
+    .cbp-af-header .langpicker,
     .cbp-af-header.cbp-af-header-shrink nav a {
         font-size: .80em;;
     }
@@ -144,7 +150,7 @@
     .cbp-af-header a img,
     .cbp-af-header.cbp-af-header-shrink a img {
         margin-top: 15px;
-        width: 80%;
+        width: 60%;
         margin-top: 0px;
     }
     .cbp-af-header .logo,
@@ -155,11 +161,20 @@
     .cbp-af-header.cbp-af-header-shrink nav a {
         font-size: .6em;
         margin: 0 5px;
-
     }
     .cbp-af-header {
         height: auto;
     }
+    .cbp-af-header .langpicker {
+	height: 40px;
+    }
+    .cbp-af-header .lang {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        font-size: .6em;
+    }
+
 }
 
 @media screen and (max-width: 24em) {
@@ -174,6 +189,7 @@
         margin-top: 0px;
         margin: 0 auto;
     }
+    .cbp-af-header .langpicker,
     .cbp-af-header nav a {
         font-size: .80em;
         margin: 0 7px;
