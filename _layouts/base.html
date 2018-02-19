@@ -17,7 +17,7 @@
   <body>
     <div class="container" id="sec-top">
       <header role="banner">
-        <div class="cbp-af-header cbp-af-header-{{ site.lang }} cbp-af-header-shrink">
+        <div class="cbp-af-header cbp-af-header-shrink">
           <div class="cbp-af-inner">
             <div class="logo">
               <a href="{{ site.baseurl }}/" title="Bitcoin XT"><img src="/img/bitcoin-logo.png" alt="Bitcoin XT"></a>
@@ -30,8 +30,11 @@
               <a href="{{ site.baseurl }}/#sec-takepart" title="{% t base.menu.takepart %}">{% t base.menu.takepart %}</a>
             </nav>
             <div class="lang">
-              <a class="en" href="/{{ page.url | split:"/" | last }}" title="English">EN</a>
-              <a class="ru" href="/ru/{{ page.url | split:"/" | last }}" title="Russian">RU</a>
+              <ul class="langpicker">
+                <a href="#"><li>{% t base.menu.language %}▼</li></a>
+                <a href="/{{ page.url | split:"/" | last }}"><li class="langitem">English</li></a>
+                <a href="/ru/{{ page.url | split:"/" | last }}"><li class="langitem">русский</li></a>
+              </ul>
             </div>
           </div>
         </div>
@@ -42,13 +45,6 @@
         </article>
       </section>
       <footer>
-<!--        <small>
-          <p>
-            BitcoinXt is set to revolutionize the market. Expect a broader adaption
-            for crypto currency from this point forward. We welcome your support!
-            <br><br>
-            Questions? <a href="/">Reach out for more information.</a></p>
-        </small> -->
       </footer>
     </div>
   </body>

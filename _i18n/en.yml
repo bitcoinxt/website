@@ -7,12 +7,13 @@ base:
             title: "Frequently asked questions"
             text: "FAQ"
         takepart: "Take&nbsp;part"
+        language: "Language"
 
 index:
     title: "Welcome"
     description: |
         Bitcoin XT is an implementation of a full node that embraces Bitcoin's original vision of simple, reliable, low-cost transactions for everyone in the world.
-    
+
     header:
         scalingicon: "Scaling<br>Bitcoin"
         usersicon: "Users<br>Matter"
@@ -23,7 +24,7 @@ index:
             title: "Download now"
             aptrepo: "APT repository"
             dockerimg: "Docker Image"
-    
+
     whatwestandfor:
         title: "What we stand for"
         missionstatement: |
@@ -52,7 +53,7 @@ index:
                 <a href="http://gavinandresen.ninja/" title="Gavin Andresen - Chief Scientist, Bitcoin Foundation. All-around geek.">A series of essays by Gavin Andresen</a>
             mike: |
                 <a href="https://medium.com/@octskyward/crash-landing-f5cc19908e32" title="Crash landing — Medium">Why the block size limit must be raised</a> and <a href="https://medium.com/@octskyward/the-capacity-cliff-586d1bf7715e" title="The capacity cliff – Medium">why the proposed alternative schemes will not work</a>, by Mike Hearn.
-    
+
     miners:
         title: "Miners"
         vote: |
@@ -91,7 +92,7 @@ patches:
 
     explore: "Bitcoin XT has a rich set of features. It's encouraged to explore RPC interface and the <em>--help</em> options."
     somefeatures: "Some selected features of XT"
-    
+
     features:
       - title: "Dynamic maximum block size by miner vote"
         text: |
@@ -118,9 +119,9 @@ patches:
 faq:
     title: "FAQ"
     description: "Bitcoin XT is an implementation of a Bitcoin full node"
-    
+
     faq: "Frequently asked questions"
-    
+
     items:
       - id: "how-do-i-upgrade"
         title: "How do I switch to XT?"
@@ -130,7 +131,7 @@ faq:
         title: "Is there any risk involved in running XT?"
         text: |
             <p>Bitcoin XT is fully compatible with the Bitcoin Cash (BCH) network.</p>
-            <p>When running on the Bitcoin (BTC) network, segwit transactions cannot be fully validated.</p>            
+            <p>When running on the Bitcoin (BTC) network, segwit transactions cannot be fully validated.</p>
       - id: "why-did-the-xt-fork-happen"
         title: "Why did the Bitcoin XT fork happen?"
         text: |
@@ -159,12 +160,12 @@ apt:
     description: "We provide an APT repository for Debian and Ubuntu users, for bitcoind and 64 bit machines only. To use it, follow these steps."
 
     aptanddocker: "APT And Docker"
-    
+
     gettingstarted: "There are two methods for getting started quickly on a linux machine:"
     addrepo: "Add an apt repository to a debian or ubuntu installation."
     installdocker: |
         Install a docker image on a <a href="https://www.docker.com/" title="Docker">docker</a> supporting system.
-    
+
     apt:
         repo: "1. APT Repository"
         64bitonly: "We provide an APT repository for Debian and Ubuntu users, for bitcoind and 64 bit machines only. To use it, follow these steps. Run all commands as root."
@@ -176,7 +177,7 @@ apt:
         service: |
             Note that the server binary is named "bitcoinxtd" in this package, not bitcoind. Since 0.11B we have added systemd init scripts to make sure that the node will be started and auto-restarted if you reboot.</br>
             The systemd bitcoinxtd.service registers the XT based daemon for autostart. Also installed is the bitcoinxt-cli executable which allows you to communicate with the running daemon.
-    
+
     docker:
         image: 2. Docker Image
         dockerhub: |
