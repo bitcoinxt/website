@@ -32,6 +32,7 @@
             <div class="lang">
               <ul class="langpicker">
                 <a href="#"><li>{% t base.menu.language %}▼</li></a>
+                <a href="/de/{{ page.url | split:"/" | last }}"><li class="langitem">Deutsch</li></a>
                 <a href="/{{ page.url | split:"/" | last }}"><li class="langitem">English</li></a>
                 <a href="/ru/{{ page.url | split:"/" | last }}"><li class="langitem">русский</li></a>
               </ul>

@@ -20,7 +20,7 @@ sass:
 plugins:
   - jekyll-multiple-languages-plugin
 
-languages: ["en", "ru"]
+languages: ["en", "ru", "de"]
 
 exclude_from_localizations: [
     "css",
