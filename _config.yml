@@ -28,5 +28,6 @@ exclude_from_localizations: [
     "favicon.ico",
     "favicon.png",
     "industry-letter.pdf",
-    "robots.txt"
+    "robots.txt",
+    "onboard.html"
     ]
