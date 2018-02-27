@@ -1,0 +1,184 @@
+base:
+    menu:
+        welcome: "Willkommen"
+        bigblocks: "Größere&nbsp;Blöcke"
+        features: "Features"
+        faq:
+            title: "Häufig gestellte Fragen"
+            text: "FAQ"
+        takepart: "Teilnehmen"
+        language: "Sprache"
+
+index:
+    title: "Willkommen"
+    description: |
+        Bitcoin XT ist eine Implementierung eines vollständigen Nodes, der Bitcoins ursprüngliche Vision von einfachen, zuverlässigen und kostengünstigen Transaktionen für jedermann auf der Welt umfasst.
+    
+    header:
+        scalingicon: "Bitcoin<br>skalieren"
+        usersicon: "Benutzer<br>sind wichtig"
+        communityicon: "Pragmatische<br>Community"
+        info: |
+            Bitcoin XT ist eine vollständige Node Implementierung von Bitcoin Cash (BCH) und Bitcoin (BTC). Bitcoin XT wird Bitcoins ursprünglicher Vision von einfachen, zuverlässigen und kostengünstigen Transaktionen für jedermann auf der Welt gerecht. Bitcoin XT entstand als eine Reihe von Patches auf Bitcoin Core und ist jetzt eine unabhängig geführte Software Fork. Wir machen <a href="https://github.com/bitcoinxt/gitian.sigs">deterministische Builds</a>, damit jeder überprüfen kann, ob die Downloads dem <a href="https://github.com/bitcoinxt/bitcoinxt">Quellcode</a> entsprechen.
+        download:
+            title: "Jetzt herunterladen"
+            aptrepo: "APT-Repository"
+            dockerimg: "Docker-Image"
+
+    whatwestandfor:
+        title: "Für was wir stehen"
+        missionstatement: |
+            Das XT-Leitbild definiert, was das Projekt für wichtig hält: Das Bekenntnis zu diesen Prinzipien unterscheidet uns von Bitcoin Core. Wir versuchen, Satosis ursprünglicher Vision zu folgen, da diese Vision die Bitcoin-Gemeinschaft zusammengebracht hat.
+        scaling: |
+            <b>Es ist wichtig, das Netzwerk für die Benutzeranforderungen zu skalieren</b>, auch wenn dies bedeutet, dass sich das Netzwerk auf dem Weg ändert. <a href="http://satoshi.nakamotoinstitute.org/emails/cryptography/2/" title="Satoshi Nakamoto Institute - Re: Bitcoin P2P e-cash paper">Es ist das, was Satoshi wollte</a> und die Idee eines globalen Systems, das von gewöhnlichen Menschen benutzt wird, hat viele von uns motiviert sich ihm anzuschließen.
+        provideinfo: |
+            <b>XT stellt den Menschen die Informationen zur Verfügung, die sie benötigen</b>, auch wenn sie risikobasierte Entscheidungen treffen müssen. Beispielsweise:
+        zeroconf: |
+            Wir glauben, <b>dass unbestätigte Transaktionen wichtig sind</b>. Viele Händler wollen oder müssen Zahlungen innerhalb von Sekunden statt Minuten oder Stunden akzeptieren. XT akzeptiert diese Tatsache und tut was es kann um das Risiko zu minimieren und hilft Verkäufern zu beurteilen was bleibt. Es ist der <a href="http://satoshi.nakamotoinstitute.org/emails/cryptography/8/" title="Satoshi Nakamoto Institute - Re: Bitcoin P2P e-cash paper">First-Seen-Regel</a> verpflichtet. Wir werden keine Änderungen vornehmen, die unbestätigte Transaktionen riskanter machen.
+        lightwallet: |
+            <b>Leichte Wallets sind wichtig</b>. Die meisten Benutzer können oder werden keinen vollständig verifizierenden Node betreiben. Der größte Teil der Weltbevölkerung besitzt nicht einmal einen Computer: Sie werden das Internet ausschließlich über Smartphones erleben. Diese Benutzer müssen etwas Sicherheit opfern um teilnehmen zu können, deshalb unterstützt XT alle technischen Kompromisse, die Wallet-Entwickler erforschen möchten.
+        decisionmaking: |
+            <b>Entscheidungsfindung ist schnell und klar</b>. Entscheidungen werden gemäß einer Führungshierarchie getroffen. Die XT-Software codiert Entscheidungen, die den oben genannten Prinzipien folgen: Personen, die nicht damit einverstanden sind, können andere Software verwenden oder unsere Software patchen. Wir denken nicht darüber nach, seriöse Software zu zentralisieren und weigern uns nicht, vernünftige Vorgaben zu wählen.
+        professionalism: |
+            Die Bitcoin XT-Community ist freundlich, pragmatisch, kümmert sich um App-Entwickler und berücksichtigt die Benutzererfahrung bei allem was wir tun. Wir schätzen Professionalität in technischem Ansatz und Kommunikation.        
+    blocksize:
+        title: "Blockgröße Hard-Fork"
+        history: |
+            Vor vielen Jahren wurde von Satoshi eine Kapazitätsgrenze in Bitcoin eingeführt. Er beabsichtigte, diese zu entfernen, sobald leichte Wallets entwickelt wurden, jedoch wurde dies nie gemacht. Wie vorhergesagt, ist Bitcoin voll ausgelastet und die Benutzer leiden unter Zuverlässigkeitsproblemen. Die Entwickler von Bitcoin Core sind nicht bereit, die Kapazität der Blockchain zu erhöhen, was letztendlich dazu führte, dass das Netzwerk in Bitcoin Cash (BCH) und Bitcoin (BTC) gespalten wurde. Miner und Benutzer, die mit ihnen nicht einverstanden sind, sind nach dem Bitcoin Cash-Konsens zu Bitcoin XT gewechselt oder zu anderen Clients gewechselt.
+        raise: |
+            Über dieses Thema wurde viel diskutiert. Sie können eine Analyse und Erklärungen dazu lesen, warum wir die Erhöhung der Blockgröße für wichtig halten:
+        links:
+            gavin: |
+                <a href="http://gavinandresen.ninja/" title="Gavin Andresen - Chief Scientist, Bitcoin Foundation. All-around geek.">Eine Reihe von Essays von Gavin Andresen</a>
+            mike: |
+                <a href="https://medium.com/@octskyward/crash-landing-f5cc19908e32" title="Crash landing — Medium">Warum das Blockgrößenlimit erhöht werden muss</a> und <a href="https://medium.com/@octskyward/the-capacity-cliff-586d1bf7715e" title="The capacity cliff – Medium">warum die vorgeschlagenen alternativen Pläne nicht funktionieren werden</a>, von Mike Hearn.
+
+    miners:
+        title: "Miner"
+        vote: |
+            Wenn Sie mit Bitcoin XT arbeiten, können Sie <a href="https://bip100.tech">über eine neue maximale Blockgröße abstimmen</a>. Dies zeigt dem Rest des Netzwerks an, dass Sie die Änderung des Limits unterstützen. Wenn 75% der Block-Stimmen übereinstimmen, wird automatisch ein neues Limit aktiviert.
+        softlimit: |
+            <b>Soft-Limit</b>: Bitcoin XT unterstützt die Konfiguration der maximalen Größe von Blöcken die geschürft werden. Wenn gesetzt, erstellt Ihr Node keine Blöcke größer als das Limit, obwohl er sie trotzdem akzeptiert.
+        nosegwit: |
+            Mining wird nur im Bitcoin Cash-Netzwerk unterstützt, da Bitcoin XT kein segwit implementiert.
+
+    users:
+        title: "Benutzer und Händler"
+        norisks: |
+            Mit Bitcoin XT gehen Sie kein Risiko ein: Wenn die Hash-Leistung von XT nicht ausreicht, um die Super-Majorität zu erreichen, wird nichts passieren. Wenn sie genug ist, werden Sie der neuen Kette folgen und die Dinge werden wie gewohnt weitergehen.
+        doublespend: |
+            Darüber hinaus verfügt XT über eine nützliche Funktion: Überwachung und Weiterleitung von doppelten Ausgaben. Indem Sie XT ausführen, helfen Sie, Informationen über doppelte Ausgaben im Netzwerk zu verbreiten, was es für Zahlungsbetrüger schwieriger macht von Verkäufern zu stehlen indem zwei widersprüchliche Transaktionen gleichzeitig gesendet werden.
+
+    takepart:
+        title: "Teilnehmen!"
+        contact: |
+            Treten Sie über unseren <a href="https://gitter.im/bitcoinxt">Chatraum in Gitter</a> in Kontakt. Geeignete Themen umfassen:
+        topics:
+            patches: |
+                Diskussion neuer Patches
+            configuration: |
+                Fragen zur Verwendung oder wie XT am besten für das Schürfen konfiguriert wird
+            ideas: |
+                Entwicklungsideen (bitte versuchen Sie zumindest, Ihre Idee umzusetzen, bevor Sie andere dazu auffordern!)
+        polite: |
+            Seien Sie höflich und debattieren Sie lieber Ideen als Menschen.
+
+patches:
+    title: "Features"
+    description: "Bitcoin XT bietet größere Blöcke, Thin-Block-Download, Doppelausgaben-Weiterleitung, BIP 64-Unterstützung, Anti-DoS-Angriffsverbesserungen und Updates für die DNS-Seed-Liste."
+
+    explore: "Bitcoin XT verfügt über umfangreiche Funktionen. Es wird empfohlen, die RPC-Schnittstelle und die <em>--help</em> Optionen zu erkunden."
+    somefeatures: "Einige ausgewählte Funktionen von XT"
+
+    features:
+      - title: "Dynamische maximale Blockgröße durch Minerstimme"
+        text: |
+            Bitcoin XT implementiert BIP100, so dass die Miner die maximale Blockgröße nach Netzwerkbedarf anpassen können. Lesen Sie mehr darüber und folgen Sie den Stimmen auf <a href="https://bip100.tech">bip100.tech</a>
+      - title: "Bandbreitenbegrenzung"
+        text: |
+            Legen Sie Beschränkungen für die Upload- und Download-Bandbreite fest. Dadurch können Sie einen vollständigen Node betreiben, ohne dass andere Internetdienste in Ihrem Netzwerk beeinträchtigt werden.
+      - title: "Thin-Block-Weiterleitung"
+        text: |
+            Bitcoin XT ist der einzige Client, der <em>sowohl</em> das <a href="https://github.com/BitcoinUnlimited/BitcoinUnlimited/blob/release/doc/bu-xthin-protocol.md">XThin</a>- als auch das <a href="https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki">Compact-Block</a>-Protokoll unterstützt. Wenn Sie XT ausführen, werden Sie effizient mit der Blockchain mithalten. Sie werden auch dem Netzwerk helfen, indem Sie effektiv als Brücke zwischen Nodes dienen, die eines der Protokolle unterstützen, aber nicht beide.
+      - title: "Doppelausgaben-Weiterleitung"
+        text: |
+            Erkennen und helfen Sie anderen Kunden, Doppelausgaben-Transaktionen zu erkennen. Dies ermöglicht es Verkäufern mit geringeren Kosten für das Peer-to-Peer-Netzwerk über Betrugsversuche zu erfahren. Die Bitcoin-Qt-Wallet zeigt gesendete Versuche von Doppelausgaben in Rot. Es gibt ein neues <em>-respendnotify</em> Befehlszeilenflag und Konflikte werden über die RPC-Schnittstelle gemeldet. Selbst wenn diese Funktion von Ihnen nicht benötigt wird, helfen Sie denen, die davon profitieren, indem Sie XT ausführen.
+      - title: "BIP 64-Unterstützung (\"getutxos\")"
+        text: |
+            Dadurch können Peers den Inhalt eines Hauptbucheintrags über das Netzwerk anfordern. Es ist nützlich für <a href="https://vinumeris.com/lighthouse" title="Lighthouse - Geld mit Bitcoin sammeln">die dezentralisierte Lighthouse Crowdfunding-Geldbörse</a> um eine bessere Benutzerschnittstelle zu präsentieren und für verschiedene andere Aufgaben.
+      - title: "Verbesserte SPV-Sicherheit"
+        text: |
+            XT gibt SPV-Wallets Wissen über unbestätigte Vorfahren von Transaktionen weiter, so dass sie das Risiko ihrer unbestätigten Transaktionen besser einschätzen können.
+      - title: "Priorisieren Sie eingehende Verbindungen"
+        text: |
+            Es ist möglich, IP-Adressen von eingehenden Verbindungen zu gruppieren und ihnen Priorität zuzuweisen. Wenn die Verbindungsplätze voll werden, wird ein Peer mit einer niedrigeren Priorität als die eingehende Verbindung getrennt. Als eine Anti-DoS-Maßnahme haben Tor-Ausgangs-Nodes optional eine niedrigere Priorität als normale IP-Adressen, um mobile und private Benutzer nicht abzulehnen.
+
+faq:
+    title: "FAQ"
+    description: "Bitcoin XT ist eine Implementierung eines vollständigen Bitcoin-Node"
+
+    faq: "Häufig gestellte Fragen"
+
+    items:
+      - id: "how-do-i-upgrade"
+        title: "Wie wechsle ich zu XT?"
+        text: |
+            <p>Wie gewohnt von unserer Website herunterladen und ausführen. Bitcoin XT verwendet die gleichen Datenverzeichnisse und die gleiche Konfiguration wie Bitcoin Core. Wenn Sie zuvor bereits ausgeführt haben, müssen Sie die Blockchain nicht erneut herunterladen. Beim ersten Lauf müssen Sie die Blockchain neu indizieren, indem Sie den Parameter <em>-reindex</em> hinzufügen.</p>
+      - id: "is-there-risk"
+        title: "Besteht ein Risiko beim Betrieb von XT?"
+        text: |
+            <p>Bitcoin XT ist voll kompatibel mit dem Bitcoin Cash (BCH) Netzwerk.</p>
+            <p>Wenn im Bitcoin-Netzwerk (BTC) betrieben, können Segwit-Transaktionen nicht vollständig validiert werden.</p>
+      - id: "why-did-the-xt-fork-happen"
+        title: "Warum ist die Bitcoin XT-Fork passiert?"
+        text: |
+            <p>Bitcoin XT wurde aufgrund einer Reihe grundlegender Meinungsverschiedenheiten zwischen Bitcoin-Core-Entwicklern erstellt. Die Meinungsverschiedenheiten drehen sich um Fragen wie "Sollte die Blockchain wachsen, um den Anforderungen der Nutzer zu entsprechen?", "Welche Daten sollte das Bitcoin-Protokoll den Clients zur Verfügung stellen?" und "Wie sollten technische Entscheidungen getroffen werden?".</p>
+            <p>Die größte und hartnäckigste Meinungsverschiedenheit betrifft die Blockgröße: Die XT-Community glaubt, dass die Blockgröße wachsen muss, um Bitcoins wachsende Nutzerbasis zu unterstützen. Das Bitcoin Core-Projekt hat keine Schritte unternommen, um das Limit zu erhöhen und um Anreize für die Schaffung und Nutzung von alternativen, nicht Blockchainbasierten Finanzsystemen wie dem sogenannten Lightning-Netzwerk zu schaffen. Dies ist ein unüberbrückbarer Unterschied in der Vision, der sich als unmöglich zu überwinden erwiesen hat.</p>
+            <p>Darüber hinaus haben die Bitcoin Core-Entwickler Erklärungen abgegeben, die implizieren, dass sie sich nicht mehr für unbestätigte Transaktionen oder einfache Peer-to-Peer-Wallets interessieren, obwohl beide von vielen Benutzern verwendet werden. Ohne den Bitcoin Cash-Fork wären diese Features nicht realisierbar geblieben.</p>
+            <p>Der letzte Bereich der Meinungsverschiedenheit besteht darin, wie Entscheidungen getroffen werden. Bitcoin Core hat keinen Prozess, um Meinungsverschiedenheiten zwischen seinen Entwicklern zu lösen oder zu definieren, wer diese Entwickler eigentlich sind.</p>
+            <p>Nach einer langen Reihe von Versuchen, im Jahr 2015 einen Kompromiss zu finden, wurde klar, dass es keine Möglichkeit gibt, diese Unterschiede zu lösen, außer über eine Fork.</p>
+            <p>Sie können einen längeren Artikel zum Thema namens <a href="https://medium.com/@octskyward/why-is-bitcoin-forking-d647312d22c1" title="Why is Bitcoin forking? – Medium">"Why is Bitcoin forking?"</a> lesen.</p>
+      - id: "hard-fork-alternatives"
+        title: "Warum können keine alternativen Ansätze für die Hard-Fork verwendet werden?"
+        text: |
+            <p>Die maximale Blockgrößenbeschränkung ist eine Regel, die von jedem Node überprüft wird. Sie wurde von Satoshi als vorübergehende Maßnahme eingefügt und sollte immer entfernt werden, was eine Hard-Fork bedeutet, da ältere Nodes Blöcke ablehnen, die von neueren Nodes erstellt wurden. Die am stärksten beworbene Alternative ist das "Lightning-Netzwerk" von Blockstream, das ein völlig anderes System ist: Es würde komplett andere Wallets benötigen, einen Ersatz für Bitcoin-Adressen / QR-Codes, neue Nodesoftware und so weiter. Lightning ist eine Sammlung von Beziehungen zwischen quasi-institutionellen Entitäten, die von Zeit zu Zeit an der auf der Blockchain beglichen werden. Es ist nicht implementiert und viele Designelemente sind noch nicht definiert.</p>
+            <p>Kurz gesagt, die einzige ernsthaft vorgeschlagene Alternative besteht darin, Bitcoin, wie wir es heute kennen, aufzugeben und zu versuchen, Benutzer davon zu überzeugen, zu einer weitgehend ungeplanten und möglicherweise schlechteren Alternative überzugehen.</p>
+      - id: "soft-forks"
+        title: "Kann stattdessen eine Soft-Fork verwendet werden? Ist das besser?"
+        text: |
+            <p>Im Falle einer Änderung der Blockgröße ist keine Soft-Fork möglich, da alte Knoten feststellen, dass sie nicht dieselben Regeln überprüfen, sobald sie einen Block größer als erwartet sehen. Jeder Versuch, sie zu täuschen, dass die 1-MB-Regel immer noch befolgt wird, würde radikale Änderungen am Protokoll und wesentliche Änderungen an allen Wallets erfordern, was unpraktisch ist. Da alte Knoten ohnehin auf ein Upgrade angewiesen sind, um ihr Sicherheitsniveau zu erhalten, ist es nicht vorteilhaft, einen Soft-Fork zu erstellen.</p>
+      - id: "who-is-involved"
+        title: "Wie werden Entscheidungen getroffen?"
+        text: |
+            <p>Entscheidungen werden vom aktuellen Instandhalter getroffen und vom Bitcoin XT-Entwicklungsteam übernommen. Bei Unstimmigkeiten hat der aktuelle Instandhalter das letzte Wort. Wenn ein Patch den Prinzipien des Projekts entspricht, wird es für die Aufnahme in Betracht gezogen. Wenn der Entwickler bereit ist, bei der Rebase-Arbeit zu helfen, hilft dies auch bei der Einbeziehung.</p>
+
+apt:
+    title: "APT-Repository"
+    description: "Wir bieten ein APT-Repository für Debian- und Ubuntu-Benutzer nur für bitcoind und 64-Bit-Maschinen. Befolgen Sie diese Schritte, um es zu verwenden."
+
+    aptanddocker: "APT und Docker"
+
+    gettingstarted: "Es gibt zwei Methoden, um schnell auf einem Linux-Rechner zu starten:"
+    addrepo: "Fügen Sie einer Debian- oder Ubuntu-Installation ein Apt-Repository hinzu."
+    installdocker: |
+        Installieren Sie ein Docker-Image auf einem von <a href="https://www.docker.com/" title="Docker">Docker</a> unterstützten System.
+
+    apt:
+        repo: "1. APT-Repository"
+        64bitonly: "Wir bieten ein APT-Repository für Debian- und Ubuntu-Benutzer nur für bitcoind und 64-Bit-Maschinen. Befolgen Sie diese Schritte, um es zu verwenden. Führen Sie alle Befehle als root aus."
+        upgrade: "Wenn Sie von Bitcoin XT 0.11.0D upgraden, bitte aktualisieren Sie <em>/etc/apt/sources.list.d/bitcoinxt.list</em> &mdash; Die URL wurde geändert."
+        importpgp: "Importieren Sie zuerst den PGP-Schlüssel, der zum Signieren der Pakete verwendet wurde:"
+        fingerprint: "Der Fingerabdruck des Schlüssels ist FB2C 2916 3890 E919 6434  BEFE 399C 6E4E 97B6 956B."
+        configureapt: "Konfigurieren Sie nun apt, indem Sie dies als root ausführen:"
+        install: "Und abschliessend installieren:"
+        service: |
+            Beachten Sie, dass die Server-Binärdatei in diesem Paket "bitcoinxtd" heißt und nicht bitcoind. Seit 0.11B haben wir Systemd-Init-Skripte hinzugefügt, um sicherzustellen, dass der Node beim Neustart automatisch gestartet und neu gestartet wird.</br>
+            Der systemd bitcoinxtd.service registriert den XT-basierten Daemon für den Autostart. Außerdem ist die ausführbare Datei bitcoinxt-cli installiert, mit der Sie mit dem laufenden Daemon kommunizieren können.
+
+    docker:
+        image: 2. Docker-Image
+        dockerhub: |
+            Es gibt ein Docker-Image, das auf dockerhub gehostet wird:
+            <a href="https://hub.docker.com/r/bitcoinxt/bitcoinxt/" title="Bitcoin XT auf Docker Hub">bitcoinxt/bitcoinxt</a>
+        node: |
+            Dies ermöglicht es Ihnen, einen Node in wenigen Sekunden in Betrieb zu nehmen. Alles, was Sie brauchen, ist eine Maschine, die <a href="https://www.docker.com/" title="Docker - Build, Ship, and Run Any App, Anywhere">Docker</a> ausführen kann.
