@@ -171,7 +171,10 @@ apt:
         importpgp: "Firstly, import the PGP key used to sign the packages:"
         fingerprint: "The key fingerprint is FB2C 2916 3890 E919 6434  BEFE 399C 6E4E 97B6 956B."
         configureapt: "Now configure apt, by running this as root:"
-        install: "And finally install:"
+        install: "And then install:"
+        locatepassword: "To run bitcoinxt-cli, you will need to find your RPC password located in the bitcoin.conf file:"
+        run: "And then run bitcoinxt-cli by passing the appropriate parameters:"
+        prune: "Last, if you would like to run BitcoinXT as a pruned node to save disk space and reduce bandwidth usage, add the following lines of code to bitcoin.conf:"
         service: |
             Note that the server binary is named "bitcoinxtd" in this package, not bitcoind. Since 0.11B we have added systemd init scripts to make sure that the node will be started and auto-restarted if you reboot.</br>
             The systemd bitcoinxtd.service registers the XT based daemon for autostart. Also installed is the bitcoinxt-cli executable which allows you to communicate with the running daemon.
