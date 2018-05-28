@@ -41,7 +41,7 @@ index:
             <b>Decision making is quick and clear.</b> Decisions are made according to a leadership hierarchy. The XT software encodes decisions that follow the above principles: people who disagree are welcome to use different software, or patch ours. We do not consider writing principled software to be centralizing and do not refuse to select reasonable defaults.
         professionalism: |
             The Bitcoin XT community is friendly, pragmatic, cares about app developers and considers the user experience in everything we do. We value professionalism in technical approach and communication.
-        
+
     blocksize:
         title: "Block size hard fork"
         history: |
@@ -152,6 +152,10 @@ faq:
         title: "How are decisions made?"
         text: |
             <p>Decisions are made by the current maintainer with input from the Bitcoin XT development team. When there is a disagreement the current maintainer will have the final say. If a patch seems in line with the principles of the project it will be considered for inclusion. If the developer is willing to assist with rebasing work, that also helps build the case for inclusion.</p>
+      - id: "donations"
+        title: "Do you accept donations?"
+        text: |
+            <p>The Bitcoin XT project does not accept monetary donations. We appreciate donations of time, effort and skills. You can help by running our code, contributing your time or funding individuals to do so.</p>
 
 apt:
     title: "APT repository"
