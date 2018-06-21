@@ -1,0 +1,32 @@
+---
+layout: "base"
+title: doc.title
+description: doc.description
+---
+
+<div class="main">
+  <section>
+    <div>
+      <p>{% t doc.description %}</p>
+      <h1>{% t doc.developer %}</h1>
+
+      <ul>
+          <li><a href="{{ site.baseurl }}/doc/rpc_0_11I.html">RPC Reference for Bitcoin XT 0.11I</a></li>
+        <li><a href="https://github.com/bitcoinxt/bitcoinxt/wiki">{% t doc.wiki %}</a></li>
+        <li>{% t doc.moredocs %}</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>
+      <p></p>
+      <h1>{% t doc.guides %}</h1>
+
+      <ul>
+        <li><a href="https://github.com/bitcoinxt/bitcoinxt/wiki/Build-Bitcoin-XT-from-git-on-Debian-9">
+              Running the latest development version</a>
+          &mdash; Installing XT from source on Debian 9</li>
+      </ul>
+    </div>
+  </section>
+</div>

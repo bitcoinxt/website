@@ -7,7 +7,7 @@ $base-font-size: 110%;
 $base-line-height: 1.4;
 
 // Fixed Font
-$fixed-font-family: 'Lato', Calibri, Arial, sans-serif;
+$fixed-font-family: 'Roboto Mono', Courier, monospace;
 $fixed-font-size: 85%;
 $fixed-line-height: $base-line-height;
 
@@ -18,9 +18,9 @@ $indented-paragraphs: false;
 $body-margin-x: 0%;
 
 // This should be applied to the body of the document:
-// 
+//
 //     body { @include base-font; }
-// 
+//
 @mixin base-font {
     color: $text-color;
     font-family: $base-font-family;
@@ -45,13 +45,13 @@ $body-margin-x: 0%;
 }
 
 // Typically this should be applied to content portion of the document:
-// 
+//
 //     .content { @include basic-typography; }
-// 
+//
 // Pass true if you would like to use indented instead of block level paragraphs:
-// 
+//
 //     .content { @include basic-typography(true); }
-// 
+//
 @mixin basic-typography($indented: $indented-paragraphs) {
     @include inline-elements;
     @include headings;
@@ -155,7 +155,7 @@ $body-margin-x: 0%;
 @mixin fixed-font-elements($font-family: $fixed-font-family, $font-size: $fixed-font-size, $line-height: $fixed-line-height) {
     code, dfn, kbd, samp, tt, pre {
         font-family: $font-family;
-        font-size: 95%;
+        font-size: 90%;
         background: soften($text-color);
         color: if(lightness($text-color) > 50, #000, #fff);
         border-radius: 8px;

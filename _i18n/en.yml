@@ -1,7 +1,7 @@
 base:
     menu:
         welcome: "Welcome"
-        bigblocks: "Bigger&nbsp;blocks"
+        doc: "Documentation"
         features: "Features"
         faq:
             title: "Frequently asked questions"
@@ -188,3 +188,12 @@ apt:
             <a href="https://hub.docker.com/r/bitcoinxt/bitcoinxt/" title="Bitcoin XT on Docker Hub">bitcoinxt/bitcoinxt</a>
         node: |
             This allows you to get a node up and running in seconds. All you need is a machine capable of running <a href="https://www.docker.com/" title="Docker - Build, Ship, and Run Any App, Anywhere">docker</a>.
+
+doc:
+    title: "Documentation"
+    description: "Documentation resources for Bitcoin XT"
+    developer: "For developers"
+    wiki: Developer wiki
+    guides: Guides / procedures
+    moredocs: |
+        More documentation is located in the <a href="https://github.com/bitcoinxt/bitcoinxt">git repository</a>.

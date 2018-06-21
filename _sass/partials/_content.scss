@@ -6,7 +6,7 @@
         white-space: nowrap;
         &:after { content: " »"; }
     }
-    
+
     .box {
         background: #efeacf;
         border: 1px solid darken(#efeacf, 10);
@@ -280,3 +280,31 @@ section > div > h2 > a:target {
     margin-bottom: 20px;
 }
 
+/* -- Table of contents */
+.toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+.toc_container .rpcexample {
+    font-size: 70%;
+    font-family: $fixed-font-family;
+    margin : 0;
+}
+
+.toc_container li, .toc_container ul, .toc_container ul li{
+    list-style: outside none none !important;
+    margin : 0;
+    padding-top : 0;
+    padding-bottom : 0;
+}
