@@ -194,6 +194,10 @@ doc:
     description: "Documentation resources for Bitcoin XT"
     developer: "For developers"
     wiki: Developer wiki
-    guides: Guides / procedures
+    articles: Articles
     moredocs: |
         More documentation is located in the <a href="https://github.com/bitcoinxt/bitcoinxt">git repository</a>.
+
+articles:
+    freetx:
+        title: "Free transactions with Bitcoin Cash"
