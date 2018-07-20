@@ -1,0 +1,124 @@
+---
+layout: "base"
+title: articles.freetx.title
+---
+<script>
+
+    function calcpri() {
+
+        var totalSize = document.getElementById("txtotalsize").value;
+        var inputs = document.getElementsByClassName("txinput");
+
+        // Calculate modified size, assuming average input size of 180.
+        var i;
+        for (i = 0; i < inputs.length; ++i) {
+            offset = 41 + 110;
+            if (totalSize > offset)
+                totalSize -= offset;
+        }
+
+        // Calculate input priority
+        var COIN = 100000000;
+        var threshold = COIN * 144 / 250;
+        var inputPri = 0;
+        for (i = 0; i < inputs.length; ++i) {
+            val = inputs[i].getElementsByClassName("inputval")[0].value;
+            conf = inputs[i].getElementsByClassName("inputconfirm")[0].value;
+            inputPri += (val * COIN) * conf;
+        }
+        var pri = parseInt(inputPri / totalSize, 10);
+
+        document.getElementById("txpriority").innerHTML = pri;
+        document.getElementById("txisfree").innerHTML = pri >= threshold ? "Yes" : "No";
+        var MAX_FREE_SIZE = 49000;
+        if (document.getElementById("txtotalsize").value > MAX_FREE_SIZE) {
+            document.getElementById("txisfree").innerHTML = "No, transaction is too big."
+                + " Free transactions are limited to " + MAX_FREE_SIZE + " bytes.";
+        }
+    }
+    function addinput() {
+        var itm = document.getElementsByClassName("txinput")[0];
+        itm.parentNode.insertBefore(itm.cloneNode(true), itm);
+        var newsize = parseInt(document.getElementById("txtotalsize").value) + 180;
+        document.getElementById("txtotalsize").value = newsize;
+    }
+</script>
+<div class="main">
+  <section>
+    <div>
+        <h1>Free transactions with Bitcoin Cash</h1>
+        <p><em>Last updated: 2018-07-20</em></p>
+        <p>This document describes how Bitcoin XT handles free transactions on the Bitcoin Cash network.</p>
+        <h1>The criteria for free transactions</h1>
+        <p>For sending a free transaction, your transaction needs to pass a <em>coin age</em> criteria. This criteria is accumulation of the value of the transaction inputs, multiplied by the number of confirmations they have.</p>
+        <p>Using this coin age criteria, we allow for many transactions to pass for free, while not allowing a bad actor to flood the network for free.</p>
+        <p>
+        You’re basically rewarded for holding Bitcoin Cash by transacting for free. A bad actor would have to hold a large amount of coins for a long period of time to be able to abuse this. This makes an attack expensive and impractical.</p>
+
+        <h1>What are inputs and confirmations?</h1>
+        <p>When you create a transaction in Bitcoin Cash, you take one or more inputs from previous transactions you’ve received and you create outputs that can be spent in a later transaction.</p>
+        <p><img src="/doc/txinout.png" alt="tx" /></p>
+        <p>Your coins are basically a collection of unspent outputs. Every time a new block is added to the blockchain, any unspent output you own gets an additional confirmation.</p>
+        <h1>The formula</h1>
+        <p>A transaction that has a <em>priority</em> larger or equal to the following threshold requires no fee, where <em>COIN</em> is 100 000 000 satoshis (1 BCH).
+        <pre>priority &gt;= COIN * 144 / 250</pre>
+
+        <p>Where <em>priority</em> is calculated as (in pseudo code):</p>
+        <pre>
+inputPriorty = 0;
+for each input:
+    inputPriority = input.value * input.confirmations
+
+priority = inputPriorty / modified transaction size
+        </pre>
+        <p>Where <em>modified transaction size</em> is:
+        <pre>
+size = actual transaction size
+for each input:
+    offset = 41 + min(110, input.scriptSig.size)
+    if (size &gt; offset)
+        size -= offset
+        </pre>
+        <p>The modified size is a rebate to incentivizing cleaning up the UTXO set.</p>
+
+        <p>The actual code for this is now located in <a href="https://github.com/bitcoinxt/bitcoinxt/blob/master/src/policy/txpriority.cpp">policy/txpriority.cpp</a>.</p>
+
+        <p>The threshold was originally introduced by Satoshi Nakamoto in commit <a href="https://github.com/bitcoinxt/bitcoinxt/commit/f35e21e2e4fcc0aa52edd9f9b58bd19e347597da">f35e21e</a>.</p>
+
+
+
+        <h1>Simplified calculator</h1>
+        <p><span style="font-weight : bold;">1 day = ~144 confirmations</span>. Calculator assumes average input size is 180 bytes.
+        <table style="font-family: 'Roboto Mono', Courier, monospace; background : #efefef;">
+            <tr>
+                <th>Inputs</th>
+                <th>Size</th>
+                <th>Criteria</th>
+            </tr>
+            <tr>
+                <td style="min-width : 300px">
+                    <p class="txinput">Input:<br/>
+                    Value&nbsp;&nbsp;&nbsp;&nbsp;<input class="inputval" type="text" name="value" size="4" value="0.4"/><br />
+                    Confirm.&nbsp;<input class="inputconfirm" type="text" name="confirmations" size="4" value="144"/>
+                    </p>
+                    <p id="txbuttons"><button onclick="addinput()">Add input</button>&nbsp;<button onclick="calcpri()">Calculate</button></p>
+                    </p>
+                </td>
+                <td>
+                    <p>Total size (bytes): <input id="txtotalsize" name="totalsize" type="text" value="250"/></p>
+                </td>
+                <td>
+                    <p>Priority: <span id="txpriority">58181818</span> / 57600000</p>
+                    <p>Free: <span id="txisfree">Yes</span></p>
+                </td>
+            </tr>
+        </table>
+
+        <h1>How fast do free transactions get confirmed?</h1>
+        <p>Bitcoin XT will mine all free transactions <em>as long as there is block space available</em>. Priority is not weighted in the block transaction selection. Transactions paying the highest fee have priority over lower fee paying transactions.</p>
+        <p>When blocks are full, Bitcoin XT will accept free transactions into its mempool as long as there is space available. Mempool size defaults to 300MB (<em>maxmempool=300</em>).
+        <p>Miners can disable free transactions by adding <em>allowfreetx=0</em> to their nodes configuration file.</p>
+
+    </div>
+  </section>
+</div>
